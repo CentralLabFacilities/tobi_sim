@@ -1,0 +1,8 @@
+<launch>
+  <node name="gzserver" pkg="gazebo_ros" type="gzserver" respawn="false" output="screen"/>
+  <!-- Convert an xacro and put on parameter server -->
+  <!-- <param name="robot_description" command="$(find xacro)/xacro.py $(find tobi_description)/urdf/tobi_nav.urdf.xacro" /> -->
+
+  <!-- Spawn a robot into Gazebo -->
+  <!-- <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model tobi" /> -->
+</launch>
