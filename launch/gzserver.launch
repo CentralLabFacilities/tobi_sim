@@ -1,5 +1,13 @@
 <launch>
-  <node name="gzserver" pkg="gazebo_ros" type="gzserver" respawn="false" output="screen"/>
+  <!-- set use_sim_time flag -->
+  <param name="/use_sim_time" value="true" />
+
+  <arg name="world" value="$(env NAVIGATION_WORLD)"/>
+
+  <node name="gzserver" pkg="gazebo_ros" type="gzserver" respawn="false" output="screen"
+    args="$(arg world)"
+
+  />
   <!-- Convert an xacro and put on parameter server -->
   <!-- <param name="robot_description" command="$(find xacro)/xacro.py $(find tobi_description)/urdf/tobi_nav.urdf.xacro" /> -->
 
