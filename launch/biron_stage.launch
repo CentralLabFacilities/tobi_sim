@@ -9,7 +9,7 @@
     <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 1 base_laser_link laser_front 100" />
 
     <!-- provide laser scans on the same topic as on the real robot -->
-    <node pkg="topic_tools" type="relay" name="base_scan_relay" args="/base_scan /scan_merged" />
+    <node pkg="topic_tools" type="relay" name="base_scan_relay" args="/base_scan /scan_filtered" />
     <node pkg="topic_tools" type="relay" name="scan_relay" args="/base_scan /scan" />
 
 </launch>
