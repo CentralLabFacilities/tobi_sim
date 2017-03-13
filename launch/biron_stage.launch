@@ -13,5 +13,5 @@
     <node pkg="topic_tools" type="relay" name="base_scan_relay_merged" args="/base_scan /scan_merged" />
     <node pkg="topic_tools" type="relay" name="scan_relay" args="/base_scan /scan" />
     <node pkg="topic_tools" type="relay" name="scan_relay_max" args="/base_scan /scan_max" />
-    <node pkg="rostopic" type="rostopic" name="init_pose_pub" args="pub /initialpose geometry_msgs/PoseWithCovarianceStamped &quot; header: seq: 0 stamp: secs: 0 nsecs: 0 frame_id: '' pose: pose: position: {x: 1.786, y: 3.047, z: 0.0} orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.280} covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]&quot;"/>
+    <node pkg="rostopic" type="rostopic" name="init_pose_pub" args="pub /initialpose geometry_msgs/PoseWithCovarianceStamped &quot; header: seq: 0 stamp: secs: 0 nsecs: 0 frame_id: '' pose: pose: position: {x: 1.786, y: 3.047, z: 0.0} orientation: {x: 0.0, y: 0.0, z: 1.280, w: 0.0} covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]&quot;"/>
 </launch>
