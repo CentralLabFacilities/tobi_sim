@@ -1,0 +1,80 @@
+<launch>
+
+	<!-- The semantic description that corresponds to the URDF -->
+	<param name="robot_description_semantic" textfile="$(find tobi_2of4_moveit_config)/config/tobi_2of4.srdf" />
+
+	<!-- Load default settings for kinematics -->
+	<group ns="robot_description_kinematics">
+		<rosparam command="load" file="$(find tobi_2of4_moveit_config)/config/kinematics_ikfast.yaml"/>
+	</group>
+
+	<!-- augmented pnp usage -->
+	<arg name="augmented" default="false" />
+
+	<!-- move_group settings -->
+	<arg name="allow_trajectory_execution" default="true"/>
+	<arg name="fake_execution" default="false"/>
+	<arg name="max_safe_path_cost" default="1"/>
+	<arg name="jiggle_fraction" default="0.05" />
+	<arg name="publish_monitored_planning_scene" default="true"/>
+
+	<!-- Planning Functionality -->
+	<include ns="move_group" file="$(find tobi_2of4_moveit_config)/launch/planning_pipeline.launch.xml">
+		<arg name="pipeline" value="ompl" />
+	</include>
+
+	<!-- Trajectory Execution Functionality -->
+	<include ns="move_group" file="$(find tobi_2of4_moveit_config)/launch/trajectory_execution.launch.xml" if="$(arg allow_trajectory_execution)">
+		<arg name="moveit_manage_controllers" value="true"/>
+		<arg name="moveit_controller_manager" value="tobi"/>
+	</include>
+
+	<!-- Sensors Functionality -->
+	<!-- include ns="move_group" file="$(find tobi_2of4_moveit_config)/launch/sensor_manager.launch.xml" if="$(arg allow_trajectory_execution)">
+		<arg name="moveit_sensor_manager" value="tobi" />
+	</include-->
+
+	<!-- Start the actual move_group node/action server -->
+	<node name="move_group" pkg="moveit_ros_move_group" type="move_group" respawn="true" output="screen">
+		<!-- Set the display variable, in case OpenGL code is used internally -->
+		<env name="DISPLAY" value="$(optenv DISPLAY :0)" />
+
+		<param name="allow_trajectory_execution" value="$(arg allow_trajectory_execution)"/>
+		<param name="max_safe_path_cost" value="$(arg max_safe_path_cost)"/>
+		<param name="jiggle_fraction" value="$(arg jiggle_fraction)" />
+
+		<!-- MoveGroup capabilities to load -->
+
+		<param unless="$(arg augmented)" name="capabilities" value="move_group/MoveGroupCartesianPathService
+							move_group/MoveGroupExecuteService
+							move_group/MoveGroupKinematicsService
+							move_group/MoveGroupMoveAction
+							move_group/MoveGroupPlanService
+							move_group/MoveGroupQueryPlannersService
+							move_group/MoveGroupStateValidationService
+							move_group/MoveGroupGetPlanningSceneService
+							move_group/ClearOctomapService
+						" />
+		<param if="$(arg augmented)" name="capabilities" value="move_group/MoveGroupCartesianPathService
+							move_group/MoveGroupExecuteService
+							move_group/MoveGroupKinematicsService
+					move_group/MoveGroupAugmentedPickPlaceAction
+							move_group/MoveGroupMoveAction
+							move_group/MoveGroupPlanService
+							move_group/MoveGroupQueryPlannersService
+							move_group/MoveGroupStateValidationService
+							move_group/MoveGroupGetPlanningSceneService
+							move_group/ClearOctomapService
+						" />
+			<!--param if="$(arg augmented)" name="disable_capabilities" value="move_group/MoveGroupPickPlaceAction" /-->
+
+
+
+		<!-- Publish the planning scene of the physical robot so that rviz plugin can know actual robot -->
+		<param name="planning_scene_monitor/publish_planning_scene" value="$(arg publish_monitored_planning_scene)" />
+		<param name="planning_scene_monitor/publish_geometry_updates" value="$(arg publish_monitored_planning_scene)" />
+		<param name="planning_scene_monitor/publish_state_updates" value="$(arg publish_monitored_planning_scene)" />
+		<param name="planning_scene_monitor/publish_transforms_updates" value="$(arg publish_monitored_planning_scene)" />
+	</node>
+
+	</launch>

@@ -1,12 +1,30 @@
 <launch>
-  <!-- set use_sim_time flag -->
-  <param name="/use_sim_time" value="true" />
 
-  <arg name="world" value="$(env NAVIGATION_WORLD)"/>
+  <arg name="world_path" default="$(find tobi_sim)/worlds"/>
+  <arg name="world" default="sim"/>
 
-  <node name="gzserver" pkg="gazebo_ros" type="gzserver" respawn="false" output="screen"
-    args="$(arg world)"
+  <arg name="paused" default="true"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="physics" default="ode"/>
 
+  <arg name="use_clock_frequency" default="false"/>
+  <arg name="pub_clock_frequency" default="100"/>
+
+  <!-- Config handling -->
+  <group if="$(arg use_sim_time)">
+    <param name="/use_sim_time" value="true" />
+  </group>
+
+  <arg unless="$(arg paused)" name="command_arg1" value=""/>
+  <arg     if="$(arg paused)" name="command_arg1" value="-u"/>
+
+  <group if="$(arg use_clock_frequency)">
+    <param name="gazebo/pub_clock_frequency" value="$(arg pub_clock_frequency)" />
+  </group>
+
+
+  <node name="gazebo" pkg="gazebo_ros" type="gzserver" respawn="false" output="screen"
+    args="$(arg command_arg1) -e $(arg physics) $(arg world_path)/$(arg world).world"
   />
   <!-- Convert an xacro and put on parameter server -->
   <!-- <param name="robot_description" command="$(find xacro)/xacro.py $(find tobi_description)/urdf/tobi_nav.urdf.xacro" /> -->
