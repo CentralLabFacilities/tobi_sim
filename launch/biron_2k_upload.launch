@@ -3,6 +3,11 @@
 	<!-- Load universal robot description format (URDF) -->
 	<param name="robot_description" command="$(find xacro)/xacro.py '$(find tobi_description)/urdf/tobi_2of4_kinect.urdf.xacro'"/>
 
+	<!-- Default Sim Controller settigns -->
+	<rosparam command="load" file="$(find katana_arm_gazebo)/config/katana_arm_controller.yaml" />
+	<rosparam command="load" file="$(find katana_arm_gazebo)/config/katana_gripper_controller.yaml" />
+	<rosparam command="load" file="$(find katana_arm_gazebo)/config/joint_state_controller.yaml" />
+
 	<!-- spawn robot in gazebo -->
 	<node name="spawn_biron_model" pkg="gazebo_ros" type="spawn_model" args="$(optenv ROBOT_INITIAL_POSE) -z 0.00 -urdf -param robot_description -model tobi" respawn="false" output="screen"/>
 
@@ -11,5 +16,10 @@
 		<param name="publish_frequency" type="double" value="50.0" />
 		<param name="tf_prefix" type="string" value="" />
 	</node>
+
+	<node pkg="laser_filters" respawn="true" type="scan_to_scan_filter_chain" name="laser_filter">
+        <rosparam command="load" file="$(find tobi_navigation)/config/laser_config_ownfilter.yaml" />
+        <param name="tf_message_filter_target_frame" type="string" value="laser_front" />
+    </node>
 
 </launch>
