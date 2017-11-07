@@ -496,7 +496,7 @@
         <visual name='visual'>
           <geometry>
             <box>
-              <size>3.13719 0.522097 2.95544</size>
+              <size>3.13719 0.522097 2.4</size>
             </box>
           </geometry>
           <material>
@@ -519,7 +519,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <box>
-              <size>3.13719 0.522097 2.95544</size>
+              <size>3.13719 0.522097 2.4</size>
             </box>
           </geometry>
           <surface>
