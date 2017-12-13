@@ -1,18 +1,5 @@
 <launch>
 
-	<!-- Load universal robot description format (URDF) -->
-	<param name="robot_description" textfile="$(find meka_description)/robots/bie.xml"/>
-
-	<!-- Default Sim Controller settigns -->
-	<rosparam command="load" file="$(find meka_description)/config/gazebo_controllers.yaml"/>
-
-	<!-- spawn robot in gazebo -->
-	<node name="spawn_meka_model" pkg="gazebo_ros" type="spawn_model" args="$(optenv ROBOT_INITIAL_POSE) -x 2 -y 2 -z 0.00 -urdf -model meka -param robot_description" respawn="false" output="screen"/>
-
-	<!-- Robot state publisher -->
-	<node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
-		<param name="publish_frequency" type="double" value="50.0" />
-		<param name="tf_prefix" type="string" value="" />
-	</node>
+	<include file="$(find meka_description)/launch/m3bie_gazebo_upload.launch" />
 
 </launch>

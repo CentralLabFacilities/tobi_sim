@@ -1,14 +1,6 @@
 <launch>
-
-	<!-- Default Controllers -->
-	<rosparam command="load" file="$(find meka_description)/config/gazebo_controllers.yaml"/>
-
-	<!-- Controller manager parameters -->
-	<param name="controller_manager/mechanism_statistics_publish_rate" value="1.0" />
-	<param name="controller_manager/joint_state_publish_rate" value="100.0" />
-
-	<!-- Controllers that come up loaded -->
-	<node name="default_loaded_controllers_spawner" pkg="controller_manager" type="spawner" output="screen" args="joint_state_controller head_controller zlift_controller body_controller arm_r_controller hand_r_controller arm_l_controller hand_l_controller"></node>
+    
+    <include file="$(find meka_description)/launch/m3bie_gazebo_controllers.launch" />
 
 	<!-- joint state publisher without gui -->
 	<!-- <param name="use_gui" value="false" />
