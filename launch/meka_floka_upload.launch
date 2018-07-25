@@ -1,0 +1,16 @@
+<launch>
+
+  <!-- <node name="meka_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model meka" /> -->
+  <!-- spawner tries to resolve all package urls in comments while xacro is not replacing xacro params in comments.
+    so we have to generate the urdf and remove all comments to be useable with the spawner
+
+    > rosrun xacro xacro bie.urdf.xacro > bie.urdf
+    > xmlstarlet ed -d '//comment()' bie.urdf > bie.xml
+
+  -->
+  <param name="robot_description" textfile="$(find meka_description)/robots/bie_floka.xml"/>
+
+
+  <include file="$(find meka_description)/launch/m3bie_gazebo_upload.launch" />
+
+</launch>
