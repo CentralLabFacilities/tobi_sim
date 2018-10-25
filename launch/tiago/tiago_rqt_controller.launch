@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+   <node pkg="rqt_gui" type="rqt_gui" name="rqt_controller" args="--perspective-file $(find tobi_sim)/config/tiago_control.perspective" />
+</launch>
