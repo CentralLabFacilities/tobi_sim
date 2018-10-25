@@ -1,0 +1,121 @@
+{
+  "keys": {},
+  "groups": {
+    "pluginmanager": {
+      "keys": {
+        "running-plugins": {
+          "type": "repr",
+          "repr": "{u'rqt_joint_trajectory_controller/JointTrajectoryController': [1]}"
+        }
+      },
+      "groups": {
+        "plugin__rqt_robot_monitor__RobotMonitor__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__Robot Monitor": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Robot &Monitor'"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "splitter": {
+                  "type": "repr(QByteArray.hex)",
+                  "repr(QByteArray.hex)": "QtCore.QByteArray('000000ff00000001000000030000008a0000008d000001170100000009010000000200')",
+                  "pretty-print": "                 "
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__image_recognition_rqt__Test Plugin__1": {
+          "keys": {},
+          "groups": {
+            "plugin": {
+              "keys": {
+                "topic_name": {
+                  "type": "repr",
+                  "repr": "u'/xtion/rgb/image_raw'"
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__rqt_joint_trajectory_controller__JointTrajectoryController__1": {
+          "keys": {},
+          "groups": {
+            "plugin": {
+              "keys": {
+                "jtc_name": {
+                  "type": "repr",
+                  "repr": "u'head_controller'"
+                },
+                "cm_ns": {
+                  "type": "repr",
+                  "repr": "u'/controller_manager'"
+                }
+              },
+              "groups": {}
+            },
+            "dock_widget__JointTrajectoryControllerUi": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "True"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'&Joint trajectory controller'"
+                }
+              },
+              "groups": {}
+            }
+          }
+        }
+      }
+    },
+    "mainwindow": {
+      "keys": {
+        "geometry": {
+          "type": "repr(QByteArray.hex)",
+          "repr(QByteArray.hex)": "QtCore.QByteArray('01d9d0cb0002000000000126000000a9000004f80000037c0000012a000000c6000004f40000037800000000000000000780')",
+          "pretty-print": "     &     | *     x     "
+        },
+        "state": {
+          "type": "repr(QByteArray.hex)",
+          "repr(QByteArray.hex)": "QtCore.QByteArray('000000ff00000000fd0000000100000003000003cb0000027efc0100000003fb00000062007200710074005f0072006f0062006f0074005f006d006f006e00690074006f0072005f005f0052006f0062006f0074004d006f006e00690074006f0072005f005f0031005f005f0052006f0062006f00740020004d006f006e00690074006f00720100000000000000f60000000000000000fb000000b4007200710074005f006a006f0069006e0074005f007400720061006a006500630074006f00720079005f0063006f006e00740072006f006c006c00650072005f005f004a006f0069006e0074005400720061006a006500630074006f007200790043006f006e00740072006f006c006c00650072005f005f0031005f005f004a006f0069006e0074005400720061006a006500630074006f007200790043006f006e00740072006f006c006c00650072005500690100000000000003cb0000011f01000003fb0000004e0069006d006100670065005f007200650063006f0067006e006900740069006f006e005f007200710074005f005f005400650073007400200050006c007500670069006e005f005f0031005f005f0100000182000002490000000000000000000003cb0000000000000004000000040000000800000008fc00000001000000030000000100000036004d0069006e0069006d0069007a006500640044006f0063006b00570069006400670065007400730054006f006f006c0062006100720000000000ffffffff0000000000000000')",
+          "pretty-print": "                 brqt_robot_monitor__RobotMonitor__1__Robot Monitor           rqt_joint_trajectory_controller__JointTrajectoryController__1__JointTrajectoryControllerUi          Nimage_recognition_rqt__Test Plugin__1__                            6MinimizedDockWidgetsToolbar        "
+        }
+      },
+      "groups": {
+        "toolbar_areas": {
+          "keys": {
+            "MinimizedDockWidgetsToolbar": {
+              "type": "repr",
+              "repr": "8"
+            }
+          },
+          "groups": {}
+        }
+      }
+    }
+  }
+}
