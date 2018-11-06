@@ -56,4 +56,8 @@
      <group if="$(arg tuck_arm)">
        <node name="tuck_arm" pkg="tiago_gazebo" type="tuck_arm.py" output="screen"/>
      </group>
+    
+    <include file="$(find tiago_clf_nav)/launch/voxel_filter.launch"> 
+       <arg name="topic"    value="/xtion/depth_registered/points" />
+    </include>
 </launch>
