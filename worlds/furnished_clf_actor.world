@@ -6914,7 +6914,7 @@
       <pose frame=''>0.679288 5.42791 0 0 -0 0</pose>
     </model>
     <actor name="Olf">
-      <pose>2.5 1 1.25 1.57 0 -1.57</pose>
+      <pose>2.5 1 0.98 1.57 0 -1.57</pose>
       <skin>
         <filename>moonwalk.dae</filename>
         <scale>1.0</scale>
