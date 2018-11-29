@@ -6,8 +6,8 @@
     <arg name="camera" value="xtion" />
     <arg name="publish_tf" value="true" />
     <arg name="depth_registration" value="true" />
-    <arg name="rgb_camera_info_url" value="file://$(find tobi_bringup)/config/rgb.yaml" />
-    <arg name="depth_camera_info_url" value="file://$(find tobi_bringup)/config/depth.yaml" />
+    <arg name="rgb_camera_info_url" value="file://$(find tobi_sim)/config/rgb.yaml" />
+    <arg name="depth_camera_info_url" value="file://$(find tobi_sim)/config/depth.yaml" />
   </include>
 
   <!--node pkg="nodelet" type="nodelet" respawn="true" name="pcl_manager" args="manager" output="screen" /-->
