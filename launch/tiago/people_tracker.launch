@@ -9,7 +9,7 @@
     <arg name="bayes_people_pose_array" default="/people_tracker/pose_array" />
     <arg name="bayes_people_people" default="/people_tracker/people" />
     <arg name="bayes_people_marker" default="/people_tracker/marker_array" />
-    <arg name="scan" default="/scan" />
+    <arg name="scan" default="/scan_clf" />
 
     <arg name="machine" default="localhost" />
     <arg name="user" default="" />
