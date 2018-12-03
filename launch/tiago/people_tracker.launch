@@ -37,7 +37,7 @@
 
     <param name="leg_detector/fixed_frame" value="base_footprint" />
     <include file="$(find leg_detector)/launch/leg_detector.launch">
-        <!--arg name="scan" value="$(arg scan)"/-->
+        <arg name="scan" value="$(arg scan)" />
     </include>
 
 </launch> 
