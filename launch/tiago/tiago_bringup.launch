@@ -2,16 +2,25 @@
 
 <launch>
     <arg name="robot" default="steel"/>
+    <arg name="arm"  default="$(eval {'iron': False}.get(arg('robot'), True))"/>
+    <arg name="end_effector"  default="$(eval {'iron': 'false', 'steel': 'pal-gripper', 'titanium': 'pal-hey5'}.get(arg('robot'), 'pal-gripper'))"/>
+    <arg name="ft_sensor"  default="$(eval {'titanium': 'schunk-ft'}.get(arg('robot'), 'false'))"/>
+    <arg name="laser_model"  default="sick-571"/>
+    <arg name="camera_model"  default="asus-xtion"/>
     <arg name="public_sim" default="true"/>
     <arg name="use_moveit_camera" default="false"/>
     <arg name="tuck_arm" default="true"/>
     <arg name="tf_prefix" default=""/>
 
-     <!-- Load default controllers -->
-     <include file="$(find tiago_controller_configuration_gazebo)/launch/$(arg robot)_controllers.launch">
-      <arg name="public_sim" value="$(arg public_sim)"/>
-      <arg name="tf_prefix" value="$(arg tf_prefix)"/>
-      <arg name="use_moveit_camera" value="$(arg use_moveit_camera)"/>
+    <!-- Joint trajectory and diff drive controllers -->
+    <rosparam command="load" file="$(find tiago_controller_configuration_gazebo)/config/mobile_base_controller.yaml"/>
+    <include file="$(find tiago_controller_configuration_gazebo)/launch/tiago_controllers.launch">
+        <arg name="arm" value="$(arg arm)"/>
+        <arg name="end_effector" value="$(arg end_effector)"/>
+        <arg name="ft_sensor" value="$(arg ft_sensor)"/>
+        <arg name="laser_model" value="$(arg laser_model)"/>
+        <arg name="camera_model" value="$(arg camera_model)"/>
+        <arg name="use_moveit_camera" value="$(arg use_moveit_camera)"/>
     </include>
 
     <!-- Robot state publisher -->
@@ -36,6 +45,13 @@
         <arg name="cmd_vel_out" value="/twist_mux/cmd_vel" />
       </include>
     </group>
+    
+     <!-- Dynamic footprint -->
+     <group unless="$(arg public_sim)">
+         <include file="$(find tiago_bringup)/launch/dynamic_footprint.launch">
+            <arg name="arm" value="$(arg arm)"/>
+         </include>
+     </group>
 
     <!-- Speed limit -->
     <group unless="$(arg public_sim)">
