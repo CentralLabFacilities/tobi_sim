@@ -10,6 +10,7 @@ Panels:
         - /Planning1/Base1/Global1/Plan1
         - /Planning1/Base1/Global1/Costmap1
         - /Mapping1/Map1
+        - /LocationArray1
       Splitter Ratio: 0.48756218
     Tree Height: 96
   - Class: rviz/Selection
@@ -20,6 +21,7 @@ Panels:
       - /2D Nav Goal1
       - /Publish Point1
       - /Add Viewpoint1
+      - /Add Location1
     Name: Tool Properties
     Splitter Ratio: 0.588679016
   - Class: rviz/Views
@@ -683,6 +685,7 @@ Visualization Manager:
           Pose: true
           Pose Graph: true
           Value: true
+        LocationArray: true
         Mapping:
           Map: true
           Map (with Virtual Obstacles): true
@@ -743,6 +746,14 @@ Visualization Manager:
       Unreliable: false
       Value: true
       show Labels: true
+    - Class: mappr_rviz/LocationArray
+      Enabled: true
+      Label size: 1
+      Name: LocationArray
+      Topic: /mappr_server/current_locations
+      Unreliable: false
+      Value: true
+      show Labels: true
   Enabled: true
   Global Options:
     Background Color: 161; 161; 161
@@ -766,6 +777,8 @@ Visualization Manager:
       Topic: clicked_point
     - Class: mappr_rviz/Add_Viewpoint
       Name: viewpoint
+    - Class: mappr_rviz/Add_Location
+      Name: location
   Value: true
   Views:
     Current:
