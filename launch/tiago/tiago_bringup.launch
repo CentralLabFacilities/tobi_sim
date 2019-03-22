@@ -75,4 +75,6 @@
     <include file="$(find tiago_clf_nav)/launch/voxel_filter.launch"> 
        <arg name="topic"    value="/xtion/depth_registered/points" />
     </include>
+
+    <rosparam file="$(find robocup_data)/play_motion/motions.yaml" command="load" />
 </launch>
