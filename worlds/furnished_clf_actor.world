@@ -864,10 +864,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -1269,10 +1269,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -1674,10 +1674,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -2079,10 +2079,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -2484,10 +2484,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -2889,10 +2889,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -3294,10 +3294,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -3699,10 +3699,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -4104,10 +4104,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -4509,10 +4509,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -4914,10 +4914,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -5319,10 +5319,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -5724,10 +5724,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -6129,10 +6129,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
@@ -6534,10 +6534,10 @@
         <collision name='surface'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.7 0 -0 0</pose>
+          <pose frame=''>0 0 0.8 0 -0 0</pose>
           <geometry>
             <box>
-              <size>1.6 0.8 0.03</size>
+              <size>1.6 0.7 0.03</size>
             </box>
           </geometry>
           <surface>
