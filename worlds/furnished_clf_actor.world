@@ -6924,6 +6924,11 @@
         <scale>1.000000</scale>
         <interpolate_x>true</interpolate_x>
       </animation>
+      <animation name="waving">
+        <filename>/vol/robocup/tiago-sim/share/ros_actor_cmd_vel_plugin/res/waving.dae</filename>
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
       <plugin name="actor1_plugin" filename="libros_actor_cmd_vel_plugin.so">
         <animation_factor>5.1</animation_factor>
       </plugin>
