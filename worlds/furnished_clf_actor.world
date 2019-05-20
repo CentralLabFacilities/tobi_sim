@@ -6952,18 +6952,18 @@
         </material>
       </visual>
       <collision name="left_side">
-        <pose>0.4 -0.195 1.0 0 0 0</pose>
+        <pose>0.4 -0.125 1.0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.02 0.4 2.0</size>
+            <size>0.02 0.26 2.0</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual2">
-        <pose>0.4 -0.195 1.0 0 0 0</pose>
+        <pose>0.4 -0.125 1.0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.02 0.4 2.0</size>
+            <size>0.02 0.26 2.0</size>
           </box>
         </geometry>
         <material>
@@ -6974,18 +6974,18 @@
         </material>
       </visual>
       <collision name="right_side">
-        <pose>-0.4 -0.195 1.0 0 0 0</pose>
+        <pose>-0.4 -0.125 1.0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.02 0.4 2.0</size>
+            <size>0.02 0.26 2.0</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual3">
-        <pose>-0.4 -0.195 1.0 0 0 0</pose>
+        <pose>-0.4 -0.125 1.0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.02 0.4 2.0</size>
+            <size>0.02 0.26 2.0</size>
           </box>
         </geometry>
         <material>
@@ -6996,40 +6996,18 @@
         </material>
       </visual>
       <collision name="bottom">
-        <pose>0 -0.195 0.03 0 0 0</pose>
+        <pose>0 -0.125 0.09 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.78 0.4 0.06</size>
+            <size>0.78 0.26 0.06</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual4">
-        <pose>0 -0.195 0.03 0 0 0</pose>
+        <pose>0 -0.125 0.09 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.78 0.4 0.06</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-        </material>
-      </visual>
-      <collision name="top">
-        <pose>0 -0.195 1.99 0 0 0</pose>
-        <geometry>
-          <box>
-            <size>0.78 0.4 0.02</size>
-          </box>
-        </geometry>
-      </collision>
-      <visual name="visual5">
-        <pose>0 -0.195 1.99 0 0 0</pose>
-        <geometry>
-          <box>
-            <size>0.78 0.4 0.02</size>
+            <size>0.78 0.26 0.06</size>
           </box>
         </geometry>
         <material>
@@ -7040,18 +7018,18 @@
         </material>
       </visual>
       <collision name="low_shelf">
-        <pose>0 -0.195 0.43 0 0 0</pose>
+        <pose>0 -0.125 0.41 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.78 0.4 0.02</size>
+            <size>0.78 0.26 0.02</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual6">
-        <pose>0 -0.195 0.43 0 0 0</pose>
+        <pose>0 -0.125 0.41 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.78 0.4 0.02</size>
+            <size>0.78 0.26 0.02</size>
           </box>
         </geometry>
         <material>
@@ -7062,18 +7040,18 @@
         </material>
       </visual>
       <collision name="high_shelf">
-        <pose>0 -0.195 0.8 0 0 0</pose>
+        <pose>0 -0.125 0.76 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.78 0.4 0.02</size>
+            <size>0.78 0.26 0.02</size>
           </box>
         </geometry>
       </collision>
       <visual name="visual7">
-        <pose>0 -0.195 0.8 0 0 0</pose>
+        <pose>0 -0.125 0.76 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.78 0.4 0.02</size>
+            <size>0.78 0.26 0.02</size>
           </box>
         </geometry>
         <material>
@@ -7084,18 +7062,18 @@
         </material>
       </visual>
       <collision name="c_shelf3">
-        <pose>0 -0.195 1.19 0 0 0</pose>
+        <pose>0 -0.125 1.05 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.78 0.4 0.02</size>
+            <size>0.78 0.26 0.02</size>
           </box>
         </geometry>
       </collision>
       <visual name="v_shelf3">
-        <pose>0 -0.195 1.19 0 0 0</pose>
+        <pose>0 -0.125 1.05 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.78 0.4 0.02</size>
+            <size>0.78 0.26 0.02</size>
           </box>
         </geometry>
         <material>
@@ -7106,18 +7084,62 @@
         </material>
       </visual>
       <collision name="c_shelf4">
-        <pose>0 -0.195 1.59 0 0 0</pose>
+        <pose>0 -0.125 1.4 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.78 0.4 0.02</size>
+            <size>0.78 0.26 0.02</size>
           </box>
         </geometry>
       </collision>
       <visual name="v_shelf4">
-        <pose>0 -0.195 1.59 0 0 0</pose>
+        <pose>0 -0.125 1.4 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.78 0.4 0.02</size>
+            <size>0.78 0.26 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Wood</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="c_shelf5">
+        <pose>0 -0.125 1.685 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.78 0.26 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="v_shelf5">
+        <pose>0 -0.125 1.685 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.78 0.26 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Wood</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="top">
+        <pose>0 -0.125 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.78 0.26 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual5">
+        <pose>0 -0.125 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.78 0.26 0.02</size>
           </box>
         </geometry>
         <material>
