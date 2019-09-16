@@ -14,7 +14,7 @@
     <include file="$(find tiago_gazebo)/launch/tiago_spawn.launch">
       <arg name="arm"  value="true"/>
       <arg name="end_effector"  value="pal-gripper"/>
-      <arg name="ft_sensor"  value="false"/>
+      <arg name="ft_sensor"  value="schunk-ft"/>
       <arg name="laser_model"  value="sick-571"/>
       <arg name="camera_model"  value="asus-xtion"/>
       <arg name="gzpose" value="$(arg gzpose)"/>
