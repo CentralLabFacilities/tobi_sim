@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <model name="clf_shelf">
+        <static>true</static>
+        <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://clf_office_chair/meshes/clf_office_chair.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <material>
+                    <ambient>0.21 0.21 0.21 1.0</ambient>
+                    <diffuse>0.21 0.21 0.21 1.0</diffuse>
+                    <specular>0 0 0 0</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+                <geometry>
+                    <mesh>
+                        <uri>model://clf_office_chair/meshes/clf_office_chair.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+</sdf>

@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="clf_table_long">
+    <static>true</static>
+    <link name="link">
+      <collision name="wood_collision">
+        <geometry>
+          <mesh>
+            <uri>model://clf_table_long/meshes/clf_table_long_wood.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="wood_visual">
+        <material>
+          <ambient>0.92 0.68 0.3 1.0</ambient>
+          <diffuse>0.92 0.68 0.3 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>model://clf_table_long/meshes/clf_table_long_wood.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="metal_collision">
+        <geometry>
+          <mesh>
+            <uri>model://clf_table_long/meshes/clf_table_long_metal.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="metal_visual">
+        <material>
+          <ambient>0.5 0.5 0.5 1.0</ambient>
+          <diffuse>0.5 0.5 0.5 1.0</diffuse>
+          <specular>0.5 0.5 0.5 64</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>model://clf_table_long/meshes/clf_table_long_metal.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

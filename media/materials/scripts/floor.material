@@ -1,0 +1,13 @@
+material CLF/Floor
+{
+  receive_shadows on
+
+  technique
+  {
+    pass
+    {
+      ambient 0.49 0.49 0.49 1.0
+      diffuse 0.49 0.49 0.49 1.0
+    }
+  }
+}

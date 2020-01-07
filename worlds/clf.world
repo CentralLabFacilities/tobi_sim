@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<!--
+  Detailed version of the central lab facilities
+-->
+<sdf version="1.6">
+  <world name="clf">
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.4 0.4 0.4 1</diffuse>
+      <specular>0.4 0.4 0.4 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <!-- Actors to include -->
+
+    <!-- Models to include -->
+    <include>
+      <uri>model:///clf_walls</uri>
+      <name>walls</name>
+      <pose>-4.5 4 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_cupboard_a</uri>
+      <name>cupboard_a</name>
+      <pose>-4.25 0.1 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_cupboard_b</uri>
+      <name>cupboard_b</name>
+      <pose>5.9 -1.9 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_shelf</uri>
+      <name>shelf</name>
+      <pose>6.35 3.85 0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_tiago_box</uri>
+      <name>tiago_box</name>
+      <pose>-1.35 3.5 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_flowerpot</uri>
+      <name>flowerpot</name>
+      <pose>-0.42 3.5 0.03 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_bin</uri>
+      <name>bin_a</name>
+      <pose>5.45 0.27 -0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_bin</uri>
+      <name>bin_b</name>
+      <pose>-2.9 3.2 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_grasp_table</uri>
+      <name>grasp_table</name>
+      <pose>0.75 3.0 -0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_short</uri>
+      <name>table_short_leroy</name>
+      <pose>-4.09 -3.2 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_short</uri>
+      <name>table_short_a</name>
+      <pose>5.15 3.57 -0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_short</uri>
+      <name>table_short_b</name>
+      <pose>2.34 3.59 -0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_short</uri>
+      <name>table_short_c</name>
+      <pose>8.33 1.61 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_short</uri>
+      <name>table_short_d</name>
+      <pose frame=''>8.13 0.61 0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_short</uri>
+      <name>table_short_e</name>
+      <pose>6.93 0.61 0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_david</name>
+      <pose>-1.4 -0.16 0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_buildor</name>
+      <pose>2.58 -2.99 0 0 -0 -3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_thorben</name>
+      <pose>2.58 -1.39 0 0 -0 -3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_markus</name>
+      <pose>1.78 -1.39 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_a</name>
+      <pose>1.78 -2.99 -0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_b</name>
+      <pose>-1 -2.96 0 0 -0 -3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_julia</name>
+      <pose>-1 -1.36 0 0 -0 -3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_jan</name>
+      <pose>-1.8 -1.36 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_c</name>
+      <pose>-1.8 -2.96 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_one</name>
+      <pose>-0.4 -1 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_two</name>
+      <pose>-0.4 -1.77 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_three</name>
+      <pose>-0.4 -2.6 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_four</name>
+      <pose>-0.4 -3.37 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_five</name>
+      <pose>1.1 -1 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_six</name>
+      <pose>1.1 -1.77 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_seven</name>
+      <pose>1.1 -2.6 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_eight</name>
+      <pose>1.1 -3.37 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_nine</name>
+      <pose>-2.2 -2.7 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_ten</name>
+      <pose>-2.2 -1.33 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_eleven</name>
+      <pose>3.08 -2.6 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_twelve</name>
+      <pose>3.08 -3.37 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_david</name>
+      <pose>7.6 1.6 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_one</name>
+      <pose>-1.08 -0.85 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_two</name>
+      <pose>-1.08 -1.9 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_three</name>
+      <pose>-1.08 -2.42 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_four</name>
+      <pose>-1.08 -3.45 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_five</name>
+      <pose>-1.7 -0.85 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_six</name>
+      <pose>-1.7 -1.9 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_seven</name>
+      <pose>-1.7 -2.42 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_eight</name>
+      <pose>-1.7 -3.45 0.22 0 0 0</pose>
+    </include>
+
+  </world>
+</sdf>

@@ -1,0 +1,19 @@
+material CLF/Table
+{
+  receive_shadows on
+
+  technique
+  {
+    pass
+    {
+      ambient 0.13 0.13 0.13 1.0
+      diffuse 0.13 0.13 0.13 1.0
+
+      texture_unit
+      {
+        texture granite.jpg
+        scale 0.033 0.033
+      }
+    }
+  }
+}

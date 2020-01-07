@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <model name="clf_shelf">
+        <static>true</static>
+        <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://clf_shelf/meshes/clf_shelf.obj</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <material>
+                    <ambient>0.36 0.035 0.035 1.0</ambient>
+                    <diffuse>0.36 0.035 0.035 1.0</diffuse>
+                    <specular>0 0 0 0</specular>
+                    <emissive>0 0 0 1</emissive>
+                </material>
+                <geometry>
+                    <mesh>
+                        <uri>model://clf_shelf/meshes/clf_shelf.obj</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+</sdf>

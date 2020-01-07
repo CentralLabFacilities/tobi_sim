@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="clf_flowerpot">
+    <static>true</static>
+    <link name="link">
+    <!--   Collision   -->
+      <collision name="pot_bottom_collision">
+        <geometry>
+          <mesh>
+            <uri>model://clf_flowerpot/meshes/clf_flowerpot_pot_bottom.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="pot_top_collision">
+        <geometry>
+          <mesh>
+            <uri>model://clf_flowerpot/meshes/clf_flowerpot_pot_top.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="dirt_collision">
+        <geometry>
+          <mesh>
+            <uri>model://clf_flowerpot/meshes/clf_flowerpot_dirt.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="plant_collision">
+        <geometry>
+          <mesh>
+            <uri>model://clf_flowerpot/meshes/clf_flowerpot_plant.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!--    Visual    -->
+      <visual name="pot_bottom_visual">
+        <material>
+          <ambient>0.16 0.16 0.16 1.0</ambient>
+          <diffuse>0.16 0.16 0.16 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>model://clf_flowerpot/meshes/clf_flowerpot_pot_bottom.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="pot_top_visual">
+        <material>
+          <ambient>0.64 0.43 0.22 1.0</ambient>
+          <diffuse>0.64 0.43 0.22 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>model://clf_flowerpot/meshes/clf_flowerpot_pot_top.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="dirt_visual">
+        <material>
+          <ambient>0.38 0.22 0.06 1.0</ambient>
+          <diffuse>0.38 0.22 0.06 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      <geometry>
+        <mesh>
+          <uri>model://clf_flowerpot/meshes/clf_flowerpot_dirt.dae</uri>
+        </mesh>
+      </geometry>
+    </visual>
+      <visual name="plant_visual">
+        <material>
+          <ambient>0.27 0.19 0.1 1.0</ambient>
+          <diffuse>0.27 0.19 0.1 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      <geometry>
+        <mesh>
+          <uri>model://clf_flowerpot/meshes/clf_flowerpot_plant.dae</uri>
+        </mesh>
+      </geometry>
+    </visual>
+    </link>
+  </model>
+</sdf>

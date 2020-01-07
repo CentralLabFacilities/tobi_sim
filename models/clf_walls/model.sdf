@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="clf_walls">
+    <static>true</static>
+    <link name="link">
+      <!--   Collision   -->
+      <collision name="walls_collision">
+        <geometry>
+          <mesh>
+            <uri>model://clf_walls/meshes/clf_walls.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="floor_collision">
+        <geometry>
+          <mesh>
+            <uri>model://clf_walls/meshes/clf_floor.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="doors_metal_collision">
+        <geometry>
+          <mesh>
+            <uri>model://clf_walls/meshes/clf_walls_doors_metal.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name="doors_wood_collision">
+        <geometry>
+          <mesh>
+            <uri>model://clf_walls/meshes/clf_walls_doors_wood.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!--   Visual   -->
+      <visual name="walls_visual">
+        <material>
+          <ambient>1 1 1 1.0</ambient>
+          <diffuse>1 1 1 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0.1 0.1 0.1 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>model://clf_walls/meshes/clf_walls.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="floor_visual">
+        <material>
+          <script>
+            <uri>file://materials/scripts/floor.material</uri>
+            <name>CLF/Floor</name>
+          </script>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>model://clf_walls/meshes/clf_floor.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="doors_metal_visual">
+        <material>
+          <ambient>0.13 0.13 0.13 1.0</ambient>
+          <diffuse>0.13 0.13 0.13 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0.1 0.1 0.1 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>model://clf_walls/meshes/clf_walls_doors_metal.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="doors_wood_visual">
+        <material>
+          <ambient>0.8 0.51 0.23 1.0</ambient>
+          <diffuse>0.8 0.51 0.23 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0.1 0.1 0.1 1</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>model://clf_walls/meshes/clf_walls_doors_wood.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
