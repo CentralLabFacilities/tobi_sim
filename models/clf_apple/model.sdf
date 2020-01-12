@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+<model name="clf_apple">
+  <link name="link">
+    <inertial>
+      <mass>0.025</mass>
+      <inertia>
+        <ixx>0.001</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0.001</iyy>
+        <iyz>0</iyz>
+        <izz>0.001</izz>
+      </inertia>
+    </inertial>
+    <collision name="collision">
+      <geometry>
+        <mesh>
+          <uri>model://clf_apple/meshes/clf_apple.dae</uri>
+        </mesh>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>1.0</mu>
+            <mu2>1.0</mu2>
+          </ode>
+        </friction>
+        <contact>
+          <ode>
+            <kp>10000000.0</kp>
+            <kd>1.0</kd>
+            <min_depth>0.001</min_depth>
+            <max_vel>0.1</max_vel>
+          </ode>
+        </contact>
+      </surface>
+    </collision>
+    <visual name="visual">
+	<material>
+          <ambient>0.67 0.76 0.22 1.0</ambient>
+          <diffuse>0.67 0.76 0.22 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      <geometry>
+        <mesh>
+          <uri>model://clf_apple/meshes/clf_apple.dae</uri>
+        </mesh>
+      </geometry>
+    </visual>
+  </link>
+</model>
+</sdf>

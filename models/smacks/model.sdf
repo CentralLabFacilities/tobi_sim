@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <model name="smacks">
-    <pose>0 0 0 0 0 0</pose>
     <link name="link">
       <inertial>
         <mass>0.025</mass>
@@ -16,9 +15,9 @@
       </inertial>
       <collision name="collision">
         <geometry>
-          <box>
-            <size>0.105 0.072 0.04</size>
-          </box>
+          <mesh>
+            <uri>model://smacks/material/smacks.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <friction>
@@ -38,11 +37,9 @@
         </surface>
       </collision>
       <visual name="visual">
-        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://smacks/material/smacks.dae</uri>
-            <scale>0.5 0.5 0.5</scale>
           </mesh>
         </geometry>
       </visual>
