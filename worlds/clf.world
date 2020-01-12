@@ -291,5 +291,29 @@
       <pose>-1.7 -3.45 0.22 0 0 0</pose>
     </include>
 
+    <include>
+      <uri>model:///smacks</uri>
+      <name>smacks</name>
+      <pose>2.04 3.55 0.88 1.57 -1.57 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_pringles</uri>
+      <name>pringles</name>
+      <pose>2.3 3.5 0.88 0 0 1.57</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_apple</uri>
+      <name>apple</name>
+      <pose>2.55 3.5 0.88 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_baerenmarke</uri>
+      <name>baerenmarke</name>
+      <pose>2.65 3.7 0.88 0 0 0</pose>
+    </include>
+
   </world>
 </sdf>
