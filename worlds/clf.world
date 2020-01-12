@@ -298,6 +298,12 @@
     </include>
 
     <include>
+      <uri>model:///kelloggs</uri>
+      <name>kelloggs</name>
+      <pose>2.75 3.5 0.88 1.57 -1.57 0</pose>
+    </include>
+
+    <include>
       <uri>model:///clf_pringles</uri>
       <name>pringles</name>
       <pose>2.3 3.5 0.88 0 0 1.57</pose>
