@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+<!--  <actor name="clf_actor_waving">-->
+<!--    <skin>-->
+<!--      <filename>model://clf_actor_waving/meshes/clf_actor_waving.dae</filename>-->
+<!--    </skin>-->
+<!--  </actor>-->
+<model name="clf_actor_waving">
+  <static>true</static>
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <mesh>
+          <uri>model://clf_actor_waving/meshes/clf_actor_waving.dae</uri>
+        </mesh>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <mesh>
+          <uri>model://clf_actor_waving/meshes/clf_actor_waving.dae</uri>
+        </mesh>
+      </geometry>
+    </visual>
+  </link>
+</model>
+</sdf>

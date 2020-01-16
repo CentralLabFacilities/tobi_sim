@@ -4,21 +4,55 @@
 -->
 <sdf version="1.6">
   <world name="clf">
+    <light type="point" name="indoor_light">
+      <cast_shadows>false</cast_shadows>
+      <pose>0 0 4 0 0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>100</range>
+        <constant>0.65</constant>
+        <linear>0.00</linear>
+        <quadratic>0.00</quadratic>
+      </attenuation>
+    </light>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
-      <pose>0 0 10 0 0 0</pose>
-      <diffuse>0.4 0.4 0.4 1</diffuse>
-      <specular>0.4 0.4 0.4 1</specular>
+      <pose>-3.5 -0.12 4 0.4 0 -1</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
-        <range>1000</range>
-        <constant>0.9</constant>
-        <linear>0.01</linear>
-        <quadratic>0.001</quadratic>
+        <range>100</range>
+        <constant>0.0</constant>
+        <linear>0.00</linear>
+        <quadratic>0.00</quadratic>
       </attenuation>
-      <direction>-0.5 0.1 -0.9</direction>
     </light>
 
+<!--    <light type="spot" name="spot_light">-->
+<!--      <cast_shadows>true</cast_shadows>-->
+<!--      <pose>0.11 0 4 0.9 0 -0.9</pose>-->
+<!--      <diffuse>0.4 0.4 0.4 1</diffuse>-->
+<!--      <specular>0.4 0.4 0.4 1</specular>-->
+<!--      <spot>-->
+<!--        <inner_angle>0.60</inner_angle>-->
+<!--        <outer_angle>3.00</outer_angle>-->
+<!--        <falloff>1.0</falloff>-->
+<!--      </spot>-->
+<!--    </light>-->
+
     <!-- Actors to include -->
+    <include>
+      <uri>model:///clf_actor</uri>
+      <name>actor_a</name>
+      <pose>6.35 2.89 0 0 0 0.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_actor_waving</uri>
+      <name>actor_b</name>
+      <pose>3.52 2.93 0 0 0 0.73</pose>
+    </include>
 
     <!-- Models to include -->
     <include>
