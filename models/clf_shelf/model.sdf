@@ -1,28 +1,231 @@
 <?xml version="1.0" ?>
-<sdf version="1.6">
-    <model name="clf_shelf">
-        <static>true</static>
-        <link name="link">
-            <collision name="collision">
-                <geometry>
-                    <mesh>
-                        <uri>model://clf_shelf/meshes/clf_shelf.obj</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-            <visual name="visual">
-                <material>
-                    <ambient>0.36 0.035 0.035 1.0</ambient>
-                    <diffuse>0.36 0.035 0.035 1.0</diffuse>
-                    <specular>0 0 0 0</specular>
-                    <emissive>0 0 0 1</emissive>
-                </material>
-                <geometry>
-                    <mesh>
-                        <uri>model://clf_shelf/meshes/clf_shelf.obj</uri>
-                    </mesh>
-                </geometry>
-            </visual>
-        </link>
-    </model>
+<sdf version="1.5">
+  <model name="bookshelf">
+    <static>true</static>
+    <link name="link">
+      <inertial>
+        <mass>1.0</mass>
+      </inertial>
+      <collision name="back_c">
+        <pose>0 0.005 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.8 0.01 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="back_v">
+        <pose>0 0.005 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.8 0.01 2.0</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.36 0.035 0.035 1.0</ambient>
+          <diffuse>0.36 0.035 0.035 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <collision name="left_c">
+        <pose>0.389 -0.125 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.018 0.28 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_v">
+        <pose>0.389 -0.125 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.018 0.28 2.0</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.36 0.035 0.035 1.0</ambient>
+          <diffuse>0.36 0.035 0.035 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <collision name="right_c">
+        <pose>-0.389 -0.125 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.018 0.28 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_v">
+        <pose>-0.389 -0.125 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.018 0.28 2.0</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.36 0.035 0.035 1.0</ambient>
+          <diffuse>0.36 0.035 0.035 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <!--<collision name="floor0_c">
+        <pose>0 -0.125 0.09 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="floor0_v">
+        <pose>0 -0.125 0.09 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.36 0.035 0.035 1.0</ambient>
+          <diffuse>0.36 0.035 0.035 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>-->
+      <collision name="floor1_c">
+        <pose>0 -0.125 0.405 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="floor1_v">
+        <pose>0 -0.125 0.405 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.36 0.035 0.035 1.0</ambient>
+          <diffuse>0.36 0.035 0.035 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <collision name="floor2_c">
+        <pose>0 -0.125 0.76 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="floor2_v">
+        <pose>0 -0.125 0.76 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.36 0.035 0.035 1.0</ambient>
+          <diffuse>0.36 0.035 0.035 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <collision name="floor3_c">
+        <pose>0 -0.125 1.05 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="floor3_v">
+        <pose>0 -0.125 1.05 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.36 0.035 0.035 1.0</ambient>
+          <diffuse>0.36 0.035 0.035 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <collision name="floor4_c">
+        <pose>0 -0.125 1.4 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="floor4_v">
+        <pose>0 -0.125 1.4 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.36 0.035 0.035 1.0</ambient>
+          <diffuse>0.36 0.035 0.035 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <collision name="floor5_c">
+        <pose>0 -0.125 1.685 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="floor5_v">
+        <pose>0 -0.125 1.685 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.36 0.035 0.035 1.0</ambient>
+          <diffuse>0.36 0.035 0.035 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <collision name="floor6_c">
+        <pose>0 -0.125 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="floor6_v">
+        <pose>0 -0.125 2.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.76 0.26 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.36 0.035 0.035 1.0</ambient>
+          <diffuse>0.36 0.035 0.035 1.0</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+    </link>
+  </model>
 </sdf>
