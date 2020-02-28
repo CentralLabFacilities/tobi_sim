@@ -13,10 +13,22 @@
       </collision>
       <collision name="floor_collision">
         <geometry>
-          <mesh>
+          <!--<mesh>
             <uri>model://clf_walls/meshes/clf_floor.dae</uri>
-          </mesh>
+          </mesh>-->
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 100</size>
+          </plane>
         </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
       </collision>
       <collision name="doors_metal_collision">
         <geometry>
@@ -54,9 +66,13 @@
           </script>
         </material>
         <geometry>
-          <mesh>
+          <!--<mesh>
             <uri>model://clf_walls/meshes/clf_floor.dae</uri>
-          </mesh>
+          </mesh>-->
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 100</size>
+          </plane>
         </geometry>
       </visual>
       <visual name="doors_metal_visual">
