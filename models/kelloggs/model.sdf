@@ -6,12 +6,12 @@
       <inertial>
         <mass>0.025</mass>
         <inertia>
-          <ixx>0.001</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>0.001</iyy>
-          <iyz>0</iyz>
-          <izz>0.001</izz>
+          <ixx>0.000014133</ixx> <!-- 1/12*0.025*(0.072^2+0.040^2) -->
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.000026302</iyy> <!-- 1/12*0.025*(0.105^2+0.040^2) -->
+          <iyz>0.0</iyz>
+          <izz>0.000033769</izz> <!-- 1/12*0.025*(0.105^2+0.072^2) -->
         </inertia>
       </inertial>
       <collision name="collision">

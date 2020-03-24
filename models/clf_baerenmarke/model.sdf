@@ -3,7 +3,7 @@
 <model name="clf_baerenmarke">
   <link name="link">
     <inertial>
-      <mass>0.025</mass>
+      <mass>1.0</mass>
       <inertia>
         <ixx>0.001</ixx>
         <ixy>0</ixy>

@@ -3,14 +3,14 @@
 <model name="clf_apple">
   <link name="link">
     <inertial>
-      <mass>0.025</mass>
+      <mass>0.150</mass>
       <inertia>
-        <ixx>0.001</ixx>
+        <ixx>0.000063375</ixx> <!-- 2/5*0.150*(0.065/2)^2 -->
         <ixy>0</ixy>
         <ixz>0</ixz>
-        <iyy>0.001</iyy>
+        <iyy>0.000063375</iyy>
         <iyz>0</iyz>
-        <izz>0.001</izz>
+        <izz>0.000063375</izz>
       </inertia>
     </inertial>
     <collision name="collision">
@@ -37,12 +37,12 @@
       </surface>
     </collision>
     <visual name="visual">
-	<material>
-          <ambient>0.67 0.76 0.22 1.0</ambient>
-          <diffuse>0.67 0.76 0.22 1.0</diffuse>
-          <specular>0 0 0 0</specular>
-          <emissive>0 0 0 1</emissive>
-        </material>
+      <material>
+        <ambient>0.67 0.76 0.22 1.0</ambient>
+        <diffuse>0.67 0.76 0.22 1.0</diffuse>
+        <specular>0 0 0 0</specular>
+        <emissive>0 0 0 1</emissive>
+      </material>
       <geometry>
         <mesh>
           <uri>model://clf_apple/meshes/clf_apple.dae</uri>

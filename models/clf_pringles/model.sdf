@@ -3,21 +3,25 @@
 <model name="clf_pringles">
   <link name="link">
     <inertial>
-      <mass>0.025</mass>
+      <mass>0.200</mass>
       <inertia>
-        <ixx>0.001</ixx>
+        <ixx>0.000984817</ixx> <!-- 1/12*0.200*(3*0.04^2+0.233^2) -->
         <ixy>0</ixy>
         <ixz>0</ixz>
-        <iyy>0.001</iyy>
+        <iyy>0.000984817</iyy> <!-- same as ixx -->
         <iyz>0</iyz>
-        <izz>0.001</izz>
+        <izz>0.00016</izz> <!-- 1/2*0.200*0.04^2 -->
       </inertia>
     </inertial>
     <collision name="collision">
       <geometry>
-        <mesh>
+        <cylinder>
+          <radius>0.040</radius>
+          <length>0.233</length>
+        </cylinder>
+        <!--<mesh>
           <uri>model://clf_pringles/meshes/clf_pringles.dae</uri>
-        </mesh>
+        </mesh>-->
       </geometry>
       <surface>
         <friction>
