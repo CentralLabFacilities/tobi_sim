@@ -5,12 +5,12 @@
     <inertial>
       <mass>1.0</mass>
       <inertia>
-        <ixx>0.001</ixx>
+        <ixx>0.004441667</ixx> <!-- 1/12*1.0*(0.07^2+0.22^2) -->
         <ixy>0</ixy>
         <ixz>0</ixz>
-        <iyy>0.001</iyy>
+        <iyy>0.004441667</iyy> <!-- 1/12*1.0*(0.07^2+0.22^2) -->
         <iyz>0</iyz>
-        <izz>0.001</izz>
+        <izz>0.000816667</izz> <!-- 1/12*1.0*(0.07^2+0.07^2) -->
       </inertia>
     </inertial>
     <collision name="collision">

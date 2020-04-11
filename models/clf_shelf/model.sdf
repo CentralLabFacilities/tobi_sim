@@ -4,7 +4,7 @@
     <static>false</static>
     <link name="link">
       <inertial>
-        <mass>1.0</mass>
+        <mass>35.0</mass>
       </inertial>
       <collision name="back_c">
         <pose>0 0.005 1.0 0 0 0</pose>
