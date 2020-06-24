@@ -2,7 +2,7 @@
 <sdf version='1.6'>
   <model name='clf_cabinet_2'>
     <link name='link'>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose frame=''>0 0 1.2 0 -0 0</pose>
       <inertial>
         <mass>1</mass>
         <inertia>
@@ -92,7 +92,7 @@
         </surface>
       </collision>
     </link>
-    <static>0</static>
+    <static>true</static>
     <allow_auto_disable>1</allow_auto_disable>
   </model>
 </sdf>
