@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-    <model name="clf_shelf">
+    <model name="clf_grasp_table">
         <static>false</static>
         <link name="link">
             <collision name="collision">
