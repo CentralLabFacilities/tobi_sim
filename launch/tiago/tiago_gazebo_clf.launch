@@ -6,6 +6,7 @@
     <arg name="debug" default="false"/>
     <arg name="recording" default="false"/>
     <arg name="verbose" default="true"/>
+    <arg name="paused" default="false"/>
 
     <env name="GAZEBO_MODEL_PATH" value="$(find tobi_sim)/models:$(find tiago_gazebo)/models:$(optenv GAZEBO_MODEL_PATH)"/>
     <env name="GAZEBO_RESOURCE_PATH" value="$(find tobi_sim)/media:$(optenv GAZEBO_RESOURCE_PATH)"/>
@@ -18,6 +19,7 @@
       <arg name="gui" value="$(arg gui)"/>
       <arg name="debug" value="$(arg debug)"/>
       <arg name="recording" value="$(arg recording)"/>
-      <arg name="verbose" value="$(arg verbose)"/>    
+      <arg name="verbose" value="$(arg verbose)"/>
+      <arg name="paused" value="$(arg paused)"/>
     </include>
 </launch>
