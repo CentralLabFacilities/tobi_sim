@@ -8,13 +8,18 @@
    <arg name="P" default="0.0"/>
    <arg name="Y" default="0.0"/>
 
+   <arg name="arm"  default="True"/>
+   <arg name="ft_sensor"  default="schunk-ft"/>
+   <arg name="end_effector"  default="pal-gripper"/>
+   
+
    <arg name="gzpose" default="-x $(arg x) -y $(arg y) -z $(arg z) -R $(arg R) -P $(arg P) -Y $(arg Y)"/>
     
     <!-- spawn robot in simulation -->
     <include file="$(find tiago_gazebo)/launch/tiago_spawn.launch">
-      <arg name="arm"  value="true"/>
-      <arg name="end_effector"  value="pal-gripper"/>
-      <arg name="ft_sensor"  value="schunk-ft"/>
+      <arg name="arm"  value="$(arg arm)"/>
+      <arg name="end_effector"  value="$(arg end_effector)"/>
+      <arg name="ft_sensor"  value="$(arg ft_sensor)"/>
       <arg name="laser_model"  value="sick-571"/>
       <arg name="camera_model"  value="asus-xtion"/>
       <arg name="gzpose" value="$(arg gzpose)"/>
