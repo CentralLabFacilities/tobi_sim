@@ -1,13 +1,31 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
-  <world name="default">
+  <world name="centralLab">
+
+    <light type="point" name="indoor_light">
+      <cast_shadows>false</cast_shadows>
+      <pose>0 0 4 0 0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>100</range>
+        <constant>0.65</constant>
+        <linear>0.00</linear>
+        <quadratic>0.00</quadratic>
+      </attenuation>
+    </light>
+
     <!-- A global light source -->
     <include>
       <uri>model://sun</uri>
     </include>
-    <!-- A ground plane -->
+
+    <!-- Models to include -->
     <include>
-      <uri>model://ground_plane</uri>
+      <uri>model:///clf_walls</uri>
+      <name>walls</name>
+      <pose>-4.5 4 0 0 -0 0</pose>
     </include>
+
   </world>
 </sdf>
