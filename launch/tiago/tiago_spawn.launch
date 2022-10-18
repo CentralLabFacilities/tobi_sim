@@ -10,7 +10,7 @@
 
    <arg name="arm"  default="True"/>
    <arg name="ft_sensor"  default="schunk-ft"/>
-   <arg name="end_effector"  default="schunk-wsg-cupro"/>
+   <arg name="end_effector"  default="schunk-wsg"/>
    
 
    <arg name="gzpose" default="-x $(arg x) -y $(arg y) -z $(arg z) -R $(arg R) -P $(arg P) -Y $(arg Y)"/>
