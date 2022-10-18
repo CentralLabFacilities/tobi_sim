@@ -2,10 +2,10 @@
 
 <launch>
     <arg name="arm" default="True"/>
-    <arg name="end_effector"  default="pal-gripper"/>
+    <arg name="end_effector"  default="schunk-wsg-cupro"/>
     <arg name="ft_sensor"  default="schunk-ft"/>
     <arg name="laser_model"  default="sick-571"/>
-    <arg name="camera_model"  default="orbbec-astra"/>
+    <arg name="camera_model"  default="asus-xtion"/>
     <arg name="wrist_model"  default="wrist-2010"/>
     
     <arg name="public_sim" default="true"/>
