@@ -34,7 +34,7 @@
     <arg name="end_effector" value="schunk-wsg-cupro"/>
     <arg name="ft_sensor" value="schunk-ft"/>
     <arg name="laser_model" value="sick-571"/>
-    <arg name="camera_model" value="$(arg camera_model)"/>
+    <arg name="camera_model" value="asus-xtion"/>
     <arg name="multi"  value=""/>
     <arg name="base_type"  value="pmb2"/>
   </include>
