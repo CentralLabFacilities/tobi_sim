@@ -36,7 +36,7 @@
     <arg name="laser_model" value="sick-571"/>
     <arg name="camera_model" value="asus-xtion"/>
     <arg name="multi"  value=""/>
-    <arg name="base_type"  value="pmb2"/>
+    <!--<arg name="base_type"  value="pmb2"/> -->
   </include>
 
   <!-- Spawn robot in Gazebo -->
