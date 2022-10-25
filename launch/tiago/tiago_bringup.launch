@@ -90,4 +90,7 @@
       <arg name="camera" value="$(arg use_moveit_camera)"/>
     </include>
 
+    <!-- Add Scan relay-->
+    <node name="scan_to_scan_raw_relay" pkg="topic_tools" type="relay" args="scan scan_raw" />
+
 </launch>
