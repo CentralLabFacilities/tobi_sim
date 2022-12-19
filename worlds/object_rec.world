@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<sdf version='1.6'>
+  <world name='object_rec'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>0.5 0.2 -0.6</direction>
+    </light>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='storing_groceries'>
+      <sim_time>7882 789000000</sim_time>
+      <real_time>40 221999123</real_time>
+      <wall_time>1511182585 514481296</wall_time>
+      <iterations>39777</iterations>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>0 0 15 0 1.5 0</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+    <include>
+      <uri>model:///storing_groceries_walls</uri>
+      <name>walls</name>
+      <pose>4.26 2.83 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model:///storing_groceries_door</uri>
+      <name>door</name>
+      <pose>4.26 2.83 0 0 0 0</pose>
+    </include>
+    
+    
+<!--
+  Objects on short table.
+-->
+    <include>
+      <uri>model:///clf_table_short</uri>
+      <name>table_short_b</name>
+      <pose>6.14 2.8 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <uri>model:///smacks</uri>
+      <name>smacks</name>
+      <pose>5.84 2.9 0.8 1.57 -1.57 0</pose>
+    </include>
+    <include>
+      <uri>model:///kelloggs</uri>
+      <name>kelloggs</name>
+      <pose>6.55 2.9 0.8 1.57 -1.57 0</pose>
+    </include>
+    <include>
+      <uri>model:///clf_pringles</uri>
+      <name>pringles</name>
+      <pose>6.1 2.5 0.75 0 0 1.57</pose>
+    </include>
+    <include>
+      <uri>model:///clf_apple</uri>
+      <name>apple</name>
+      <pose>6.35 2.8 0.77 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model:///clf_baerenmarke</uri>
+      <name>baerenmarke</name>
+      <pose>6.45 2.6 0.75 0 0 0</pose>
+    </include>
+
+
+
+    <include>
+      <uri>model:///mustard_bottle</uri>
+      <name>mustard</name>
+      <pose>6.08 2.95 0.77 1.57 -1.57 1</pose>
+    </include>
+    <include>
+      <uri>model:///sugar_box</uri>
+      <name>sugar</name>
+      <pose>5.8 2.7 0.77 0.77 1.57 -1.57 -1.7</pose>
+    </include>
+    <include>
+      <uri>model:///tuna_fish_can</uri>
+      <name>tuna_fish_can</name>
+      <pose>6.06 2.75 0.77 0 0 0</pose>
+    </include>
+  </world>
+</sdf>
