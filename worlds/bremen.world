@@ -235,6 +235,7 @@
         </link>
       </model>
       <model name='bremen_table'>
+        <static>1</static>
         <pose>-0.159245 -2.65045 0.405 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_3'>
@@ -2502,6 +2503,7 @@
       <pose>0.93134 0.50292 0 0 -0 0</pose>
     </model>
     <model name='bremen_table'>
+      <static>1</static>
       <link name='link_3'>
         <inertial>
           <mass>1</mass>
