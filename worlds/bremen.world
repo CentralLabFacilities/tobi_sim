@@ -234,7 +234,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='Threshold_Bead_Cereal_Bowl_Red'>
+      <model name='cereal_bowl'>
         <pose>-1.10488 -4.35217 0.484934 -0.009825 -0.016872 0.000528</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
@@ -244,7 +244,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='Vans_Cereal_Honey_Nut_Crunch_11_oz_box'>
+      <model name='cereal_box'>
         <pose>-1.03994 -4.56386 0.829439 -0.00413 -0.008253 1.18205</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
@@ -4286,19 +4286,19 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose>-0.762582 -1.18907 0.669583 0 -0 1.57079</pose>
     </model>
-    <model name='Vans_Cereal_Honey_Nut_Crunch_11_oz_box'>
+    <model name='cereal_box'>
       <link name='link_0'>
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>/home/bheihoff/.ignition/fuel/fuel.gazebosim.org/googleresearch/models/vans_cereal_honey_nut_crunch_11_oz_box/1/meshes/model.obj</uri>
+              <uri>model://cereal_box/1/meshes/model.obj</uri>
             </mesh>
           </geometry>
         </visual>
         <collision name='collision_0'>
           <geometry>
             <mesh>
-              <uri>/home/bheihoff/.ignition/fuel/fuel.gazebosim.org/googleresearch/models/vans_cereal_honey_nut_crunch_11_oz_box/1/meshes/model.obj</uri>
+              <uri>model://cereal_box/1/meshes/model.obj</uri>
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -4346,7 +4346,7 @@
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
     </light>
-    <model name='Threshold_Bead_Cereal_Bowl_Red'>
+    <model name='cereal_bowl'>
       <link name='link_0'>
         <self_collide>0</self_collide>
         <inertial>
@@ -4368,7 +4368,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>/home/bheihoff/.ignition/fuel/fuel.gazebosim.org/googleresearch/models/threshold_bead_cereal_bowl_white/1/meshes/model.obj</uri>
+              <uri>model://cereal_bowl/1/meshes/model.obj</uri>
             </mesh>
           </geometry>
           <material>
@@ -4394,7 +4394,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/bheihoff/.ignition/fuel/fuel.gazebosim.org/googleresearch/models/threshold_bead_cereal_bowl_white/1/meshes/model.obj</uri>
+              <uri>model://cereal_bow/1/meshes/model.obj</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
