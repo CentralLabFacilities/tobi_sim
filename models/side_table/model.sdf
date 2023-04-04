@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="side_table">
+    <static>true</static>
+    <link name="body">
+      <visual name="visual">
+        <geometry>
+          <mesh><uri>model://side_table/model.dae</uri></mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
