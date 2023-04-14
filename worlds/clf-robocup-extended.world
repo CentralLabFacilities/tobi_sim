@@ -339,6 +339,13 @@
             </mesh>
           </geometry>
         </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://cabinet/model.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -1716,6 +1723,13 @@
             </mesh>
           </geometry>
         </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://side_table/model.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -1732,6 +1746,13 @@
             </mesh>
           </geometry>
         </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://desk/model.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
