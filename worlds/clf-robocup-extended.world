@@ -88,12 +88,12 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>439 907000000</sim_time>
-      <real_time>41 264022537</real_time>
-      <wall_time>1680608026 410466213</wall_time>
-      <iterations>41104</iterations>
+      <sim_time>1197 875000000</sim_time>
+      <real_time>90 900691454</real_time>
+      <wall_time>1681825014 188631461</wall_time>
+      <iterations>43453</iterations>
       <model name='cabinet'>
-        <pose>-1.70181 6.13863 -0 0 -0 0.06424</pose>
+        <pose>-1.70181 6.13863 0 0 -0 0.06424</pose>
         <scale>1 1 1</scale>
         <link name='body'>
           <pose>-1.70181 6.13863 -0 0 -0 0.06424</pose>
@@ -173,7 +173,7 @@
         </link>
       </model>
       <model name='clf-robocup-sim_0'>
-        <pose>-1.65038 0.143941 0 0 -0 0</pose>
+        <pose>-1.65038 0.14394 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='Wall_0'>
           <pose>-2.41982 3.28668 0 0 0 -1.49023</pose>
@@ -230,69 +230,81 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='cupro_kuechenzeile'>
-        <pose>1.41426 2.18458 0 0 -0 -3.07735</pose>
+      <model name='cupro_kuechenzeile_schublade'>
+        <pose>1.41275 2.19847 -0.000675 0 5e-05 -3.05612</pose>
         <scale>1 1 1</scale>
         <link name='auszug_ol'>
-          <pose>2.01302 2.2231 0 0 -0 -3.07735</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose>2.01056 2.24969 -0.000645 0 5e-05 -3.05612</pose>
+          <velocity>-1e-06 -1e-06 0.005527 0.00246 -0.028776 -7.6e-05</velocity>
+          <acceleration>0.008931 -0.051107 33.9865 -1.46694 0.347558 -0.138567</acceleration>
+          <wrench>0.008931 -0.051107 33.9865 0 -0 0</wrench>
         </link>
         <link name='auszug_ol_mount'>
-          <pose>2.01302 2.2231 0 0 -0 -3.07735</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose>2.01056 2.24969 -0.000645 0 5e-05 -3.05612</pose>
+          <velocity>-1e-06 -3e-06 0.005527 0.00246 -0.028776 -7.7e-05</velocity>
+          <acceleration>0.008554 -0.052309 33.9864 -1.4667 0.347535 -0.140848</acceleration>
+          <wrench>0.008554 -0.052309 33.9864 0 -0 0</wrench>
         </link>
         <link name='auszug_r'>
-          <pose>0.815498 2.14607 0 0 -0 -3.07735</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose>0.814938 2.14725 -0.000704 0 5e-05 -3.05612</pose>
+          <velocity>-6e-06 9.6e-05 -0.02913 0.00246 -0.028776 -7.7e-05</velocity>
+          <acceleration>-0.005785 0.127288 -33.7022 -1.46707 0.347685 -0.137377</acceleration>
+          <wrench>-0.005785 0.127288 -33.7022 0 -0 0</wrench>
         </link>
         <link name='auszug_r_mount'>
-          <pose>0.815498 2.14607 0 0 -0 -3.07735</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose>0.814938 2.14725 -0.000704 0 5e-05 -3.05612</pose>
+          <velocity>-6e-06 9.6e-05 -0.029131 0.00246 -0.028776 -7.8e-05</velocity>
+          <acceleration>-0.006404 0.128989 -33.7023 -1.46684 0.347673 -0.139646</acceleration>
+          <wrench>-0.006404 0.128989 -33.7023 0 -0 0</wrench>
         </link>
         <link name='auszug_ul'>
-          <pose>2.01302 2.2231 0 0 -0 -3.07735</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose>2.01056 2.24969 -0.000645 0 5e-05 -3.05612</pose>
+          <velocity>-1e-06 -1e-06 0.005527 0.00246 -0.028776 -7.5e-05</velocity>
+          <acceleration>0.009399 -0.049973 33.9865 -1.46709 0.347575 -0.136846</acceleration>
+          <wrench>0.009399 -0.049973 33.9865 0 -0 0</wrench>
         </link>
         <link name='auszug_ul_mount'>
-          <pose>2.01302 2.2231 0 0 -0 -3.07735</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose>2.01056 2.24969 -0.000645 0 5e-05 -3.05612</pose>
+          <velocity>-1e-06 -3e-06 0.005527 0.00246 -0.028776 -7.6e-05</velocity>
+          <acceleration>0.009029 -0.051161 33.9865 -1.46686 0.347554 -0.139104</acceleration>
+          <wrench>0.009029 -0.051161 33.9865 0 -0 0</wrench>
         </link>
         <link name='base'>
-          <pose>1.41426 2.18458 0 0 -0 -3.07735</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose>1.41275 2.19847 -0.000675 0 5e-05 -3.05612</pose>
+          <velocity>2e-06 6.7e-05 -0.011801 0.002461 -0.028776 -5.6e-05</velocity>
+          <acceleration>-0.521086 -0.014319 0.142712 -1.46844 0.347826 -0.086832</acceleration>
+          <wrench>-104.217 -2.86371 28.5423 0 -0 0</wrench>
         </link>
         <link name='front_m'>
-          <pose>1.41426 2.18458 0 0 -0 -3.07735</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose>1.41275 2.19847 -0.000675 0 5e-05 -3.05612</pose>
+          <velocity>-7e-06 4.9e-05 -0.011795 0.002448 -0.028777 -7.7e-05</velocity>
+          <acceleration>-0.003084 0.045566 0.139813 -1.46449 0.348 -0.135372</acceleration>
+          <wrench>-0.003084 0.045566 0.139813 0 -0 0</wrench>
         </link>
         <link name='front_m_mount'>
-          <pose>0.815498 2.14607 0 0 -0 -3.07735</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <pose>0.814938 2.14725 -0.000704 0 5e-05 -3.05612</pose>
+          <velocity>-6e-06 9.5e-05 -0.02913 0.00246 -0.028776 -7.8e-05</velocity>
+          <acceleration>-0.005682 0.124967 -33.7021 -1.46701 0.347849 -0.137941</acceleration>
+          <wrench>-0.005682 0.124967 -33.7021 0 -0 0</wrench>
+        </link>
+        <link name='link_0'>
+          <pose>1.34237 3.0194 0.657324 0 0.000103 -3.05612</pose>
+          <velocity>-0.018876 -0.001563 -0.011808 0.002459 -0.028776 -7.3e-05</velocity>
+          <acceleration>-36.8659 -3.12129 0.14269 -1.46767 0.347843 -0.131907</acceleration>
+          <wrench>-36.8659 -3.12129 0.14269 0 -0 0</wrench>
+        </link>
+        <link name='link_1'>
+          <pose>1.31916 3.29037 0.624325 0 5e-05 -3.05612</pose>
+          <velocity>-0.017902 -0.001484 -0.011809 0.002461 -0.028776 -8e-05</velocity>
+          <acceleration>-34.9674 -2.95804 0.143361 -1.46609 0.346959 -0.146793</acceleration>
+          <wrench>-34.9674 -2.95804 0.143361 0 -0 0</wrench>
         </link>
       </model>
       <model name='desk'>
-        <pose>-1.31428 2.90875 0 0 -0 1.63853</pose>
+        <pose>-1.31428 2.90875 0 0 -0 1.65038</pose>
         <scale>1 1 1</scale>
         <link name='body'>
-          <pose>-1.31428 2.90875 0 0 -0 1.63853</pose>
+          <pose>-1.31428 2.90875 0 0 -0 1.65038</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -324,7 +336,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>1.29253 -8.50923 21.1165 0 1.0858 1.60814</pose>
+        <pose>-4.673 -0.096294 16.8481 0 1.2418 0.348068</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -345,412 +357,25 @@
               <uri>model://cabinet/model.dae</uri>
             </mesh>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
       <pose>-1.50012 5.76213 0 0 -0 0</pose>
-    </model>
-    <model name='cupro_kuechenzeile'>
-      <static>0</static>
-      <plugin name='remote_joint_control' filename='libcupro_sim.so'>
-        <animation_factor>0.7</animation_factor>
-        <z_offset>0.94</z_offset>
-        <robotNamespace>operator</robotNamespace>
-      </plugin>
-      <link name='base'>
-        <inertial>
-          <pose>0 -0.3 0.01 0 -0 0</pose>
-          <mass>200</mass>
-          <inertia>
-            <ixx>16.6</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>16.6</iyy>
-            <iyz>0</iyz>
-            <izz>16.6</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://cupro_kuechenzeile/meshes/kuechenzeile_scaled_collision.stl</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://cupro_kuechenzeile/meshes/kuechenzeile_scaled.stl</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <link name='auszug_ol_mount'>
-        <pose>-0.6 0 0 0 -0 0</pose>
-        <self_collide>0</self_collide>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <link name='auszug_ol'>
-        <pose>-0.6 0 0 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://cupro_kuechenzeile/meshes/auszug_ol_scaled.stl</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://cupro_kuechenzeile/meshes/auszug_ol_scaled.stl</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <link name='auszug_ul_mount'>
-        <pose>-0.6 0 0 0 -0 0</pose>
-        <self_collide>0</self_collide>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <link name='auszug_ul'>
-        <pose>-0.6 0 0 0 -0 0</pose>
-        <inertial>
-          <mass>1</mass>
-          <pose>0 0 0 0 -0 0</pose>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://cupro_kuechenzeile/meshes/auszug_ul_scaled.stl</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://cupro_kuechenzeile/meshes/auszug_ul_scaled.stl</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <link name='auszug_r_mount'>
-        <pose>0.6 0 0 0 -0 0</pose>
-        <self_collide>0</self_collide>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <link name='auszug_r'>
-        <pose>0.6 0 0 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://cupro_kuechenzeile/meshes/auszug_r_scaled.stl</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://cupro_kuechenzeile/meshes/auszug_r_scaled.stl</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <link name='front_m_mount'>
-        <pose>0.6 0 0 0 -0 0</pose>
-        <self_collide>0</self_collide>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <link name='front_m'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://cupro_kuechenzeile/meshes/front_m_scaled.stl</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://cupro_kuechenzeile/meshes/front_m_scaled.stl</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <joint name='auszug_ol_mount_joint' type='fixed'>
-        <pose>-0.6 0 0 0 -0 0</pose>
-        <child>auszug_ol_mount</child>
-        <parent>base</parent>
-      </joint>
-      <joint name='auszug_ol_joint' type='prismatic'>
-        <pose>0 0 0 0 -0 -3.14159</pose>
-        <child>auszug_ol</child>
-        <parent>auszug_ol_mount</parent>
-        <axis>
-          <limit>
-            <lower>0</lower>
-            <upper>0.55</upper>
-          </limit>
-          <xyz>0 1 0</xyz>
-          <dynamics>
-            <damping>0.6</damping>
-            <friction>0.2</friction>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-          </dynamics>
-        </axis>
-      </joint>
-      <joint name='auszug_ul_mount_joint' type='fixed'>
-        <pose>-0.6 0 0 0 -0 0</pose>
-        <child>auszug_ul_mount</child>
-        <parent>base</parent>
-      </joint>
-      <joint name='auszug_ul_joint' type='prismatic'>
-        <pose>0 0 0 0 -0 -3.14159</pose>
-        <child>auszug_ul</child>
-        <parent>auszug_ul_mount</parent>
-        <axis>
-          <limit>
-            <lower>0</lower>
-            <upper>0.55</upper>
-          </limit>
-          <xyz>0 1 0</xyz>
-          <dynamics>
-            <damping>0.6</damping>
-            <friction>0.2</friction>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-          </dynamics>
-        </axis>
-      </joint>
-      <joint name='auszug_r_mount_joint' type='fixed'>
-        <pose>-0.6 0 0 0 -0 0</pose>
-        <child>auszug_r_mount</child>
-        <parent>base</parent>
-      </joint>
-      <joint name='auszug_r_joint' type='prismatic'>
-        <pose>0 0 0 0 -0 -3.14159</pose>
-        <child>auszug_r</child>
-        <parent>auszug_r_mount</parent>
-        <axis>
-          <limit>
-            <lower>0</lower>
-            <upper>0.55</upper>
-          </limit>
-          <xyz>0 1 0</xyz>
-          <dynamics>
-            <damping>0.6</damping>
-            <friction>0.2</friction>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-          </dynamics>
-        </axis>
-      </joint>
-      <joint name='front_m_mount_joint' type='fixed'>
-        <pose>0 0 0 0 -0 0</pose>
-        <child>front_m_mount</child>
-        <parent>base</parent>
-      </joint>
-      <joint name='front_m_joint' type='revolute'>
-        <pose>0 -0.6 0.16 0 -0 0</pose>
-        <child>front_m</child>
-        <parent>front_m_mount</parent>
-        <axis>
-          <xyz>1 0 0</xyz>
-          <dynamics>
-            <damping>2</damping>
-            <friction>2</friction>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-          </dynamics>
-          <limit>
-            <lower>0</lower>
-            <upper>1.5708</upper>
-          </limit>
-        </axis>
-      </joint>
-      <pose>0.943851 1.13141 0 0 -0 0</pose>
     </model>
     <model name='clf-robocup-sim'>
       <link name='Wall_0'>
@@ -1729,6 +1354,19 @@
               <uri>model://side_table/model.dae</uri>
             </mesh>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -1752,6 +1390,19 @@
               <uri>model://desk/model.dae</uri>
             </mesh>
           </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
         </collision>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -2167,6 +1818,953 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
+    </model>
+    <model name='cupro_kuechenzeile_schublade'>
+      <link name='base'>
+        <inertial>
+          <pose>0 -0.3 0.01 0 -0 0</pose>
+          <mass>200</mass>
+          <inertia>
+            <ixx>16.6</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>16.6</iyy>
+            <iyz>0</iyz>
+            <izz>16.6</izz>
+          </inertia>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cupro_kuechenzeile/meshes/kuechenzeile_scaled.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <shader type='pixel'/>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <pose>0 0 0 0 -0 0</pose>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/vol/tiago/noetic/nightly/share/cupro_sim/models/cupro_kuechenzeile/meshes/kuechenzeile_scaled_collision.stl</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <link name='auszug_ol'>
+        <pose>-0.6 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cupro_kuechenzeile/meshes/auszug_ol_scaled.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <shader type='pixel'/>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <pose>0 0 0 0 -0 0</pose>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/vol/tiago/noetic/nightly/share/cupro_sim/models/cupro_kuechenzeile/meshes/auszug_ol_scaled.stl</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <link name='auszug_ol_mount'>
+        <pose>-0.6 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='auszug_r'>
+        <pose>0.6 -0 -0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cupro_kuechenzeile/meshes/auszug_r_scaled.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <shader type='pixel'/>
+          </material>
+          <pose>0 0 0 0 -0 0</pose>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/vol/tiago/noetic/nightly/share/cupro_sim/models/cupro_kuechenzeile/meshes/auszug_r_scaled.stl</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <link name='auszug_r_mount'>
+        <pose>0.6 -0 -0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='auszug_ul'>
+        <pose>-0.6 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>1</mass>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cupro_kuechenzeile/meshes/auszug_ul_scaled.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <shader type='pixel'/>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <pose>0 0 0 0 -0 0</pose>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/vol/tiago/noetic/nightly/share/cupro_sim/models/cupro_kuechenzeile/meshes/auszug_ul_scaled.stl</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <link name='auszug_ul_mount'>
+        <pose>-0.6 0 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='front_m'>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://cupro_kuechenzeile/meshes/front_m_scaled.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <shader type='pixel'/>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <pose>0 0 0 0 -0 0</pose>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/vol/tiago/noetic/nightly/share/cupro_sim/models/cupro_kuechenzeile/meshes/front_m_scaled.stl</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <link name='front_m_mount'>
+        <pose>0.6 -0 -0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_0'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <pose>-0 -0.823941 0.657999 0 5.3e-05 0</pose>
+        <gravity>1</gravity>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <enable_wind>0</enable_wind>
+        <visual name='visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.492 0.435 0.004</size>
+            </box>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <shader type='pixel'>
+              <normal_map>__default__</normal_map>
+            </shader>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.492 0.435 0.004</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <link name='link_1'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <pose>-0 -1.0959 0.625 0 -0 0</pose>
+        <gravity>1</gravity>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <enable_wind>0</enable_wind>
+        <visual name='visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.595 0.11 0.13</size>
+            </box>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <shader type='pixel'>
+              <normal_map>__default__</normal_map>
+            </shader>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.595 0.11 0.13</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <joint name='auszug_ol_joint' type='prismatic'>
+        <parent>auszug_ol_mount</parent>
+        <child>auszug_ol</child>
+        <pose>0 0 0 0 -0 -3.14159</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0.55</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.6</damping>
+            <friction>0.2</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='auszug_ol_mount_joint' type='fixed'>
+        <parent>base</parent>
+        <child>auszug_ol_mount</child>
+        <pose>-0.6 0 0 0 -0 0</pose>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='auszug_r_joint' type='prismatic'>
+        <parent>auszug_r_mount</parent>
+        <child>auszug_r</child>
+        <pose>0 0 0 0 -0 -3.14159</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0.55</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.6</damping>
+            <friction>0.2</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='auszug_r_mount_joint' type='fixed'>
+        <parent>base</parent>
+        <child>auszug_r_mount</child>
+        <pose>-0.6 0 0 0 -0 0</pose>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='auszug_ul_joint' type='prismatic'>
+        <parent>auszug_ul_mount</parent>
+        <child>auszug_ul</child>
+        <pose>0 0 0 0 -0 -3.14159</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0.55</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.6</damping>
+            <friction>0.2</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='auszug_ul_mount_joint' type='fixed'>
+        <parent>base</parent>
+        <child>auszug_ul_mount</child>
+        <pose>-0.6 0 0 0 -0 0</pose>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='front_m_joint' type='revolute'>
+        <parent>front_m_mount</parent>
+        <child>front_m</child>
+        <pose>0 -0.6 0.16 0 -0 0</pose>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.5708</upper>
+            <effort>-1</effort>
+            <velocity>-1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>2</damping>
+            <friction>2</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='front_m_mount_joint' type='fixed'>
+        <parent>base</parent>
+        <child>front_m_mount</child>
+        <pose>0 0 0 0 -0 0</pose>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='link_0_JOINT_0' type='fixed'>
+        <parent>link_0</parent>
+        <child>base</child>
+        <pose>0 0 0 0 -0 0</pose>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='link_1_JOINT_1' type='fixed'>
+        <parent>link_1</parent>
+        <child>link_0</child>
+        <pose>0 0 0 0 -0 0</pose>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <plugin name='remote_joint_control' filename='libcupro_sim.so'>
+        <animation_factor>0.7</animation_factor>
+        <z_offset>0.94</z_offset>
+        <robotNamespace>operator</robotNamespace>
+      </plugin>
+      <pose>1.41318 2.1943 -0.000678 0 -5.1e-05 -3.08002</pose>
     </model>
   </world>
 </sdf>
