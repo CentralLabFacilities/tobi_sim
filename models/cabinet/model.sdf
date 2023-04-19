@@ -8,6 +8,11 @@
           <mesh><uri>model://cabinet/model.dae</uri></mesh>
         </geometry>
       </visual>
+      <collision name="collision">
+        <geometry>
+          <mesh><uri>model://cabinet/model.dae</uri></mesh>
+        </geometry>
+      </collision>
     </link>
   </model>
 </sdf>
