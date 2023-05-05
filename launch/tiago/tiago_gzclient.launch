@@ -1,0 +1,8 @@
+<launch>
+    
+  <env name="GAZEBO_MODEL_PATH" value="$(find tobi_sim)/models:$(find tiago_gazebo)/models:$(optenv GAZEBO_MODEL_PATH)"/>
+  <env name="GAZEBO_RESOURCE_PATH" value="$(find tobi_sim)/media:$(optenv GAZEBO_RESOURCE_PATH)"/>
+  <!-- start gazebo client -->
+  <node name="gazebo_gui" pkg="gazebo_ros" type="gzclient" respawn="false" output="screen"/>
+
+</launch>
