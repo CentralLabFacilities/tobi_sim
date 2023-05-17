@@ -93,10 +93,10 @@
       <wall_time>1683208292 911412130</wall_time>
       <iterations>65379</iterations>
       <model name='arm_chair'>
-        <pose>-1.09681 -1.57031 0 0 -0 1.7492</pose>
+        <pose>-1.09681 -1.57031 0.1 0 -0 1.7492</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-1.09681 -1.57031 0 0 -0 1.7492</pose>
+          <pose>-1.09681 -1.57031 0.1 0 -0 1.7492</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -371,10 +371,10 @@
         </link>
       </model>
       <model name='sofa'>
-        <pose>-1.19931 -0.41256 0 0 -0 1.23764</pose>
+        <pose>-1.19931 -0.41256 0.1 0 -0 1.23764</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-1.19931 -0.41256 0 0 -0 1.23764</pose>
+          <pose>-1.19931 -0.41256 0.1 0 -0 1.23764</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
