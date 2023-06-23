@@ -351,17 +351,6 @@ Visualization Manager:
         - 6DOF: false
           Alpha: 1
           Axis: false
-          Class: rviz_plugin_covariance/Odometry
-          Color: 204; 51; 204
-          Enabled: false
-          Name: Odometry
-          Orientation: false
-          Position: false
-          Queue Size: 10
-          Scale: 1
-          Topic: /mobile_base_controller/odom
-          Unreliable: false
-          Value: false
         - Class: rviz/MarkerArray
           Enabled: true
           Marker Topic: inertial_mass_markers
