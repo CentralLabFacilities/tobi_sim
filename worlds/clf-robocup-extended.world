@@ -2162,7 +2162,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/vol/tiago/noetic/nightly/share/cupro_sim/models/cupro_kuechenzeile/meshes/kuechenzeile_scaled_collision.stl</uri>
+              <uri>model://cupro_kuechenzeile/meshes/kuechenzeile_scaled_collision.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2250,7 +2250,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/vol/tiago/noetic/nightly/share/cupro_sim/models/cupro_kuechenzeile/meshes/auszug_ol_scaled.stl</uri>
+              <uri>model://cupro_kuechenzeile/meshes/auszug_ol_scaled.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2355,7 +2355,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/vol/tiago/noetic/nightly/share/cupro_sim/models/cupro_kuechenzeile/meshes/auszug_r_scaled.stl</uri>
+              <uri>model://cupro_kuechenzeile/meshes/auszug_r_scaled.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2461,7 +2461,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/vol/tiago/noetic/nightly/share/cupro_sim/models/cupro_kuechenzeile/meshes/auszug_ul_scaled.stl</uri>
+              <uri>model://cupro_kuechenzeile/meshes/auszug_ul_scaled.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2567,7 +2567,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/vol/tiago/noetic/nightly/share/cupro_sim/models/cupro_kuechenzeile/meshes/front_m_scaled.stl</uri>
+              <uri>model://cupro_kuechenzeile/meshes/front_m_scaled.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
