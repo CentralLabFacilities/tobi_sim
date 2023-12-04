@@ -883,7 +883,7 @@ Visualization Manager:
             {}
           Queue Size: 100
           Value: false
-      Enabled: true
+      Enabled: false
       Name: Localization
     - Class: rviz/Group
       Displays:
@@ -1018,10 +1018,10 @@ Visualization Manager:
       Zoom Factor: 1
     - Class: ecwm_rviz/Entities
       Enabled: true
-      Label size: 0.5
+      Label size: 0.3
       Name: Entities
-      Topic: /ecwm/SimpleGeometry/entities
-      Type Filter: ^(?!misc/annotation).*
+      Topic: /ecwm/SimpleGeometryViz/entities
+      Type Filter: ""
       Unreliable: false
       Value: true
       show Names: true
