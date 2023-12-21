@@ -356,5 +356,11 @@
       <pose>22.08781 3.498 0.724995 0 0 -0.767743</pose>
     </include>
 
+    <include>
+      <uri>model:///master_chef_can</uri>
+      <name>master_chef_can</name>
+      <pose>0.789283 2.885 0.504676 0 0 0</pose>
+    </include>
+
   </world>
 </sdf>
