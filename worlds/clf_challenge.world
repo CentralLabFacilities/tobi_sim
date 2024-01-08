@@ -52,13 +52,13 @@
     <include>
       <uri>model:///clf_actor_waving</uri>
       <name>actor_b</name>
-      <pose>1,829861 2,878417 0 0 0 2,144181</pose>
+      <pose>1.829861 2.878417 0 0 0 2.144181</pose>
     </include>
 
         <include>
       <uri>model:///clf_actor_waving</uri>
       <name>actor_c</name>
-      <pose>2,149540 0,586594 0 0 0 -2,427889</pose>
+      <pose>2.149540 0.586594 0 0 0 -2.427889</pose>
     </include>
 
     <!-- Models to include -->
@@ -71,7 +71,7 @@
     <include>
       <uri>model:///clf_cupboard_a</uri>
       <name>cupboard_a</name>
-      <pose>0,414357 3,758892 0 0 -0 -1,570163</pose>
+      <pose>0.414357 3.758892 0 0 -0 -1.570163</pose>
     </include>
 
     <include>
@@ -89,7 +89,7 @@
     <include>
       <uri>model:///clf_tiago_box</uri>
       <name>tiago_box</name>
-      <pose>4.28 3,500000 0 -0 0</pose>
+      <pose>4.28 3.500000 0 -0 0</pose>
     </include>
 
     <include>
@@ -136,12 +136,6 @@
 
     <include>
       <uri>model:///clf_table_short</uri>
-      <name>table_short_a</name>
-      <pose>5.15 3.57 -0 0 0 -1.5708</pose>
-    </include>
-
-    <include>
-      <uri>model:///clf_table_short</uri>
       <name>table_short_b</name>
       <pose>2.34 3.59 -0 0 0 -1.5708</pose>
     </include>
@@ -150,24 +144,6 @@
       <uri>model:///clf_table_short</uri>
       <name>table_short_c</name>
       <pose>8.33 1.61 0 0 -0 0</pose>
-    </include>
-
-    <include>
-      <uri>model:///clf_table_short</uri>
-      <name>table_short_d</name>
-      <pose>8.13 0.61 0 0 0 -1.5708</pose>
-    </include>
-
-    <include>
-      <uri>model:///clf_table_short</uri>
-      <name>table_short_e</name>
-      <pose>6.93 0.61 0 0 0 -1.5708</pose>
-    </include>
-
-    <include>
-      <uri>model:///clf_table_short</uri>
-      <name>table_short_f</name>
-      <pose>8.13 2.43 00 0 0 -1.57</pose>
     </include>
 
     <include>
