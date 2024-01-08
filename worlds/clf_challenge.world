@@ -130,7 +130,7 @@
 
     <include>
       <uri>model:///clf_table_short</uri>
-      <name>table_short_f</name>
+      <name>table_short_j</name>
       <pose>-4.09 -3.2 0 0 -0 0</pose>
     </include>
 
