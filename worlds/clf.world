@@ -107,7 +107,7 @@
     <include>
       <uri>model:///clf_grasp_table</uri>
       <name>grasp_table</name>
-      <pose>0.75 3.0 -0 0 0 -1.5708</pose>
+      <pose>5.48 3.22 -0 0 0 -1.5708</pose>
     </include>
 
     <include>
