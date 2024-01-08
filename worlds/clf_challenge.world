@@ -113,7 +113,7 @@
     <include>
       <uri>model:///cupro_kuechenzeile</uri>
       <name>cupro_kuechenzeile</name>
-      <pose>7.33 0.35 0 3.14</pose>
+      <pose>7.17 0.39 0 0 -3.13/pose>
     </include>
 
     <include>
@@ -143,7 +143,7 @@
     <include>
       <uri>model:///clf_table_short</uri>
       <name>table_short_c</name>
-      <pose>8.33 1.61 0 0 -0 0</pose>
+      <pose>8.12 2.33 0 0 -0 1.58</pose>
     </include>
 
     <include>
@@ -285,12 +285,6 @@
     </include>
 
     <include>
-      <uri>model:///clf_office_chair</uri>
-      <name>chair_david</name>
-      <pose>7.6 1.6 0 0 0 0</pose>
-    </include>
-
-    <include>
       <uri>model:///clf_computer</uri>
       <name>computer_one</name>
       <pose>-1.08 -0.85 0.22 0 0 0</pose>
@@ -337,5 +331,36 @@
       <name>computer_eight</name>
       <pose>-1.7 -3.45 0.22 0 0 0</pose>
     </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_eight</name>
+      <pose>-1.7 -3.45 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///chips_can</uri>
+      <name>chips_can</name>
+      <pose>7.81 2.35 0.73 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///pudding_box</uri>
+      <name>pudding_box</name>
+      <pose>2.14 2.65 0.73 0 0 1.2</pose>
+    </include>
+
+    <include>
+      <uri>model:///potted_meat_can</uri>
+      <name>potted_meat_can</name>
+      <pose>2.49 -0.16 0.73 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///gelatin_box</uri>
+      <name>gelatin_box</name>
+      <pose>-0.41 2.49 0.73 0 0 0</pose>
+    </include>
+
   </world>
 </sdf>
