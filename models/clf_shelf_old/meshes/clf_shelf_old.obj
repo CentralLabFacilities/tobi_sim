@@ -1,6 +1,6 @@
 # Blender v2.80 (sub 74) OBJ File: 'clf_shelf.blend'
 # www.blender.org
-mtllib clf_shelf.mtl
+mtllib clf_shelf_old.mtl
 o Plane
 v -0.140000 0.400000 0.000000
 v -0.140000 -0.400000 0.000000
