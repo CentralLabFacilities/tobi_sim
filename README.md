@@ -4,8 +4,8 @@ Worlds, Models, and Launchfiles for the Tobi Simulation
 
 ggf. 
 
-`mkdir build && cd build && cmake ..`
+`mkdir build && cd build && cmake .. && cd ..`
 
-`source tobi_sim/build/devel/setup.bash`
+`source build/devel/setup.bash`
 
 `roslaunch tobi_sim tiago_gazebo_clf.launch world:=apartment` 
