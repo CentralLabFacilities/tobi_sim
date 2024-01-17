@@ -108,7 +108,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/lvonseelstrang/Documents/ws/src/CSRA_simplified.dae</uri>
+              <uri>model://CSRA_simplified/meshes/CSRA_simplified.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -129,7 +129,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/lvonseelstrang/Documents/ws/src/CSRA_simplified.dae</uri>
+              <uri>model://CSRA_simplified/meshes/CSRA_simplified.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
