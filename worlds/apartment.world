@@ -91,6 +91,7 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <model name='test'>
+      <static>1</static>
       <link name='link_0'>
         <inertial>
           <mass>1</mass>
@@ -200,6 +201,11 @@
       </attenuation>
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
     </light>
     <light name='user_point_light_1' type='point'>
       <pose>-2.01708 1.00117 1 0 -0 0</pose>
@@ -213,6 +219,11 @@
       </attenuation>
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
     </light>
     <light name='user_point_light_2' type='point'>
       <pose>-4.04832 -0.94365 1 0 -0 0</pose>
@@ -226,6 +237,11 @@
       </attenuation>
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
     </light>
     <light name='user_point_light_3' type='point'>
       <pose>-4.02815 0.865196 1 0 -0 0</pose>
@@ -239,6 +255,11 @@
       </attenuation>
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
     </light>
     <light name='user_spot_light_0' type='spot'>
       <pose>2.14082 1.90911 1 0 -0 0</pose>
@@ -270,6 +291,11 @@
       </attenuation>
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
     </light>
     <light name='user_point_light_5' type='point'>
       <pose>0.658993 -3.45623 1 0 -0 0</pose>
@@ -283,6 +309,11 @@
       </attenuation>
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
     </light>
     <light name='user_point_light_6' type='point'>
       <pose>0.767843 -3.76661 1 0 -0 0</pose>
@@ -296,6 +327,11 @@
       </attenuation>
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
     </light>
     <light name='user_point_light_7' type='point'>
       <pose>-4.68446 -3.43529 1 0 -0 0</pose>
@@ -309,12 +345,27 @@
       </attenuation>
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
     </light>
     <state world_name='default'>
-      <sim_time>7 856000000</sim_time>
-      <real_time>7 889344505</real_time>
-      <wall_time>1705506406 498183250</wall_time>
-      <iterations>7856</iterations>
+      <sim_time>276 703000000</sim_time>
+      <real_time>269 583202992</real_time>
+      <wall_time>1705600552 737063403</wall_time>
+      <iterations>268847</iterations>
+      <model name='cracker_box'>
+        <pose>-3.67972 1.89221 0.92199 0 3e-06 1.0951</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-3.67972 1.89221 0.92199 0 3e-06 1.0951</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -4.0278 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='ground_plane'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -323,6 +374,16 @@
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pringles'>
+        <pose>-1.72953 1.41319 0.849867 -0.000109 -0.000191 1.7e-05</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-1.72953 1.41319 0.849867 -0.000109 -0.000191 1.7e-05</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.010381 -0.004896 -0.00355 0 -0 0</acceleration>
+          <wrench>0.002595 -0.001224 -0.000888 0 -0 0</wrench>
         </link>
       </model>
       <model name='test'>
@@ -368,10 +429,121 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>13.3311 3.36461 14.7455 0 0.841799 -2.81899</pose>
+        <pose>2.83081 5.14448 6.74948 0 1.0218 -2.52299</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    <model name='pringles'>
+      <static>0</static>
+      <link name='link'>
+        <inertial>
+          <mass>0.25</mass>
+          <inertia>
+            <ixx>0</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0</iyy>
+            <iyz>0</iyz>
+            <izz>0</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.04</radius>
+              <length>0.235</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.04</radius>
+              <length>0.235</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pringles/material/scripts</uri>
+              <uri>model://pringles/material/textures</uri>
+              <name>Custom/pringles</name>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+      </link>
+      <pose>-1.72935 1.41331 0 0 -0 0</pose>
+    </model>
+    <model name='cracker_box'>
+      <link name='link'>
+        <inertial>
+          <mass>0.411</mass>
+          <inertia>
+            <ixx>0.00236544</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00163372</iyy>
+            <iyz>0</iyz>
+            <izz>0.000978317</izz>
+          </inertia>
+          <pose>0 0 0.105 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0.105 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.06 0.158 0.21</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0.015 0.015 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://cracker_box/meshes/textured.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-3.69345 1.24687 0 0 -0 0</pose>
+    </model>
   </world>
 </sdf>
