@@ -113,7 +113,7 @@
     <include>
       <uri>model:///cupro_kuechenzeile</uri>
       <name>cupro_kuechenzeile</name>
-      <pose>7.17 0.39 0 0 -3.13</pose>
+      <pose>7.17 0.39 0 0 0 -3.13</pose>
     </include>
 
     <include>
