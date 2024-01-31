@@ -5,22 +5,23 @@
 -->
 <sdf version="1.6">
   <world name="clf">
-    <light type="point" name="indoor_light">
-      <cast_shadows>false</cast_shadows>
-      <pose>0 0 4 0 0 0</pose>
+<   light name='indoor_light' type='point'>
+      <cast_shadows>0</cast_shadows>
+      <pose>4.5 0.8 2.7 0 -0 0</pose>
       <diffuse>0.5 0.5 0.5 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
         <range>100</range>
         <constant>0.65</constant>
-        <linear>0.00</linear>
-        <quadratic>0.00</quadratic>
+        <linear>0</linear>
+        <quadratic>0</quadratic>
       </attenuation>
+      <direction>0 0 -1</direction>
     </light>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>-3.5 -0.12 4 0.4 0 -1</pose>
-      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <diffuse>0.25 0.25 0.25 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
         <range>100</range>
