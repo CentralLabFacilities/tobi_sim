@@ -14,7 +14,6 @@
     <arg name="tf_prefix" default=""/>
 
     <!-- Joint trajectory and diff drive controllers -->
-    <rosparam command="load" file="$(find tiago_controller_configuration_gazebo)/config/mobile_base_controller.yaml"/>
     <include file="$(find tobi_sim)/launch/tiago/tiago_controllers.launch">
         <arg name="arm" value="$(arg arm)"/>
         <arg name="end_effector" value="$(arg end_effector)"/>
@@ -103,5 +102,8 @@
 
     <!-- Add Scan relay-->
     <node name="scan_to_scan_raw_relay" pkg="topic_tools" type="relay" args="scan scan_raw" />
+    
+    <!-- Odom TF -->
+    <include file="$(find tiago_clf_nav)/launch/odom_ekf.launch"/>
 
 </launch>
