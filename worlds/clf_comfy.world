@@ -1,0 +1,348 @@
+<?xml version="1.0" ?>
+<!--
+  Detailed version of the central lab facilities
+  Updated 07/12/23 to include ycb items on the table
+-->
+<sdf version="1.6">
+  <world name="clf">
+    <light name='indoor_light' type='point'>
+      <cast_shadows>0</cast_shadows>
+      <pose>4.5 0.8 2.7 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>100</range>
+        <constant>0.65</constant>
+        <linear>0</linear>
+        <quadratic>0</quadratic>
+      </attenuation>
+      <direction>0 0 -1</direction>
+    </light>
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>-3.5 -0.12 4 0.4 0 -1</pose>
+      <diffuse>0.25 0.25 0.25 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>100</range>
+        <constant>0.0</constant>
+        <linear>0.00</linear>
+        <quadratic>0.00</quadratic>
+      </attenuation>
+    </light>
+
+<!--    <light type="spot" name="spot_light">-->
+<!--      <cast_shadows>true</cast_shadows>-->
+<!--      <pose>0.11 0 4 0.9 0 -0.9</pose>-->
+<!--      <diffuse>0.4 0.4 0.4 1</diffuse>-->
+<!--      <specular>0.4 0.4 0.4 1</specular>-->
+<!--      <spot>-->
+<!--        <inner_angle>0.60</inner_angle>-->
+<!--        <outer_angle>3.00</outer_angle>-->
+<!--        <falloff>1.0</falloff>-->
+<!--      </spot>-->
+<!--    </light>-->
+
+    <!-- Actors to include -->
+    <include>
+      <uri>model:///clf_actor_waving</uri>
+      <name>actor_a</name>
+      <pose>5.316 3.12 0.025 0.2 0.0 2.21881</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_tiago_box</uri>
+      <name>tiago_box</name>
+      <pose>4.57 3.650000 0 -0 0</pose>
+    </include>
+
+    <!-- Models to include -->
+    <include>
+      <uri>model:///clf_walls</uri>
+      <name>walls</name>
+      <pose>-4.5 4 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_cupboard_a</uri>
+      <name>cupboard_a</name>
+      <pose>0.414357 3.758892 0 0 -0 -1.570163</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_cupboard_b</uri>
+      <name>cupboard_b</name>
+      <pose>5.9 -1.9 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_shelf</uri>
+      <name>shelf</name>
+      <pose>1.6125 3.97855 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_bin</uri>
+      <name>bin_a</name>
+      <pose>5.84181 0.750187 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_bin</uri>
+      <name>bin_b</name>
+      <pose>-4.09 3.4 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_grasp_table</uri>
+      <name>grasp_table</name>
+      <pose>8.437253 2.757075 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_grasp_table</uri>
+      <name>couch_table_wrong</name>
+      <pose>2.25 3.52 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///cupro_kuechenzeile</uri>
+      <name>cupro_kuechenzeile</name>
+      <pose>7.249306 0.36 0 0 0 -3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_short</uri>
+      <name>table_short_j</name>
+      <pose>-4.09 -3.2 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_short</uri>
+      <name>table_short_c</name>
+      <pose>6.0 3.38 0 0 -0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_short</uri>
+      <name>table_short_h</name>
+      <pose>2.19 -0.19 .0 0 0 -1.57</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_david</name>
+      <pose>-1.4 -0.16 0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_buildor</name>
+      <pose>2.58 -2.99 0 0 -0 -3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_thorben</name>
+      <pose>2.58 -1.39 0 0 -0 -3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_markus</name>
+      <pose>1.78 -1.39 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_a</name>
+      <pose>1.78 -2.99 -0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_b</name>
+      <pose>-1 -2.96 0 0 -0 -3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_julia</name>
+      <pose>-1 -1.36 0 0 -0 -3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_jan</name>
+      <pose>-1.8 -1.36 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_table_long</uri>
+      <name>table_long_c</name>
+      <pose>-1.8 -2.96 0 0 -0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_one</name>
+      <pose>-0.4 -1 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_two</name>
+      <pose>-0.4 -1.77 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_three</name>
+      <pose>-0.4 -2.6 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_four</name>
+      <pose>-0.4 -3.37 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_five</name>
+      <pose>1.1 -1 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_six</name>
+      <pose>1.1 -1.77 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_seven</name>
+      <pose>1.1 -2.6 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_eight</name>
+      <pose>1.1 -3.37 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_nine</name>
+      <pose>-2.2 -2.7 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_ten</name>
+      <pose>-2.2 -1.33 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_eleven</name>
+      <pose>3.08 -2.6 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_office_chair</uri>
+      <name>chair_twelve</name>
+      <pose>3.08 -3.37 0 0 0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_one</name>
+      <pose>-1.08 -0.85 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_two</name>
+      <pose>-1.08 -1.9 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_three</name>
+      <pose>-1.08 -2.42 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_four</name>
+      <pose>-1.08 -3.45 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_five</name>
+      <pose>-1.7 -0.85 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_six</name>
+      <pose>-1.7 -1.9 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_seven</name>
+      <pose>-1.7 -2.42 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_computer</uri>
+      <name>computer_eight</name>
+      <pose>-1.7 -3.45 0.22 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///clf_hybrid_living_poster</uri>
+      <name>hybrid living poster</name>
+      <pose>8.19 3.586 0 0 0 -1</pose>
+    </include>
+
+    <include>
+      <uri>model:///chips_can</uri>
+      <name>chips_can</name>
+      <pose>2.28 3.7 0.53 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///pudding_box</uri>
+      <name>pudding_box</name>
+      <pose>2.24 3.52 0.525 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model:///potted_meat_can</uri>
+      <name>potted_meat_can</name>
+      <pose>2.42 3.47 0.53 0 0 0.01</pose>
+    </include>
+
+    <include>
+      <uri>model:///gelatin_box</uri>
+      <name>gelatin_box</name>
+      <pose>1.86 3.7 1.41 0 0 1.4</pose>
+    </include>
+
+    <include>
+      <uri>model:///cracker_box</uri>
+      <name>cracker_box</name>
+      <pose>1.3 3.8 1.06 0 0 -0.65</pose>
+    </include>
+
+    <include>
+      <uri>model:///bowl</uri>
+      <name>bowl</name>
+      <pose>8.38 2.93 0.53 0 0 0</pose>
+    </include>
+  </world>
+</sdf>
