@@ -6,20 +6,14 @@
       <collision name="collision">
         <geometry>
           <mesh>
-            <uri>model://clf_tiago_box/meshes/clf_tiago_box.dae</uri>
+            <uri>model://clf_tiago_box/meshes/tiago_box_collision.dae</uri>
           </mesh>
         </geometry>
       </collision>
       <visual name="visual">
-        <material>
-          <ambient>0.92 0.68 0.3 1.0</ambient>
-          <diffuse>0.92 0.68 0.3 1.0</diffuse>
-          <specular>0 0 0 0</specular>
-          <emissive>0 0 0 1</emissive>
-        </material>
         <geometry>
           <mesh>
-            <uri>model://clf_tiago_box/meshes/clf_tiago_box.dae</uri>
+            <uri>model://clf_tiago_box/meshes/tiago_box.dae</uri>
           </mesh>
         </geometry>
       </visual>
