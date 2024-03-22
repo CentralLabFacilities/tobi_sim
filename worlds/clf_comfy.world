@@ -344,5 +344,17 @@
       <name>bowl</name>
       <pose>8.38 2.93 0.53 0 0 0</pose>
     </include>
+
+    <include>
+      <uri>model:///apple</uri>
+      <name>apple</name>
+      <pose>6.13 3.63 0.73 0 0 -0.5</pose>
+    </include>
+
+    <include>
+      <uri>model:///banana</uri>
+      <name>banana</name>
+      <pose>1.9 3.8 1.06 0 0 -0.64</pose>
+    </include>
   </world>
 </sdf>
