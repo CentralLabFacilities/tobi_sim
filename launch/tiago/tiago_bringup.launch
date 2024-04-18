@@ -102,8 +102,5 @@
 
     <!-- Add Scan relay-->
     <node name="scan_to_scan_raw_relay" pkg="topic_tools" type="relay" args="scan scan_raw" />
-    
-    <!-- Odom TF -->
-    <include file="$(find tiago_clf_nav)/launch/odom_ekf.launch"/>
 
 </launch>
