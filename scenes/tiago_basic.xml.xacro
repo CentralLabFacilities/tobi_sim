@@ -39,7 +39,7 @@
   </worldbody>
 
   <worldbody>
-    <xacro:tiago_robot name="tiago" pos="0 0 0.11" rot="0 0 0" />
+    <xacro:tiago_robot name="tiago" pos="-2 0 0.11" rot="0 0 0" />
   </worldbody>
 
   <xacro:pmb2_contacts name="tiago" />
