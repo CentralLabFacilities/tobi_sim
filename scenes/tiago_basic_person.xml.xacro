@@ -52,6 +52,8 @@
   <!-- Valid gestures are 'neutral', 'waving_left', 'waving_right', 'pointing_left', 'pointing_right'-->
   <worldbody>
     <xacro:human_avatar name="human1" pos="1 1 0.95" gesture="waving_left" />
+    <xacro:human_avatar name="human2" pos="-1 1 0.95" gesture="neutral" />
+    <xacro:human_avatar name="human3" pos="1 -1 0.95" gesture="neutral" />
   </worldbody>
 
   <xacro:pmb2_contacts name="tiago" />
