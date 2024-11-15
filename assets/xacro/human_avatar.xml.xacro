@@ -2,6 +2,7 @@
 <mujoco xmlns:xacro="http://ros.org/wiki/xacro">
 <xacro:macro name="human_avatar" params="name pos gesture">
   <body name="${name}" pos="${pos}">
+    <freejoint name="root"/>
     <geom name="Pelvis" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="Pelvis"/>
     <body name="LowerTrunk_f1" pos="0 0 0.0663">
       <body name="LowerTrunk">
