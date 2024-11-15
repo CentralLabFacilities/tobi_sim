@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="human_assets">
+      <asset>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/Pelvis.stl" name="Pelvis" scale="0.91 1.0303 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/LowerTrunk.stl" name="LowerTrunk" scale="0.91 1.0303 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/UpperTrunk.stl" name="UpperTrunk" scale="0.91 1.2 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/RightShoulder.stl" name="RightShoulder" scale="1.0 1.2 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/LeftShoulder.stl" name="LeftShoulder" scale="1.0 1.2 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/Neck.stl" name="Neck" scale="0.9 0.9 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/Head.stl" name="Head" scale="1.0303 1.0303 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/RightUpperArm.stl" name="RightUpperArm" scale="1.3 1.3 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/RightForeArm.stl" name="RightForeArm" scale="1.0 1.0 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/RightHand.stl" name="RightHand" scale="0.9 0.8 0.555556"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/LeftUpperArm.stl" name="LeftUpperArm" scale="1.3 1.3 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/LeftForeArm.stl" name="LeftForeArm" scale="1.0 1.0 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/LeftHand.stl" name="LeftHand" scale="0.9 0.8 0.555556"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/RightUpperLeg.stl" name="RightUpperLeg" scale="1.2 1.2 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/RightLowerLeg.stl" name="RightLowerLeg" scale="1.1 1.1 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/RightFoot.stl" name="RightFoot" scale="1.0303 1.0303 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/LeftUpperLeg.stl" name="LeftUpperLeg" scale="1.2 1.2 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/LeftLowerLeg.stl" name="LeftLowerLeg" scale="1.1 1.1 1.0303"/>
+          <mesh file="$(find tobi_sim)/assets/meshes/human/LeftFoot.stl" name="LeftFoot" scale="1.0303 1.0303 1.0303"/>
+          </asset>
+  </xacro:macro>
+</mujoco>
