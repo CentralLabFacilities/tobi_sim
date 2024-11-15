@@ -9,7 +9,8 @@
   <xacro:include filename="$(find tiago_mujoco)/assets/xacro/assets.mujoco.xacro" />
 
   <xacro:include filename="$(find tobi_sim)/assets/xacro/human_assets.xml.xacro" />
-  <xacro:include filename="$(find tobi_sim)/assets/xacro/human_avatar.xml.xacro" />
+  <!--xacro:include filename="$(find tobi_sim)/assets/xacro/human_avatar.xml.xacro" /-->
+  <xacro:include filename="/home/nschmitz/Robocup/src/tobi_sim/assets/xacro/human_avatar.xml.xacro" />
 
 
 

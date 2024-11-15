@@ -2,28 +2,29 @@
 <mujoco xmlns:xacro="http://ros.org/wiki/xacro">
 <xacro:macro name="human_avatar" params="name pos gesture">
   <body name="${name}" pos="${pos}">
-    <freejoint name="root"/>
-    <geom name="Pelvis" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="Pelvis"/>
+    <freejoint/>
+    <inertial mass="1" pos="0 0 0" diaginertia="1 1 1"/> 
+    <geom name="Pelvis" type="mesh" density="0" rgba="0 0 1 1" mesh="Pelvis"/>
     <body name="LowerTrunk_f1" pos="0 0 0.0663">
       <body name="LowerTrunk">
-        <geom name="LowerTrunk" pos="0 0 0.085" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LowerTrunk"/>
+        <geom name="LowerTrunk" pos="0 0 0.085" quat="1 0 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LowerTrunk"/>
         <body name="UpperTrunk_f1" pos="0 0 0.17">
           <body name="UpperTrunk_f2">
             <body name="UpperTrunk">
-              <geom name="UpperTrunk" pos="0 0 0.0935" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="UpperTrunk"/>
+              <geom name="UpperTrunk" pos="0 0 0.0935" type="mesh" density="0" rgba="1 0 0 1" mesh="UpperTrunk"/>
               <body name="RightShoulder" pos="0.01 -0.074 0.133">
-              <geom name="RightShoulder" pos="0 -0.0733833 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="RightShoulder"/>
+              <geom name="RightShoulder" pos="0 -0.0733833 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightShoulder"/>
                 <body name="RightShoulder_f1" pos="0 -0.146767 0">
                   <body name="RightShoulder_f2">
                     <xacro:if value="${gesture == 'neutral'}">
                       <body name="RightUpperArm" euler="1.5 0 0">
-                        <geom name="RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
+                        <geom name="RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
                         <body name="RightForeArm_f1" pos="0 -0.3162 0">
                           <body name="RightForeArm">
-                            <geom name="RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
+                            <geom name="RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
                             <body name="RightHand_f1" pos="0 -0.2482 0">
                               <body name="RightHand">
-                                <geom name="RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
+                                <geom name="RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
                               </body>
                             </body>
                           </body>
@@ -32,13 +33,13 @@
                     </xacro:if>
                     <xacro:if value="${gesture == 'waving_left'}">
                       <body name="RightUpperArm" euler="1.5 0 0">
-                        <geom name="RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
+                        <geom name="RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
                         <body name="RightForeArm_f1" pos="0 -0.3162 0">
                           <body name="RightForeArm">
-                            <geom name="RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
+                            <geom name="RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
                             <body name="RightHand_f1" pos="0 -0.2482 0">
                               <body name="RightHand">
-                                <geom name="RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
+                                <geom name="RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
                               </body>
                             </body>
                           </body>
@@ -47,13 +48,13 @@
                     </xacro:if>
                     <xacro:if value="${gesture == 'waving_right'}">
                       <body name="RightUpperArm" euler="-0.75 0 0">
-                        <geom name="RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
+                        <geom name="RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
                         <body name="RightForeArm_f1" pos="0 -0.3162 0">
                           <body name="RightForeArm" euler="-0.75 0 0">
-                            <geom name="RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
+                            <geom name="RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
                             <body name="RightHand_f1" pos="0 -0.2482 0">
                               <body name="RightHand" euler="0 -1.5 0">
-                                <geom name="RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
+                                <geom name="RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
                               </body>
                             </body>
                           </body>
@@ -62,13 +63,13 @@
                     </xacro:if>
                     <xacro:if value="${gesture == 'pointing_left'}">
                       <body name="RightUpperArm" euler="1.5 0 0">
-                        <geom name="RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
+                        <geom name="RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
                         <body name="RightForeArm_f1" pos="0 -0.3162 0">
                           <body name="RightForeArm">
-                            <geom name="RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
+                            <geom name="RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
                             <body name="RightHand_f1" pos="0 -0.2482 0">
                               <body name="RightHand">
-                                <geom name="RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
+                                <geom name="RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
                               </body>
                             </body>
                           </body>
@@ -77,13 +78,13 @@
                     </xacro:if>
                     <xacro:if value="${gesture == 'pointing_right'}">
                       <body name="RightUpperArm" euler="0.5 0 0">
-                        <geom name="RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
+                        <geom name="RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
                         <body name="RightForeArm_f1" pos="0 -0.3162 0">
                           <body name="RightForeArm" euler="0.1 0 0">
-                            <geom name="RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
+                            <geom name="RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
                             <body name="RightHand_f1" pos="0 -0.2482 0">
                               <body name="RightHand" euler="0 -1.5 0">
-                                <geom name="RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
+                                <geom name="RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
                               </body>
                             </body>
                           </body>
@@ -94,18 +95,18 @@
                 </body>
               </body>
               <body name="LeftShoulder" pos="0.01 0.074 0.133">
-                <geom name="LeftShoulderV" pos="0 0.0733833 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LeftShoulder"/>
+                <geom name="LeftShoulderV" pos="0 0.0733833 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftShoulder"/>
                 <body name="LeftShoulder_f1" pos="0 0.146767 0">
                   <body name="LeftShoulder_f2">
                     <xacro:if value="${gesture == 'neutral'}">
                       <body name="LeftUpperArm" euler="-1.5 0 0">
-                      <geom name="LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
+                      <geom name="LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
                       <body name="LeftForeArm_f1" pos="0 0.3162 0">
                         <body name="LeftForeArm">
-                          <geom name="LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
+                          <geom name="LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
                           <body name="LeftHand_f1" pos="0 0.2482 0">
                             <body name="LeftHand">
-                              <geom name="LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
+                              <geom name="LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
                             </body>
                           </body>
                         </body>
@@ -114,13 +115,13 @@
                     </xacro:if>
                     <xacro:if value="${gesture == 'waving_left'}">
                       <body name="LeftUpperArm" euler="0.75 0 0">
-                        <geom name="LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
+                        <geom name="LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
                         <body name="LeftForeArm_f1" pos="0 0.3162 0">
                           <body name="LeftForeArm" euler="0.75 0 0">
-                            <geom name="LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
+                            <geom name="LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
                             <body name="LeftHand_f1" pos="0 0.2482 0">
                               <body name="LeftHand" euler="0 -1.5 0">
-                                <geom name="LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
+                                <geom name="LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
                               </body>
                             </body>
                           </body>
@@ -129,13 +130,13 @@
                     </xacro:if>
                     <xacro:if value="${gesture == 'waving_right'}">
                       <body name="LeftUpperArm" euler="-1.5 0 0">
-                        <geom name="LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
+                        <geom name="LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
                         <body name="LeftForeArm_f1" pos="0 0.3162 0">
                           <body name="LeftForeArm">
-                            <geom name="LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
+                            <geom name="LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
                             <body name="LeftHand_f1" pos="0 0.2482 0">
                               <body name="LeftHand">
-                                <geom name="LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
+                                <geom name="LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
                               </body>
                             </body>
                           </body>
@@ -144,13 +145,13 @@
                     </xacro:if>
                     <xacro:if value="${gesture == 'pointing_left'}">
                       <body name="LeftUpperArm" euler="-0.5 0 0">
-                        <geom name="LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
+                        <geom name="LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
                         <body name="LeftForeArm_f1" pos="0 0.3162 0">
                           <body name="LeftForeArm" euler="-0.1 0 0">
-                            <geom name="LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
+                            <geom name="LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
                             <body name="LeftHand_f1" pos="0 0.2482 0">
                               <body name="LeftHand" euler="0 -1.5 0">
-                                <geom name="LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
+                                <geom name="LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
                               </body>
                             </body>
                           </body>
@@ -159,13 +160,13 @@
                     </xacro:if>
                     <xacro:if value="${gesture == 'pointing_right'}">
                       <body name="LeftUpperArm" euler="-1.5 0 0">
-                        <geom name="LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
+                        <geom name="LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
                         <body name="LeftForeArm_f1" pos="0 0.3162 0">
                           <body name="LeftForeArm">
-                            <geom name="LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
+                            <geom name="LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
                             <body name="LeftHand_f1" pos="0 0.2482 0">
                               <body name="LeftHand">
-                                <geom name="LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
+                                <geom name="LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
                               </body>
                             </body>
                           </body>
@@ -178,10 +179,10 @@
               <body name="Neck_f1" pos="0 0 0.187">
                 <body name="Neck_f2">
                   <body name="Neck">
-                    <geom name="NeckV" pos="0 0 0.0442" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="Neck"/>
+                    <geom name="NeckV" pos="0 0 0.0442" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="Neck"/>
                     <body name="Head_f1" pos="0 0 0.0884">
                       <body name="Head">
-                        <geom name="HeadV" pos="0 0 0.1105" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0.76 0.49 1" mesh="Head"/>
+                        <geom name="HeadV" pos="0 0 0.1105" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="Head"/>
                       </body>
                     </body>
                   </body>
@@ -195,14 +196,14 @@
     <body name="RightUpperLeg_f1" pos="0 -0.09985 -0.0663">
       <body name="RightUpperLeg_f2">
         <body name="RightUpperLeg">
-          <geom name="RightUpperLeg" pos="0 0 -0.20825" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="RightUpperLeg"/>
+          <geom name="RightUpperLeg" pos="0 0 -0.20825" quat="1 0 0 0" type="mesh" density="0" rgba="0 0 1 1" mesh="RightUpperLeg"/>
           <body name="RightLowerLeg_f1" pos="0 0 -0.4165">
             <body name="RightLowerLeg">
-              <geom name="RightLowerLeg" pos="0 0 -0.2091" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="RightLowerLeg"/>
+              <geom name="RightLowerLeg" pos="0 0 -0.2091" quat="1 0 0 0" type="mesh" density="0" rgba="0 0 1 1" mesh="RightLowerLeg"/>
               <body name="RightFoot_f1" pos="0 0 -0.4182">
                 <body name="RightFoot_f2">
                   <body name="RightFoot">
-                    <geom name="RightFoot" pos="0.0842 0 -0.03315" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="RightFoot"/>
+                    <geom name="RightFoot" pos="0.0842 0 -0.03315" quat="1 0 0 0" type="mesh"  density="0" rgba="0.15 0.15 0.15 1" mesh="RightFoot"/>
                   </body>
                 </body>
               </body>
@@ -214,14 +215,14 @@
     <body name="LeftUpperLeg_f1" pos="0 0.09985 -0.0663">
       <body name="LeftUpperLeg_f2">
         <body name="LeftUpperLeg">
-          <geom name="LeftUpperLeg" pos="0 0 -0.20825" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="LeftUpperLeg"/>
+          <geom name="LeftUpperLeg" pos="0 0 -0.20825" quat="1 0 0 0" type="mesh" density="0" rgba="0 0 1 1" mesh="LeftUpperLeg"/>
           <body name="LeftLowerLeg_f1" pos="0 0 -0.4165">
             <body name="LeftLowerLeg">
-              <geom name="LeftLowerLeg" pos="0 0 -0.2091" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="LeftLowerLeg"/>
+              <geom name="LeftLowerLeg" pos="0 0 -0.2091" quat="1 0 0 0" type="mesh" density="0" rgba="0 0 1 1" mesh="LeftLowerLeg"/>
               <body name="LeftFoot_f1" pos="0 0 -0.4182">
                 <body name="LeftFoot_f2">
                   <body name="LeftFoot">
-                    <geom name="LeftFoot" pos="0.0842 0 -0.03315" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.15 0.15 0.15 1" mesh="LeftFoot"/>
+                    <geom name="LeftFoot" pos="0.0842 0 -0.03315" quat="1 0 0 0" type="mesh" density="0" rgba="0.15 0.15 0.15 1" mesh="LeftFoot"/>
                   </body>
                 </body>
               </body>
