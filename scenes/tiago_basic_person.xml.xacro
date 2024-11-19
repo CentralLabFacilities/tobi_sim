@@ -46,14 +46,14 @@
   </worldbody>
 
   <worldbody>
-    <xacro:tiago_robot name="tiago" pos="0 0 0.11" rot="0 0 0" />
+    <xacro:tiago_robot name="tiago" pos="-2 0 0.11" rot="0 0 0" />
   </worldbody>
 
   <!-- Valid gestures are 'neutral', 'waving_left', 'waving_right', 'pointing_left', 'pointing_right'-->
   <worldbody>
-    <xacro:human_avatar name="human1" pos="1 1 0.95" gesture="waving_left" />
-    <xacro:human_avatar name="human2" pos="-1 1 0.95" gesture="neutral" />
-    <xacro:human_avatar name="human3" pos="1 -1 0.95" gesture="neutral" />
+    <xacro:human_avatar name="human1" pos="0 0 0.95" rot="0 0 3.14" gesture="waving_left" />
+    <xacro:human_avatar name="human2" pos="100 1 0.95" rot="0 0 0" gesture="neutral" />
+    <xacro:human_avatar name="human3" pos="100 -1 0.95" rot="0 0 0" gesture="neutral" />
   </worldbody>
 
   <xacro:pmb2_contacts name="tiago" />
