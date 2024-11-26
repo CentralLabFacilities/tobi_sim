@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="clf_pringles_assets">
+        <asset>
+            <mesh file="$(find tobi_sim)/assets/meshes/clf_pringles/model.obj" name="clf_Pringles" scale="1.0 1.0 1.0"/>
+            <texture name="clf_Pringles" file="$(find tobi_sim)/assets/meshes/clf_pringles/texture_map.png" type="2d"/>
+            <material name="clf_Pringles" texture="clf_Pringles"/>
+        </asset>
+    </xacro:macro>
+</mujoco>
+    
