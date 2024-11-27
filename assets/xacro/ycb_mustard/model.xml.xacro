@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="ycb_mustard_model" params="name pos rot">
+        <body name="ycb_mustard_${name}" pos="${pos}" euler="${rot}">
+            <freejoint/>
+            <inertial diaginertia="0.005 0.0025 0.0025" mass="0.2" pos="0 0 0.025"/>
+            <geom name="${name}_ycb_mustard" type="mesh" density="0" mesh="ycb_mustard" material="ycb_mustard"/> 
+        </body>
+    </xacro:macro>
+</mujoco>
