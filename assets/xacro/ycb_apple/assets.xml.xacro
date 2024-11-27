@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="ycb_apple_assets">
+        <asset>
+            <mesh file="$(find tobi_sim)/assets/meshes/ycb_apple/model.obj" name="ycb_apple" scale="1.0 1.0 1.0"/>
+            <texture name="ycb_apple" file="$(find tobi_sim)/assets/meshes/ycb_apple/texture_map.png" type="2d"/>
+            <material name="ycb_apple" texture="ycb_apple"/>
+        </asset>
+    </xacro:macro>
+</mujoco>
