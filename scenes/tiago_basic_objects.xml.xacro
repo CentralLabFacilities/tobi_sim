@@ -51,7 +51,7 @@
     <xacro:clf_pringles_model name="grasp" pos="0.56428 0.221972 1" rot="0 0 0"/>
 
     <xacro:clf_pringles_model name="dummy" pos="1.2 0.2 1" rot="0 1.6 3.14"/>
-    <xacro:clf_pringles_model name="dummy2" pos="1.2 -0.2 1" rot="0 1.6 3.14"/>
+    <xacro:clf_pringles_model name="dummy2" pos="1.2 -0.2 1" rot="0 0 3.14"/>
   </worldbody>
 
   <worldbody>
