@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="ycb_master_chef_can_assets">
+        <asset>
+            <mesh file="$(find tobi_sim)/assets/meshes/ycb_master_chef_can/model.obj" name="ycb_master_chef_can" scale="1.0 1.0 1.0"/>
+            <texture name="ycb_master_chef_can" file="$(find tobi_sim)/assets/meshes/ycb_master_chef_can/texture_map.png" type="2d"/>
+            <material name="ycb_master_chef_can" texture="ycb_master_chef_can"/>
+        </asset>
+    </xacro:macro>
+</mujoco>

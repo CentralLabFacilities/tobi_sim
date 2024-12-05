@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="ycb_tuna_assets">
+        <asset>
+            <mesh file="$(find tobi_sim)/assets/meshes/ycb_tuna/model.obj" name="ycb_tuna" scale="1.0 1.0 1.0"/>
+            <texture name="ycb_tuna" file="$(find tobi_sim)/assets/meshes/ycb_tuna/texture_map.png" type="2d"/>
+            <material name="ycb_tuna" texture="ycb_tuna"/>
+        </asset>
+    </xacro:macro>
+</mujoco>

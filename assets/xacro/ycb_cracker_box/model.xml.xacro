@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="ycb_cracker_box_model" params="name pos rot">
+        <body name="ycb_cracker_box_${name}" pos="${pos}" euler="${rot}">
+            <freejoint/>
+            <inertial diaginertia="0.005 0.005 0.005" mass="0.2" pos="0 0 0"/>
+            <geom name="${name}_ycb_cracker_box" type="mesh" density="0" mesh="ycb_cracker_box" material="ycb_cracker_box"/> 
+        </body>
+    </xacro:macro>
+</mujoco>
