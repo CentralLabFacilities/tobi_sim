@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="ycb_bleach_cleanser_assets">
+        <asset>
+            <mesh file="$(find tobi_sim)/assets/meshes/ycb_bleach_cleanser/model.obj" name="ycb_bleach_cleanser" scale="1.0 1.0 1.0"/>
+            <texture name="ycb_bleach_cleanser" file="$(find tobi_sim)/assets/meshes/ycb_bleach_cleanser/texture_map.png" type="2d"/>
+            <material name="ycb_bleach_cleanser" texture="ycb_bleach_cleanser"/>
+        </asset>
+    </xacro:macro>
+</mujoco>

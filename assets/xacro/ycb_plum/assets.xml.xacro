@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="ycb_plum_assets">
+        <asset>
+            <mesh file="$(find tobi_sim)/assets/meshes/ycb_plum/model.obj" name="ycb_plum" scale="1.0 1.0 1.0"/>
+            <texture name="ycb_plum" file="$(find tobi_sim)/assets/meshes/ycb_plum/texture_map.png" type="2d"/>
+            <material name="ycb_plum" texture="ycb_plum"/>
+        </asset>
+    </xacro:macro>
+</mujoco>

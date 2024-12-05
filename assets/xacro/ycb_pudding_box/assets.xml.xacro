@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="ycb_pudding_box_assets">
+        <asset>
+            <mesh file="$(find tobi_sim)/assets/meshes/ycb_pudding_box/model.obj" name="ycb_pudding_box" scale="1.0 1.0 1.0"/>
+            <texture name="ycb_pudding_box" file="$(find tobi_sim)/assets/meshes/ycb_pudding_box/texture_map.png" type="2d"/>
+            <material name="ycb_pudding_box" texture="ycb_pudding_box"/>
+        </asset>
+    </xacro:macro>
+</mujoco>

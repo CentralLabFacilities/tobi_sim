@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="ycb_plate_assets">
+        <asset>
+            <mesh file="$(find tobi_sim)/assets/meshes/ycb_plate/model.obj" name="ycb_plate" scale="1.0 1.0 1.0"/>
+            <texture name="ycb_plate" file="$(find tobi_sim)/assets/meshes/ycb_plate/texture_map.png" type="2d"/>
+            <material name="ycb_plate" texture="ycb_plate"/>
+        </asset>
+    </xacro:macro>
+</mujoco>
