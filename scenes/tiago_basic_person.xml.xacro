@@ -50,10 +50,13 @@
   </worldbody>
 
   <!-- Valid gestures are 'neutral', 'waving_left', 'waving_right', 'pointing_left', 'pointing_right'-->
+  <!-- Valid postures are 'standing', 'sitting'-->
   <worldbody>
-    <xacro:human_avatar name="human1" pos="0 0 0.95" rot="0 0 3.14" gesture="waving_left" />
-    <xacro:human_avatar name="human2" pos="100 1 0.95" rot="0 0 0" gesture="neutral" />
-    <xacro:human_avatar name="human3" pos="100 -1 0.95" rot="0 0 0" gesture="neutral" />
+    <xacro:human_avatar name="human1" pos="0 0 0.95" rot="0 0 3.14" gesture="waving_left" posture="standing" />
+    <xacro:human_avatar name="human2" pos="100 1 0.95" rot="0 0 0" gesture="neutral" posture="standing" />
+    <xacro:human_avatar name="human3" pos="100 -1 0.95" rot="0 0 0" gesture="neutral" posture="standing" />
+    <xacro:human_avatar name="human4" pos="1 1 0.55" rot="0 0 0" gesture="neutral" posture="sitting" />
+    <xacro:human_avatar name="human5" pos="2 2 0.55" rot="0 0 0" gesture="waving_left" posture="sitting" />
   </worldbody>
 
   <xacro:pmb2_contacts name="tiago" />
