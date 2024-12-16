@@ -31,7 +31,7 @@ If the avatar is generated sitting, a chair will be placed beneath it.
                   <body name="${name}_RightShoulder_f2">
                   <!-- Right arm -->
                   <xacro:unless value="${posture == 'sitting'}">
-                    <xacro:if value="${gesture == 'neutral'}">
+                    <xacro:if value="${gesture == 'neutral' or gesture == 'pointing_left' or gesture == 'waving_left'}">
                       <body name="${name}_RightUpperArm" euler="1.5 0 0">
                         <geom name="${name}_RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
                         <body name="${name}_RightForeArm_f1" pos="0 -0.3162 0">
@@ -46,9 +46,28 @@ If the avatar is generated sitting, a chair will be placed beneath it.
                         </body>
                       </body>
                     </xacro:if>
+                    <xacro:if value="${gesture == 'holding_pringles'}">
+                      <body name="${name}_RightUpperArm" euler="1.5 0.75 0">
+                        <geom name="${name}_RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
+                        <body name="${name}_RightForeArm_f1" pos="0 -0.3162 0" euler="0 0 1.56">
+                          <body name="${name}_RightForeArm">
+                            <geom name="${name}_RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
+                            <body name="${name}_RightHand_f1" pos="0 -0.2482 0">
+                              <body name="${name}_RightHand">
+                                <geom name="${name}_RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
+                                <body name="${name}_clf_pringles" pos="0.05 -0.05 -0.045" euler="-1.6 1.55 0">
+                                      <inertial diaginertia="0.005 0.005 0.005" mass="0.05" pos="0 0 0"/>
+                                      <geom name="${name}_clf_pringles" type="mesh" density="0" mesh="clf_Pringles" material="clf_Pringles"/> 
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </xacro:if>
                   </xacro:unless>
                   <xacro:if value="${posture == 'sitting'}">
-                    <xacro:if value="${gesture == 'neutral'}">
+                    <xacro:if value="${gesture == 'neutral' or gesture == 'pointing_left' or gesture == 'waving_left'}">
                       <body name="${name}_RightUpperArm" euler="1.5 0.2 0.5">
                         <geom name="${name}_RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
                         <body name="${name}_RightForeArm_f1" pos="0 -0.3162 0">
@@ -64,21 +83,6 @@ If the avatar is generated sitting, a chair will be placed beneath it.
                       </body>
                     </xacro:if>
                   </xacro:if>
-                    <xacro:if value="${gesture == 'waving_left'}">
-                      <body name="${name}_RightUpperArm" euler="1.5 0 0">
-                        <geom name="${name}_RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
-                        <body name="${name}_RightForeArm_f1" pos="0 -0.3162 0">
-                          <body name="${name}_RightForeArm">
-                            <geom name="${name}_RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
-                            <body name="${name}_RightHand_f1" pos="0 -0.2482 0">
-                              <body name="${name}_RightHand">
-                                <geom name="${name}_RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
-                              </body>
-                            </body>
-                          </body>
-                        </body>
-                      </body>
-                    </xacro:if>
                     <xacro:if value="${gesture == 'waving_right'}">
                       <body name="${name}_RightUpperArm" euler="-0.75 0 0">
                         <geom name="${name}_RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
@@ -87,21 +91,6 @@ If the avatar is generated sitting, a chair will be placed beneath it.
                             <geom name="${name}_RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
                             <body name="${name}_RightHand_f1" pos="0 -0.2482 0">
                               <body name="${name}_RightHand" euler="0 -1.5 0">
-                                <geom name="${name}_RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
-                              </body>
-                            </body>
-                          </body>
-                        </body>
-                      </body>
-                    </xacro:if>
-                    <xacro:if value="${gesture == 'pointing_left'}">
-                      <body name="${name}_RightUpperArm" euler="1.5 0 0">
-                        <geom name="${name}_RightUpperArm" pos="0 -0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightUpperArm"/>                     
-                        <body name="${name}_RightForeArm_f1" pos="0 -0.3162 0">
-                          <body name="${name}_RightForeArm">
-                            <geom name="${name}_RightForeArm" pos="0 -0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="RightForeArm"/>
-                            <body name="${name}_RightHand_f1" pos="0 -0.2482 0">
-                              <body name="${name}_RightHand">
                                 <geom name="${name}_RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
                               </body>
                             </body>
@@ -132,7 +121,7 @@ If the avatar is generated sitting, a chair will be placed beneath it.
                 <body name="${name}_LeftShoulder_f1" pos="0 0.146767 0">
                   <body name="${name}_LeftShoulder_f2">
                   <xacro:unless value="${posture == 'sitting'}">
-                    <xacro:if value="${gesture == 'neutral'}">
+                    <xacro:if value="${gesture == 'neutral' or gesture == 'waving_right' or gesture == 'pointing_right' or gesture == 'holding_pringles'}">
                       <body name="${name}_LeftUpperArm" euler="-1.5 0 0">
                       <geom name="${name}_LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
                       <body name="${name}_LeftForeArm_f1" pos="0 0.3162 0">
@@ -149,7 +138,7 @@ If the avatar is generated sitting, a chair will be placed beneath it.
                     </xacro:if>
                   </xacro:unless>
                     <xacro:if value="${posture == 'sitting'}">
-                      <xacro:if value="${gesture == 'neutral'}">
+                      <xacro:if value="${gesture == 'neutral' or gesture == 'waving_right' or gesture == 'pointing_right' or gesture == 'holding_pringles'}">
                         <body name="${name}_LeftUpperArm" euler="-1.5 0.2 -0.5">
                         <geom name="${name}_LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
                           <body name="${name}_LeftForeArm_f1" pos="0 0.3162 0">
@@ -180,21 +169,6 @@ If the avatar is generated sitting, a chair will be placed beneath it.
                         </body>
                       </body>
                     </xacro:if>
-                    <xacro:if value="${gesture == 'waving_right'}">
-                      <body name="${name}_LeftUpperArm" euler="-1.5 0 0">
-                        <geom name="${name}_LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
-                        <body name="${name}_LeftForeArm_f1" pos="0 0.3162 0">
-                          <body name="${name}_LeftForeArm">
-                            <geom name="${name}_LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
-                            <body name="${name}_LeftHand_f1" pos="0 0.2482 0">
-                              <body name="${name}_LeftHand">
-                                <geom name="${name}_LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
-                              </body>
-                            </body>
-                          </body>
-                        </body>
-                      </body>
-                    </xacro:if>
                     <xacro:if value="${gesture == 'pointing_left'}">
                       <body name="${name}_LeftUpperArm" euler="-0.5 0 0">
                         <geom name="${name}_LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
@@ -203,21 +177,6 @@ If the avatar is generated sitting, a chair will be placed beneath it.
                             <geom name="${name}_LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
                             <body name="${name}_LeftHand_f1" pos="0 0.2482 0">
                               <body name="${name}_LeftHand" euler="0 -1.5 0">
-                                <geom name="${name}_LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
-                              </body>
-                            </body>
-                          </body>
-                        </body>
-                      </body>
-                    </xacro:if>
-                    <xacro:if value="${gesture == 'pointing_right'}">
-                      <body name="${name}_LeftUpperArm" euler="-1.5 0 0">
-                        <geom name="${name}_LeftUpperArm" pos="0 0.1581 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftUpperArm"/>
-                        <body name="${name}_LeftForeArm_f1" pos="0 0.3162 0">
-                          <body name="${name}_LeftForeArm">
-                            <geom name="${name}_LeftForeArm" pos="0 0.1241 0" quat="0.707105 0.707108 0 0" type="mesh" density="0" rgba="1 0 0 1" mesh="LeftForeArm"/>
-                            <body name="${name}_LeftHand_f1" pos="0 0.2482 0">
-                              <body name="${name}_LeftHand">
                                 <geom name="${name}_LeftHand" pos="0 0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="LeftHand"/>
                               </body>
                             </body>
