@@ -9,9 +9,38 @@
   <xacro:include filename="$(find tiago_mujoco)/assets/xacro/tiago.mujoco.xacro" />
   <xacro:include filename="$(find tiago_mujoco)/assets/xacro/assets.mujoco.xacro" />
 
+
+  <!-- Objects-->
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/model.xml.xacro" />
+
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_orange/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_orange/model.xml.xacro" />
+
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_pringles/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_pringles/model.xml.xacro" />
+
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_fanta/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_fanta/model.xml.xacro" />
+
+
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_cup/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_cup/model.xml.xacro" />
+
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/model.xml.xacro" />
+
+
+
   <!-- Use asset macros here -->
   <xacro:pmb2_assets />
   <xacro:tiago_assets />
+  <xacro:ycb_banana_assets />
+  <xacro:ycb_orange_assets />
+  <xacro:clf_pringles_assets />
+  <xacro:clf_fanta_assets />
+  <xacro:ycb_cup_assets />
+  <xacro:clf_coke_assets />
 
   <statistic center="0 0 0.3" extent="1.2" />
 
@@ -63,6 +92,17 @@
     <geom name="bigTable" pos="-1.0 -2.5 0.36" rgba=".5 .5 .5 1" size="0.5 1.1 0.36" type="box" />
     <geom name="roundTable1" pos="1.8 0.3 0.36" rgba=".5 .5 .5 1" size="0.4 0.36" type="cylinder" />
     <geom name="roundTable2" pos="-1.5 1.8 0.36" rgba=".5 .5 .5 1" size="0.4 0.36" type="cylinder" />
+  </worldbody>
+
+  <!-- Object etc. -0.75 4.4 0.5"-->
+  <worldbody>
+    <xacro:ycb_banana_model name="ikeaTable" pos="-0.4 4.6 0.5" rot="0 0 3.14"/>
+    <xacro:ycb_orange_model name="ikeaTable" pos="-0.1 4.4 0.5" rot="0 0 3.14"/>
+    <xacro:clf_pringles_model name="ikeaTable" pos="-0.45 4.8 0.55" rot="0 0 3.14"/>
+    <xacro:clf_coke_model name="ikeaTable" pos="-0.7 4.5 0.5" rot="0 0 3.14"/>
+    <xacro:clf_fanta_model name="ikeaTable2" pos="-0.22 4.75 0.5" rot="0 0 3.14"/>
+    <xacro:clf_fanta_model name="ikeaTable" pos="-0.8 4.79 0.5" rot="0 0 3.14"/>
+    <xacro:ycb_cup_model name="ikeaTable" pos="0.0 4.78 0.5" rot="0 0 3.14"/>
   </worldbody>
 
 </mujoco>
