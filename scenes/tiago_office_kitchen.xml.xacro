@@ -6,8 +6,7 @@
   <size njmax="500" nconmax="100" />
 
   <!-- Robot -->
-  <xacro:include filename="$(find tiago_mujoco)/assets/xacro/tiago.mujoco.xacro" />
-  <xacro:include filename="$(find tiago_mujoco)/assets/xacro/assets.mujoco.xacro" />
+  <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
 
   <!-- Human avatar-->
   <xacro:include filename="$(find tobi_sim)/assets/xacro/human_assets.xml.xacro" />
@@ -35,10 +34,7 @@
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/model.xml.xacro" />
 
 
-
   <!-- Use asset macros here -->
-  <xacro:pmb2_assets />
-  <xacro:tiago_assets />
   <xacro:human_assets />
   <xacro:ycb_banana_assets />
   <xacro:ycb_orange_assets />
@@ -46,6 +42,8 @@
   <xacro:clf_fanta_assets />
   <xacro:ycb_cup_assets />
   <xacro:clf_coke_assets />
+
+  <xacro:add_robot robot_name="tiago" robot_pos="0 0 0.11" robot_rot="0 0 0" />
 
   <statistic center="0 0 0.3" extent="1.2" />
 
@@ -72,14 +70,6 @@
     <light pos="0 0 1.5" dir="0 0 -1" directional="true" />
     <geom name="floor" size="0 0 0.05" type="plane" material="groundplane" />
   </worldbody>
-
-  <!-- Robot -->
-  <worldbody>
-    <xacro:tiago_robot name="tiago" pos="1.0 -2 0.11" rot="0 0 1.57" />
-  </worldbody>
-
-  <xacro:pmb2_contacts name="tiago" />
-  <xacro:pmb2_sensors name="tiago" />
 
   <!-- Human avatar -->
   <worldbody>

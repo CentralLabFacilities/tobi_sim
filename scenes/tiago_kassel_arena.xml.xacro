@@ -5,11 +5,9 @@
   <option noslip_iterations="1" />
   <size njmax="500" nconmax="100" />
 
-  <xacro:include filename="$(find tiago_mujoco)/assets/xacro/tiago.mujoco.xacro" />
-  <xacro:include filename="$(find tiago_mujoco)/assets/xacro/assets.mujoco.xacro" />
+  <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
 
-  <xacro:pmb2_assets />
-  <xacro:tiago_assets />
+  <xacro:add_robot robot_name="tiago" robot_pos="0 0 0.11" robot_rot="0 0 0" />
 
   <statistic center="0 0 0.3" extent="1.2" />
 
@@ -37,13 +35,6 @@
     <geom name="floor" size="0 0 0.05" type="plane" material="groundplane" />
 
   </worldbody>
-
-  <worldbody>
-    <xacro:tiago_robot name="tiago" pos="0 0 0.11" rot="0 0 0" />
-  </worldbody>
-
-  <xacro:pmb2_contacts name="tiago" />
-  <xacro:pmb2_sensors name="tiago" />
 
   <worldbody>
 

@@ -5,17 +5,13 @@
   <option noslip_iterations="1" />
   <size njmax="500" nconmax="100" />
 
-  <xacro:include filename="$(find tiago_mujoco)/assets/xacro/tiago.mujoco.xacro" />
-  <xacro:include filename="$(find tiago_mujoco)/assets/xacro/assets.mujoco.xacro" />
+  <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
+
+  <xacro:add_robot robot_name="tiago" robot_pos="-2 0 0.11" robot_rot="0 0 0" />
 
   <xacro:include filename="$(find tobi_sim)/assets/xacro/human_assets.xml.xacro" />
   <xacro:include filename="$(find tobi_sim)/assets/xacro/human_avatar.xml.xacro" />
 
-
-
-
-  <xacro:pmb2_assets />
-  <xacro:tiago_assets />
   <xacro:human_assets />
 
   <statistic center="0 0 0.3" extent="1.2" />
@@ -45,10 +41,6 @@
 
   </worldbody>
 
-  <worldbody>
-    <xacro:tiago_robot name="tiago" pos="-2 0 0.11" rot="0 0 0" />
-  </worldbody>
-
   <!-- Valid gestures are 'neutral', 'waving_left', 'waving_right', 'pointing_left', 'pointing_right', 'holding_pringles'-->
   <!-- Valid postures are 'standing', 'sitting'-->
   <worldbody>
@@ -56,9 +48,6 @@
     <xacro:human_avatar name="human2" pos="100 1 0.95" rot="0 0 0" gesture="neutral" posture="standing" />
     <xacro:human_avatar name="human3" pos="100 -1 0.95" rot="0 0 0" gesture="neutral" posture="standing" />
   </worldbody>
-
-  <xacro:pmb2_contacts name="tiago" />
-  <xacro:pmb2_sensors name="tiago" />
 
   <worldbody>
     <geom name="Table" type="box" pos="0.56428 0.000584 0.2099115"
