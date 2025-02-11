@@ -5,8 +5,7 @@
   <option noslip_iterations="1" />
   <size njmax="500" nconmax="100" />
 
-  <xacro:include filename="$(find tiago_mujoco)/assets/xacro/tiago.mujoco.xacro" />
-  <xacro:include filename="$(find tiago_mujoco)/assets/xacro/assets.mujoco.xacro" />
+  <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
 
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_orange/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_orange/model.xml.xacro" />
@@ -21,11 +20,7 @@
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/model.xml.xacro" />
 
-
-  
-
-  <xacro:pmb2_assets />
-  <xacro:tiago_assets />
+  <xacro:add_robot robot_name="tiago" robot_pos="0 0 0.11" robot_rot="0 0 0" />
   <xacro:ycb_orange_assets />
   <xacro:clf_pringles_assets />
   <xacro:ycb_apple_assets />
@@ -72,13 +67,6 @@
     <xacro:ycb_apple_model name="shelf4" pos="-1.5 2.1 1.1" rot="0 0 3.14"/>
     <xacro:ycb_orange_model name="shel4" pos="-1.3 2.2 1.07" rot="0 0 0"/>
   </worldbody>
-
-  <worldbody>
-    <xacro:tiago_robot name="tiago" pos="0 0 0.11" rot="0 0 0" />
-  </worldbody>
-
-  <xacro:pmb2_contacts name="tiago" />
-  <xacro:pmb2_sensors name="tiago" />
 
   <worldbody>
     <geom name="Table" type="box" pos="0.56428 0.000584 0.2099115"

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="add_robot" params="robot_name robot_pos robot_rot" >
+
+        <xacro:include filename="$(find tiago_mujoco)/assets/xacro/tiago.mujoco.xacro" />
+        <xacro:include filename="$(find tiago_mujoco)/assets/xacro/assets.mujoco.xacro" />
+
+        <xacro:if value="${end_effector == 'schunk-wsg-cupro'}">
+            <xacro:include filename="$(find cupro_gripper_description)/mujoco/cupro_gripper.xml.xacro" />
+            <xacro:cupro_couple name="gripper" />
+        </xacro:if>
+
+        <xacro:pmb2_assets />
+        <xacro:tiago_assets />
+
+        <worldbody>
+            <xacro:tiago_robot name="${robot_name}" pos="${robot_pos}" rot="${robot_rot}" />
+        </worldbody>
+
+        <xacro:pmb2_contacts name="${robot_name}" />
+        <xacro:pmb2_sensors name="${robot_name}" />
+
+        <xacro:if value="${end_effector == 'schunk-wsg-cupro'}">
+            <contact>
+                <exclude body1="gripper_left_finger_link" body2="gripper_right_finger_link"/>
+            </contact>
+        </xacro:if>
+    </xacro:macro>
+</mujoco>
