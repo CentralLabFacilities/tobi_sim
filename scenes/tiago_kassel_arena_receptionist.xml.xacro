@@ -5,29 +5,18 @@
   <option noslip_iterations="1" />
   <size njmax="500" nconmax="100" />
 
-  <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
-
-  <xacro:add_robot robot_name="tiago" robot_pos="0 0 0.11" robot_rot="0 0 0" />
+  <xacro:include filename="$(find tiago_mujoco)/assets/xacro/tiago.mujoco.xacro" />
+  <xacro:include filename="$(find tiago_mujoco)/assets/xacro/assets.mujoco.xacro" />
 
   <!-- Human avatar-->
   <xacro:include filename="$(find tobi_sim)/assets/xacro/human_assets.xml.xacro" />
   <xacro:include filename="$(find tobi_sim)/assets/xacro/human_avatar.xml.xacro" />
 
+
     <!-- Objects-->
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/model.xml.xacro" />
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_orange/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_orange/model.xml.xacro" />
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_pringles/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_pringles/model.xml.xacro" />
 
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_fanta/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_fanta/model.xml.xacro" />
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_cup/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_cup/model.xml.xacro" />
 
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/model.xml.xacro" />
@@ -35,67 +24,22 @@
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_apple/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_apple/model.xml.xacro" />
 
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_mustard/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_mustard/model.xml.xacro" />
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_strawberry/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_strawberry/model.xml.xacro" />
-
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_pear/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_pear/model.xml.xacro" />
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_peach/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_peach/model.xml.xacro" />
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_spoon/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_spoon/model.xml.xacro" />
-  
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_plum/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_plum/model.xml.xacro" />
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_plate/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_plate/model.xml.xacro" />
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_knife/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_knife/model.xml.xacro" />
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_fork/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_fork/model.xml.xacro" />
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_bowl/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_bowl/model.xml.xacro" />
-
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_spezi/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_spezi/model.xml.xacro" />
-
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_cornflakes/assets.xml.xacro" />
-  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_cornflakes/model.xml.xacro" />
 
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_hagelslag/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_hagelslag/model.xml.xacro" />
 
+
+  <xacro:pmb2_assets />
+  <xacro:tiago_assets />
   <xacro:human_assets />
-  <xacro:ycb_banana_assets />
-  <xacro:ycb_orange_assets />
-  <xacro:clf_pringles_assets />
   <xacro:clf_fanta_assets />
-  <xacro:ycb_cup_assets />
   <xacro:clf_coke_assets />
   <xacro:ycb_apple_assets />
-  <xacro:ycb_mustard_assets />
-  <xacro:ycb_strawberry_assets />
-  <xacro:ycb_peach_assets />
-  <xacro:ycb_pear_assets />
-  <xacro:ycb_plum_assets />
-  <xacro:ycb_spoon_assets />
-  <xacro:ycb_plate_assets />
-  <xacro:ycb_fork_assets />
-  <xacro:ycb_bowl_assets />
-  <xacro:ycb_knife_assets />
   <xacro:clf_hagelslag_assets />
   <xacro:clf_spezi_assets />
-  <xacro:clf_cornflakes_assets />
+
 
   <statistic center="0 0 0.3" extent="1.2" />
 
@@ -123,6 +67,13 @@
     <geom name="floor" size="0 0 0.05" type="plane" material="groundplane" />
 
   </worldbody>
+
+  <worldbody>
+    <xacro:tiago_robot name="tiago" pos="0 0 0.11" rot="0 0 0" />
+  </worldbody>
+
+  <xacro:pmb2_contacts name="tiago" />
+  <xacro:pmb2_sensors name="tiago" />
 
   <worldbody>
 
@@ -216,29 +167,9 @@
 
         <!-- Objects -->
   <worldbody>
-    <xacro:ycb_banana_model name="desk" pos="3.7 2.0 0.8" rot="0 0 3.14"/>
-    <xacro:ycb_orange_model name="desk" pos="3.4 1.8 0.8" rot="0 0 3.14"/>
-    <xacro:clf_pringles_model name="desk" pos="3.6 1.5 0.8" rot="0 0 3.14"/>
     <xacro:clf_coke_model name="desk" pos="3.2 1.0 0.8" rot="0 0 3.14"/>
     <xacro:clf_fanta_model name="desk" pos="3.35 1.1 0.8" rot="0 0 3.14"/>
-    <xacro:ycb_plum_model name="desk" pos="3.9 1.67 0.8" rot="0 0 3.14"/>
-    <xacro:ycb_apple_model name="desk" pos="3.3 1.69 0.8" rot="0 0 3.14"/>
     <xacro:clf_spezi_model name="desk" pos="3.15 1.2 0.8" rot="0 1.57 1.57"/>
-
-    <xacro:ycb_peach_model name="cabinet" pos="3.7 4.8 0.8" rot="0 0 3.14"/>
-    <xacro:ycb_pear_model name="cabinet" pos="3.6 4.7 0.8" rot="0 0 3.14"/>
-    <xacro:clf_pringles_model name="cabinet" pos="3.7 4.8 0.6" rot="0 0 3.14"/>
-    <xacro:clf_hagelslag_model name="cabinet" pos="3.8 4.7 0.5" rot="0 0 3.14"/>
-    <xacro:clf_fanta_model name="cabinet" pos="3.4 4.77 1.1" rot="0 0 3.14"/>
-    <xacro:clf_spezi_model name="cabinet" pos="3.3 4.75 1.1" rot="0 1.57 1.57"/>
-    <xacro:clf_coke_model name="cabinet" pos="3.5 4.8 1.1" rot="0 0 3.14"/>
-
-    <xacro:ycb_plate_model name="kitchen_table" pos="2.5 -3.3 0.66" rot="0 0 3.14"/>
-    <xacro:ycb_cup_model name="kitchen_table" pos="2.5 -3.7 0.66" rot="0 0 3.14"/>
-    <xacro:ycb_bowl_model name="kitchen_table" pos="2.4 -3.5 0.66" rot="0 0 3.14"/>
-    <xacro:ycb_knife_model name="kitchen_table" pos="2.5 -3.5 0.66" rot="0 0 3.14"/>
-    <xacro:ycb_spoon_model name="kitchen_table" pos="2.6 -3.2 0.66" rot="0 0 3.14"/>
-    <xacro:ycb_fork_model name="kitchen_table" pos="2.4 -3.3 0.66" rot="0 0 3.14"/>
 
     <xacro:clf_coke_model name="bar" pos="0.65 -3.85 0.6" rot="0 0 3.14"/>
     <xacro:clf_fanta_model name="bar" pos="0.7 -3.75 0.6" rot="0 0 3.14"/>
