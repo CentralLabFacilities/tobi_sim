@@ -75,9 +75,6 @@
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_hagelslag/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_hagelslag/model.xml.xacro" />
 
-
-  <xacro:pmb2_assets />
-  <xacro:tiago_assets />
   <xacro:human_assets />
   <xacro:ycb_banana_assets />
   <xacro:ycb_orange_assets />
