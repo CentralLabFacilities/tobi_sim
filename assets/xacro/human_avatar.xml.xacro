@@ -55,9 +55,9 @@ If the avatar is generated sitting, a chair will be placed beneath it.
                             <body name="${name}_RightHand_f1" pos="0 -0.2482 0">
                               <body name="${name}_RightHand">
                                 <geom name="${name}_RightHand" pos="0 -0.0718 0" quat="1 0 0 0" type="mesh" density="0" rgba="1 0.76 0.49 1" mesh="RightHand"/>
-                                <body name="${name}_clf_pringles" pos="0.05 -0.05 -0.045" euler="-1.6 1.55 0">
+                                <body name="${name}_clf_coke" pos="0.05 -0.05 -0.045" euler="-1.6 1.55 0">
                                       <inertial diaginertia="0.005 0.005 0.005" mass="0.05" pos="0 0 0"/>
-                                      <geom name="${name}_clf_pringles" type="mesh" density="0" mesh="clf_Pringles" material="clf_Pringles"/> 
+                                      <geom name="${name}_clf_coke" type="mesh" density="0" mesh="clf_coke" material="clf_coke"/> 
                                 </body>
                               </body>
                             </body>

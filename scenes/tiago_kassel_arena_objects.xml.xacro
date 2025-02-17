@@ -13,6 +13,7 @@
   <xacro:include filename="$(find tobi_sim)/assets/xacro/human_assets.xml.xacro" />
   <xacro:include filename="$(find tobi_sim)/assets/xacro/human_avatar.xml.xacro" />
 
+
     <!-- Objects-->
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/model.xml.xacro" />
@@ -75,6 +76,7 @@
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_hagelslag/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_hagelslag/model.xml.xacro" />
 
+
   <xacro:human_assets />
   <xacro:ycb_banana_assets />
   <xacro:ycb_orange_assets />
@@ -96,6 +98,7 @@
   <xacro:clf_hagelslag_assets />
   <xacro:clf_spezi_assets />
   <xacro:clf_cornflakes_assets />
+
 
   <statistic center="0 0 0.3" extent="1.2" />
 
@@ -239,23 +242,6 @@
     <xacro:ycb_knife_model name="kitchen_table" pos="2.5 -3.5 0.66" rot="0 0 3.14"/>
     <xacro:ycb_spoon_model name="kitchen_table" pos="2.6 -3.2 0.66" rot="0 0 3.14"/>
     <xacro:ycb_fork_model name="kitchen_table" pos="2.4 -3.3 0.66" rot="0 0 3.14"/>
-
-    <xacro:clf_coke_model name="bar" pos="0.65 -3.85 0.6" rot="0 0 3.14"/>
-    <xacro:clf_fanta_model name="bar" pos="0.7 -3.75 0.6" rot="0 0 3.14"/>
-
-    <xacro:ycb_apple_model name="trash" pos="3.75 -3.5 0.05" rot="0 0 3.14"/>
-
-    <xacro:clf_hagelslag_model name="trash" pos="-0.7 -3.2 0.05" rot="0 0 3.14"/>
-  </worldbody>
-
-  <worldbody>
-    <xacro:human_avatar name="human1" pos="-4.3 3 0.95" rot="0 0 3.14" gesture="waving_left" posture="standing" />
-
-    <xacro:human_avatar name="human2" pos="-4.3 -3 0.55" rot="0 0 0" gesture="neutral" posture="sitting" />
-    <xacro:human_avatar name="human3" pos="-1.2 -4.0 0.95" rot="0 0 1.0" gesture="holding_pringles" posture="standing" />
-    <xacro:human_avatar name="human4" pos="-0.7 -3.5 0.95" rot="0 0 3.14" gesture="holding_pringles" posture="standing" />
-
-    <xacro:human_avatar name="human5" pos="3.2 -4 0.55" rot="0 0 1.57" gesture="holding_pringle" posture="sitting" />
 
   </worldbody>
 
