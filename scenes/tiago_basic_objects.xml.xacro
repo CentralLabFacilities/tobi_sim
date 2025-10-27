@@ -20,11 +20,19 @@
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/model.xml.xacro" />
 
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_spezi/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_spezi/model.xml.xacro" />
+
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/model.xml.xacro" />
+
   <xacro:add_robot robot_name="tiago" robot_pos="0 0 0.11" robot_rot="0 0 0" />
   <xacro:ycb_orange_assets />
   <xacro:clf_pringles_assets />
   <xacro:ycb_apple_assets />
   <xacro:ycb_banana_assets />
+  <xacro:clf_coke_assets />
+  <xacro:clf_spezi_assets />
 
 
   <statistic center="0 0 0.3" extent="1.2" />
@@ -55,7 +63,8 @@
   </worldbody>
 
   <worldbody>
-    <xacro:ycb_orange_model name="grasp" pos="0.56428 -0.221972 0.5" rot="0 0 0"/>
+    <xacro:clf_coke_model name="grasp" pos="0.56428 -0.221972 0.5" rot="0 0 0"/>
+    <xacro:clf_spezi_model name="grasp" pos="0.56428 0.021972 0.5" rot="0 0 0"/>
     <xacro:clf_pringles_model name="grasp" pos="0.56428 0.221972 0.5" rot="0 0 0"/>
 
     <xacro:clf_pringles_model name="dummy" pos="1.2 0.2 1" rot="0 1.6 3.14"/>
@@ -71,10 +80,6 @@
   <worldbody>
     <geom name="Table" type="box" pos="0.56428 0.000584 0.2099115"
       size="0.2265785 0.3210245 0.2099115" rgba=".5 .5 .5 1" />
-    <geom name="pick_tray" type="box" pos="0.56428 -0.215704 0.419773"
-      size="0.1175175 0.072463 0.01167" rgba=".0 .0 .5 1" />
-    <geom name="place_tray" type="box" pos="0.56428 0.215704 0.419773"
-      size="0.1175175 0.072463 0.01167" rgba=".5 .0 .0 1" />
   </worldbody>
 
   <worldbody>
