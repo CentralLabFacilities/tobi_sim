@@ -8,7 +8,7 @@
         <xacro:if value="${end_effector == 'schunk-wsg-cupro'}">
             <xacro:include filename="$(find cupro_gripper_description)/mujoco/cupro_gripper.xml.xacro" />
             <xacro:cupro_couple name="gripper" />
-            <xacro:cupro_contacts_disable name="gripper"/>
+            <!--xacro:cupro_contacts_disable name="gripper"/-->
         </xacro:if>
 
         <xacro:pmb2_assets />
