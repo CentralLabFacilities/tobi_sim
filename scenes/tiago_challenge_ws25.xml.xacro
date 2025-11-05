@@ -5,15 +5,35 @@
   <option noslip_iterations="1" />
   <size njmax="500" nconmax="100" />
 
-  <!-- Include macro files -->
+  <!-- Include macro files funitures -->
   <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
   <xacro:include filename="$(find tobi_sim)/model_makros/clf/covered/ikea_table.xml.xacro"/>
   <xacro:include filename="$(find tobi_sim)/model_makros/clf/covered/red_billy.xml.xacro"/>
   <xacro:include filename="$(find tobi_sim)/model_makros/clf/covered/couch_table.xml.xacro"/>
   <xacro:include filename="$(find tobi_sim)/model_makros/clf/covered/office_table_2m.xml.xacro"/>
 
+  <!-- Include macro files objects-->
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_fanta/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_fanta/model.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/model.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_pringles/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_pringles/model.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/model.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_cup/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_cup/model.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_spezi/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_spezi/model.xml.xacro" />
+
   <!-- Add robot to scene -->
   <xacro:add_robot robot_name="tiago" robot_pos="0 2.5 0.11" robot_rot="0 0 -1.575" />
+  <xacro:clf_pringles_assets />
+  <xacro:ycb_cup_assets />
+  <xacro:ycb_banana_assets />
+  <xacro:clf_coke_assets />
+  <xacro:clf_spezi_assets />
+  <xacro:clf_fanta_assets />
 
   <!-- Basic scene stuff -->
   <statistic center="0 0 0.3" extent="1.2" />
@@ -60,5 +80,17 @@
   <xacro:add_office_table_2m geom_name="office_table" pos="-0.5 -3 0" rot="0 0 -0.785"/>
 
   <!-- Objects -->
+  <worldbody>
+    <xacro:clf_coke_model name="drink1" pos="1.1 4.2 0.5" rot="0 0 1.57"/>
+    <xacro:clf_spezi_model name="drink2"  pos="1.0 4.1 0.5" rot="0 0 0"/>
+    <xacro:clf_fanta_model name="drink3"  pos="1.4 4.2 0.5" rot="0 0 -0.8"/>
+    <xacro:clf_fanta_model name="drink4"  pos="1.25 4.15 0.5" rot="0 0 0"/>
 
+    <xacro:clf_pringles_model name="snack1"  pos="0.9 3.85 0.5" rot="0 0 0"/>
+    <xacro:clf_pringles_model name="snack2"  pos="1.5 3.9 0.5" rot="0 0 -0.8"/>
+    <xacro:ycb_banana_model name="snack3"  pos="1.2 3.85 0.5" rot="0 0 1.57"/>
+
+    <xacro:ycb_cup_model name="random"  pos="1.2 4 0.5" rot="0 0 1.57"/>
+
+  </worldbody>
 </mujoco>
