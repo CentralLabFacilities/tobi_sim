@@ -78,12 +78,12 @@ def yaml_to_xacro_worldbody(yaml_path, macro_name, rgba="0.5 0.5 0.5 1"):
     macro = ET.SubElement(
         mujoco_root,
         "xacro:macro",
-        attrib={"name": macro_name, "params": "geom_name"},
+        attrib={"name": macro_name, "params": "geom_name pos:='0 0 0'"},
     )
 
     worldbody = ET.SubElement(macro, "worldbody")
 
-    body = ET.SubElement(worldbody, "body", attrib={"name": "${geom_name}_body"})
+    body = ET.SubElement(worldbody, "body", attrib={"name": "${geom_name}_body", "pos": "${pos}"})
 
     primitives = data.get("primitives", [])
     for idx, item in enumerate(primitives):
