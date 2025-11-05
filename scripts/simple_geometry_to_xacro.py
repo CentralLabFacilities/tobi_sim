@@ -116,7 +116,7 @@ def derive_macro_name(output_path: str) -> str:
 
 def main():
     if len(sys.argv) < 3:
-        print("Usage: python3 yaml_to_xacro_worldbody_mujoco_autoname.py input.yaml output.xml.xacro")
+        print("Usage: python3 simple_geometry_to_xacro.py input.yaml output.xml.xacro")
         sys.exit(1)
 
     yaml_path = sys.argv[1]
