@@ -1,13 +1,14 @@
 <?xml version="1.0" ?>
 <mujoco xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="add_couch_office_table_2m" params="geom_name pos:='0 0 0'">
+  <xacro:macro name="add_office_table_2m" params="geom_name pos:='0 0 0' rot:='0 0 0'">
     <worldbody>
-      <body name="${geom_name}_body" pos="${pos}">
+      <body name="${geom_name}_body" pos="${pos}" euler="${rot}">
         <geom name="${geom_name}_box_0" type="box" pos="0.0 0.0 0.7075" size="0.4 1.0 0.0125" rgba="0.5 0.5 0.5 1" density="1000"/>
         <geom name="${geom_name}_box_1" type="box" pos="0.375 0.955 0.3475" size="0.0155 0.0155 0.3475" rgba="0.5 0.5 0.5 1" density="1000"/>
         <geom name="${geom_name}_box_2" type="box" pos="-0.375 0.955 0.3475" size="0.0155 0.0155 0.3475" rgba="0.5 0.5 0.5 1" density="1000"/>
         <geom name="${geom_name}_box_3" type="box" pos="0.375 -0.955 0.3475" size="0.0155 0.0155 0.3475" rgba="0.5 0.5 0.5 1" density="1000"/>
         <geom name="${geom_name}_box_4" type="box" pos="-0.375 -0.955 0.3475" size="0.0155 0.0155 0.3475" rgba="0.5 0.5 0.5 1" density="1000"/>
+        <geom name="${geom_name}_box_cover" type="box" pos="0.0 0.0 0.05" size="0.4 1.0 0.05" rgba="0.73 0.82 1 0.8" density="1000"/>
       </body>
     </worldbody>
   </xacro:macro>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro" model="Tiago Scene">
+  <!-- <compiler angle="radian" autolimits="false" /> -->
+  <compiler angle="radian" autolimits="true" balanceinertia="true" />
+  <option noslip_iterations="1" />
+  <size njmax="500" nconmax="100" />
+
+  <!-- Include macro files -->
+  <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
+  <xacro:include filename="$(find tobi_sim)/model_makros/clf/covered/ikea_table.xml.xacro"/>
+  <xacro:include filename="$(find tobi_sim)/model_makros/clf/covered/red_billy.xml.xacro"/>
+  <xacro:include filename="$(find tobi_sim)/model_makros/clf/covered/couch_table.xml.xacro"/>
+  <xacro:include filename="$(find tobi_sim)/model_makros/clf/covered/office_table_2m.xml.xacro"/>
+
+  <!-- Add robot to scene -->
+  <xacro:add_robot robot_name="tiago" robot_pos="0 2.5 0.11" robot_rot="0 0 -1.575" />
+
+  <!-- Basic scene stuff -->
+  <statistic center="0 0 0.3" extent="1.2" />
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0" />
+    <rgba haze="0.15 0.25 0.35 1" />
+    <global azimuth="120" elevation="-20" />
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512"
+      height="3072" />
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4"
+      rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300" />
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5"
+      reflectance="0.2" />
+
+    <texture name="grid" type="2d" builtin="checker" width="512" height="512" rgb1=".1 .2 .3"
+      rgb2=".2 .3 .4" />
+    <material name="grid" texture="grid" texrepeat="1 1" texuniform="true" reflectance=".2" />
+  </asset>
+
+  <worldbody>
+    <light pos="0 0 1.5" dir="0 0 -1" directional="true" />
+    <geom name="floor" size="0 0 0.05" type="plane" material="groundplane" />
+  </worldbody>
+
+  <!-- Walls -->
+  <worldbody>
+    <geom name="wall0" pos="2.5 0 0.25" rgba=".5 .5 .5 1" size="0.05 4.95 0.25" type="box"/>
+    <geom name="wall1" pos="0 5 0.25" rgba=".5 .5 .5 1" size="2.55 0.05 0.25" type="box"/>
+    <geom name="wall11" pos="0 3.975 0.25" rgba=".5 .5 .5 1" size="0.05 0.975 0.25" type="box"/>
+    <geom name="wall2" pos="-2.5 0 0.25" rgba=".5 .5 .5 1" size="0.05 4.95 0.25" type="box"/>
+    <geom name="wall3" pos="0 -5 0.25" rgba=".5 .5 .5 1" size="2.55 0.05 0.25" type="box"/>
+  </worldbody>
+
+  <!-- Models -->
+  <xacro:add_ikea_table geom_name="ikea_table_1" pos="2 0.5 0"/>
+  <xacro:add_ikea_table geom_name="ikea_table_2" pos="-2 4.2 0"/>
+  <xacro:add_couch_table geom_name="couch_table_1" pos="1.2 4 0"/>
+  <xacro:add_couch_table geom_name="couch_table_2" pos="-2.1 -1 0" rot="0 0 1.575"/>
+  <xacro:add_red_billy geom_name="shelf_1" pos="2.05 -4.55 0" rot="0 0 0.785"/>
+  <xacro:add_office_table_2m geom_name="office_table" pos="-0.5 -3 0" rot="0 0 -0.785"/>
+
+  <!-- Objects -->
+
+</mujoco>

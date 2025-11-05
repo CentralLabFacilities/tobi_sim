@@ -8,6 +8,7 @@
         <geom name="${geom_name}_box_2" type="box" pos="0.38 -0.58 0.366" size="0.02 0.02 0.366" rgba="0.5 0.5 0.5 1" density="1000"/>
         <geom name="${geom_name}_box_3" type="box" pos="-0.38 0.58 0.366" size="0.02 0.02 0.366" rgba="0.5 0.5 0.5 1" density="1000"/>
         <geom name="${geom_name}_box_4" type="box" pos="0.38 0.58 0.366" size="0.02 0.02 0.366" rgba="0.5 0.5 0.5 1" density="1000"/>
+        <geom name="${geom_name}_box_cover" type="box" pos="0.0 0.0 0.05" size="0.4 0.6 0.05" rgba="0.73 0.82 1 0.8" density="1000"/>
       </body>
     </worldbody>
   </xacro:macro>

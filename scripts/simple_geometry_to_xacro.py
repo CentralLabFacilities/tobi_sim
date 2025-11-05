@@ -7,10 +7,10 @@ Xacro file (<mujoco> root) that defines a <xacro:macro>. The macro produces a st
 <worldbody> with a <body> containing <geom> elements.
 
 Usage:
-    python3 simple_geometry_to_xacro.py input.yaml output.xml.xacro
+    python3 simple_geometry_to_xacro.py input.yaml output.xml.xacro <generate covers?> (True/False)
 
 Optional rgba values:
-    python3 simple_geometry_to_xacro.py input.yaml output.xml.xacro '0.8 0.5 0.3 1'
+    python3 simple_geometry_to_xacro.py input.yaml output.xml.xacro <generate covers?> '0.8 0.5 0.3 1'
 
 The macro name will automatically be derived from the output file name:
     e.g., output="geometry_macro.xml.xacro" -> macro name = "add_geometry_macro"
@@ -64,8 +64,32 @@ def make_geom_element(prim_type, pose, size, idx, rgba, base_name="${geom_name}"
     geom.set("density", "1000")
     return geom
 
+def update_min_max(pose, size, min_max_values):
+    lower_x = float(pose.get("x", 0)) - float(size.get("x", 0)) / 2.0
+    upper_x = float(pose.get("x", 0)) + float(size.get("x", 0)) / 2.0
+    lower_y = float(pose.get("y", 0)) - float(size.get("y", 0)) / 2.0
+    upper_y = float(pose.get("y", 0)) + float(size.get("y", 0)) / 2.0
+    if (lower_x < min_max_values["min_x"]):
+        min_max_values["min_x"] = lower_x
+    if (upper_x > min_max_values["max_x"]):
+        min_max_values["max_x"] = upper_x
+    if (lower_y < min_max_values["min_y"]):
+        min_max_values["min_y"] = lower_y
+    if (upper_y > min_max_values["max_y"]):
+        min_max_values["max_y"] = upper_y
+    return min_max_values
 
-def yaml_to_xacro_worldbody(yaml_path, macro_name, rgba="0.5 0.5 0.5 1"):
+def generate_cover(min_max_values, prim, rgba):
+    pose = {"x": 0.0, "y": 0.0, "z": 0.05}
+    x_size = (min_max_values["max_x"] - min_max_values["min_x"]) 
+    y_size = (min_max_values["max_y"] - min_max_values["min_y"]) 
+    size = {"x": x_size, "y": y_size, "z": 0.1}
+
+    geom = make_geom_element(prim, pose, size, "cover", "0.73 0.82 1 0.8")
+    return geom
+
+
+def yaml_to_xacro_worldbody(yaml_path, macro_name, generate_covers=False, rgba="0.5 0.5 0.5 1"):
     """Convert YAML primitives into a <mujoco> Xacro macro."""
     with open(yaml_path, "r") as f:
         data = yaml.safe_load(f)
@@ -78,14 +102,15 @@ def yaml_to_xacro_worldbody(yaml_path, macro_name, rgba="0.5 0.5 0.5 1"):
     macro = ET.SubElement(
         mujoco_root,
         "xacro:macro",
-        attrib={"name": macro_name, "params": "geom_name pos:='0 0 0'"},
+        attrib={"name": macro_name, "params": "geom_name pos:='0 0 0' rot:='0 0 0'"},
     )
 
     worldbody = ET.SubElement(macro, "worldbody")
 
-    body = ET.SubElement(worldbody, "body", attrib={"name": "${geom_name}_body", "pos": "${pos}"})
+    body = ET.SubElement(worldbody, "body", attrib={"name": "${geom_name}_body", "pos": "${pos}", "euler": "${rot}"})
 
     primitives = data.get("primitives", [])
+    min_max_values = {"min_x": 0, "max_x": 0, "min_y": 0, "max_y": 0}
     for idx, item in enumerate(primitives):
         if not isinstance(item, dict) or len(item) == 0:
             continue
@@ -97,11 +122,16 @@ def yaml_to_xacro_worldbody(yaml_path, macro_name, rgba="0.5 0.5 0.5 1"):
 
         try:
             geom = make_geom_element(prim_type, pose, size, idx, rgba)
+            min_max_values = update_min_max(pose, size, min_max_values)
+            
         except Exception as e:
             print(f"Warning: skipping {prim_type}_{idx} due to {e}", file=sys.stderr)
             continue
 
         body.append(geom)
+
+    if (generate_covers == True):
+        body.append(generate_cover(min_max_values, prim_type, rgba))
 
     return mujoco_root
 
@@ -116,18 +146,22 @@ def derive_macro_name(output_path: str) -> str:
 
 def main():
     if len(sys.argv) < 3:
-        print("Usage: python3 simple_geometry_to_xacro.py input.yaml output.xml.xacro")
+        print("Usage: python3 simple_geometry_to_xacro.py input.yaml output.xml.xacro <generate cover?> (true/false)")
         sys.exit(1)
 
     yaml_path = sys.argv[1]
     out_path = sys.argv[2]
-
+    try:
+        generate_covers = bool(sys.argv[3])
+    except Exception as e:
+        print(f"Error: Could not cast {sys.argv[3]} to type 'bool', see: {e}. Setting it to False now.")
+        generate_covers = False
     macro_name = derive_macro_name(out_path)
-    if len(sys.argv) >= 4:
-        rgba = sys.argv[3]
-        mujoco_root = yaml_to_xacro_worldbody(yaml_path, macro_name, rgba)
+    if len(sys.argv) >= 5:
+        rgba = sys.argv[4]
+        mujoco_root = yaml_to_xacro_worldbody(yaml_path, macro_name, generate_covers, rgba)
     else:
-        mujoco_root = yaml_to_xacro_worldbody(yaml_path, macro_name)
+        mujoco_root = yaml_to_xacro_worldbody(yaml_path, macro_name, generate_covers)
     xml_str = prettify_xml(mujoco_root)
 
     with open(out_path, "w") as f:
