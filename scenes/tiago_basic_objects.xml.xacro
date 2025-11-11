@@ -70,7 +70,7 @@
     <xacro:clf_pringles_model name="dummy" pos="1.2 0.2 1" rot="0 1.6 3.14"/>
     <xacro:clf_pringles_model name="dummy2" pos="1.2 -0.2 1" rot="0 0 3.14"/>
 
-    <xacro:ycb_pringles_model name="shelf2" pos="-1.3 2.2 0.5" rot="0 0 0"/>
+    <xacro:clf_pringles_model name="shelf2" pos="-1.3 2.2 0.5" rot="0 0 0"/>
     <xacro:clf_pringles_model name="shel3" pos="-1.6 2.2 0.8" rot="0 1.6 3.14"/>
     <xacro:ycb_banana_model name="shelf3" pos="-1.4 2.2 0.8" rot="0 0 3.14"/>
     <xacro:ycb_apple_model name="shelf4" pos="-1.5 2.1 1.1" rot="0 0 3.14"/>
