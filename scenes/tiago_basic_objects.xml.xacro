@@ -26,7 +26,7 @@
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/assets.xml.xacro" />
   <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/model.xml.xacro" />
 
-  <xacro:add_robot robot_name="tiago" robot_pos="0 0 0.11" robot_rot="0 0 0" />
+  <xacro:add_robot robot_name="tiago" robot_pos="-0.25 0 0.11" robot_rot="0 0 0" />
   <xacro:ycb_orange_assets />
   <xacro:clf_pringles_assets />
   <xacro:ycb_apple_assets />
