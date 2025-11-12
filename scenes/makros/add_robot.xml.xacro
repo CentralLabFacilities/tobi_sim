@@ -20,6 +20,10 @@
 
         <xacro:pmb2_contacts name="${robot_name}" />
         <xacro:pmb2_sensors name="${robot_name}" />
+        <sensor>
+            <force name="left_fingertip" site="gripper_finger_l_site"/>
+            <force name="right_fingertip" site="gripper_finger_r_site"/>
+        </sensor>
 
         <xacro:if value="${end_effector == 'schunk-wsg-cupro'}">
             <contact>
