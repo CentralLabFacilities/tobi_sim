@@ -2,7 +2,7 @@
 <mujoco xmlns:xacro="http://ros.org/wiki/xacro" model="Tiago Scene">
   <!-- <compiler angle="radian" autolimits="false" /> -->
   <compiler angle="radian" autolimits="true" balanceinertia="true" />
-  <option noslip_iterations="1" />
+  <option impratio="100" noslip_iterations="1" cone="elliptic"/>
   <size njmax="500" nconmax="100" />
 
   <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
