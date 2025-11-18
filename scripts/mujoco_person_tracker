@@ -48,7 +48,8 @@ class MujocoPersonPoses():
         msg.transform.rotation.z = q[2]
         msg.transform.rotation.w = q[3]
 
-        msg.header.stamp = rospy.Time.now()
+        # slight sim delay so we have transforms
+        msg.header.stamp = rospy.Time.now() - rospy.Duration(0.02)
 
         return msg
     
