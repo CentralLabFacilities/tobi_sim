@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+
+# ROS
+import rospy
+
+import cv2
+from  mujoco_ros_msgs.srv import GetBodyState
+
+import tf2_geometry_msgs
+import tf2_kdl
+
+from geometry_msgs.msg import TransformStamped
+from geometry_msgs.msg import PoseArray as PoseArrayMsg
+
+class MujocoPersonPoses():
+    def __init__(self, robotbody):
+        self.robotbody = robotbody
+        self.mujoco = rospy.ServiceProxy('/mujoco_server/get_body_state', GetBodyState)
+        self.tracking_result_pub = rospy.Publisher("/mujoco_persons/poses", PoseArrayMsg, queue_size=1)
+
+    def _get_transform(self):
+        # Get world->base_link
+        msg = TransformStamped()
+        msg.header.frame_id = "base_footprint"
+
+        res = self.mujoco(self.robotbody, '')
+        rospy.logdebug(logger_name="MujocoPersonPoses", msg=f"robot: {res.state.pose}")
+
+        msg.transform.rotation = res.state.pose.pose.orientation
+        msg.transform.translation.x = res.state.pose.pose.position.x
+        msg.transform.translation.y = res.state.pose.pose.position.y
+        msg.transform.translation.z = res.state.pose.pose.position.z
+
+        # Fucking hell why is there no tf2_ros.inverse ?
+        # we use KDLFrame.inverse
+        inverse = tf2_kdl.transform_to_kdl(msg).Inverse()
+
+        # Destruct into msg again...
+        msg.transform.translation.x = inverse.p[0]
+        msg.transform.translation.y = inverse.p[1]
+        msg.transform.translation.z = inverse.p[2]
+        q = inverse.M.GetQuaternion()
+        msg.transform.rotation.x = q[0]
+        msg.transform.rotation.y = q[1]
+        msg.transform.rotation.z = q[2]
+        msg.transform.rotation.w = q[3]
+
+        msg.header.stamp = rospy.Time.now()
+
+        return msg
+    
+    def get_and_publish(self, names):
+        poses = []
+
+        transform = self._get_transform()
+
+        rospy.loginfo_once(logger_name="MujocoPersonPoses", msg=f"getting pose of '{names}'")
+        for name in names:
+            res = self.mujoco(name, '')
+            if not res.success:
+                rospy.logwarn_once(logger_name="MujocoPersonPoses", msg=f"{name} is not found in world, ignoring")
+                continue
+            pose = res.state.pose
+            pose = tf2_geometry_msgs.do_transform_pose(pose, transform)
+            header = pose.header
+            poses.append(pose.pose)
+        
+        msg = PoseArrayMsg()
+        msg.header = header
+        msg.poses = poses
+
+        self.tracking_result_pub.publish(msg)
+
+
+if __name__ == '__main__':
+
+    # Start ROS node
+    rospy.init_node('mujoco_persons')
+
+    node = MujocoPersonPoses("base_footprint")
+
+    r = rospy.Rate(10) # 10hz
+
+    while not rospy.is_shutdown():
+        node.get_and_publish(["human1", "human2", "human3", "human4"])
+        rospy.loginfo_once(logger_name="MujocoPersonPoses", msg=f"Running...")
+        r.sleep()
