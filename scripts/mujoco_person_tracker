@@ -49,7 +49,10 @@ class MujocoPersonPoses():
         msg.transform.rotation.w = q[3]
 
         # slight sim delay so we have transforms
-        msg.header.stamp = rospy.Time.now() - rospy.Duration(0.02)
+        try:
+            msg.header.stamp = rospy.Time.now() - rospy.Duration(0.02)
+        except TypeError as e:
+            msg.header.stamp = rospy.Time.now()
 
         return msg
     
