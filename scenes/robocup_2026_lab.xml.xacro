@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<mujoco xmlns:xacro="http://ros.org/wiki/xacro" model="Tiago Scene">
+  <!-- <compiler angle="radian" autolimits="false" /> -->
+  <compiler angle="radian" autolimits="true" balanceinertia="true" />
+  <option noslip_iterations="1" />
+  <size njmax="500" nconmax="100" />
+
+  <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
+  <xacro:add_robot robot_name="tiago" robot_pos="0 0 0" robot_rot="0 0 0" />
+
+  <statistic center="0 0 0.3" extent="1.2" />
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0" />
+    <rgba haze="0.15 0.25 0.35 1" />
+    <global azimuth="120" elevation="-20" />
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072" />
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300" />
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2" />
+    <texture name="grid" type="2d" builtin="checker" width="512" height="512" rgb1=".1 .2 .3" rgb2=".2 .3 .4" />
+    <material name="grid" texture="grid" texrepeat="1 1" texuniform="true" reflectance=".2" />
+  </asset>
+
+  <worldbody>
+    <light pos="0 0 1.5" dir="0 0 -1" directional="true" />
+    <geom name="floor" size="0 0 0.05" type="plane" material="groundplane" />
+  </worldbody>
+
+   <contact>
+        <exclude body1="kitchen_counter" body2="dishwasher_drawer"/>
+    </contact>
+    <asset>
+        <material name="misc/seating"/>
+        <mesh name="misc/seating_COLLISION" file="$(find ecwm_data)/models/misc/seating/meshes/collision.stl"/>
+        <mesh name="misc/seating" file="$(find ecwm_data)/models/misc/seating/meshes/textured.stl"/>
+        <material name="clf/cupro_kitchen/parts/stl_base"/>
+        <mesh name="clf/cupro_kitchen/parts/stl_base_COLLISION" file="$(find ecwm_data)/models/clf/cupro_kitchen/parts/stl_base/Kuechenzeile_scaled_col.stl"/>
+        <mesh name="clf/cupro_kitchen/parts/stl_base" file="$(find ecwm_data)/models/clf/cupro_kitchen/parts/stl_base/Kuechenzeile_scaled.stl"/>
+        <material name="clf/coffee_machine"/>
+        <mesh name="clf/coffee_machine_COLLISION" file="$(find ecwm_data)/models/clf/coffee_machine/coffee_machine_col.stl"/>
+        <mesh name="clf/coffee_machine" file="$(find ecwm_data)/models/clf/coffee_machine/coffee_machine.stl"/>
+        <material name="clf/cabinet"/>
+        <mesh name="clf/cabinet_COLLISION" file="$(find ecwm_data)/models/clf/cabinet/cabinet.stl"/>
+        <mesh name="clf/cabinet" file="$(find ecwm_data)/models/clf/cabinet/cabinet.stl"/>
+    </asset>
+    <worldbody>
+        <body name="trashbin" pos="1.2815468311309814 -1.4048961400985718 0" quat="0.9647071230929014 -0 -0 -0.2633252108207981">
+            <geom type="box" size="0.025 0.025 0.025" pos="0 0 0.025" quat="1 0 0 0"/>
+        </body>
+        <body name="table_2" pos="-7.060017108917236 -1.3962167501449585 2.2351741790771484e-08" quat="0.6981406126977266 1.9988377029788164e-11 1.920160673766708e-10 0.7159606727342243">
+            <geom type="box" size="0.0155 0.0155 0.3475" pos="-0.375 -0.755 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.0155 0.0155 0.3475" pos="0.375 -0.755 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.0155 0.0155 0.3475" pos="-0.375 0.755 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.0155 0.0155 0.3475" pos="0.375 0.755 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.4 0.8 0.0125" pos="0 0 0.7075" quat="1 0 0 0"/>
+        </body>
+        <body name="side_table" pos="4.155045509338379 0.95364910364151 1.8998980522155762e-07" quat="0.7126928602897844 -4.177032429367419e-08 1.195620830441375e-10 0.7014762197622698">
+            <geom type="box" size="0.185 0.185 0.2525" pos="0 0 0.2525" quat="1 0 0 0"/>
+            <geom type="box" size="0.3 0.3 0.01" pos="0 0 0.515" quat="1 0 0 0"/>
+        </body>
+        <body name="shelf" pos="-3.1158580780029297 2.063682794570923 3.725290298461914e-09" quat="0.001113440698489049 -4.750988378298072e-10 -5.291750800243135e-10 -0.9999993801247133">
+            <geom type="box" size="0.38 0.13 0.01" pos="0 0.01 1.805" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.13 0.01" pos="0 0.01 1.42" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.13 0.01" pos="0 0.01 1.065" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.13 0.01" pos="0 0.01 0.775" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.13 0.01" pos="0 0.01 0.425" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.13 0.01" pos="0 0.01 0.105" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.13 0.01" pos="0 0.01 2.01" quat="1 0 0 0"/>
+            <geom type="box" size="0.4 0.01 1.01" pos="0 -0.13 1.01" quat="1 0 0 0"/>
+            <geom type="box" size="0.01 0.14 1.01" pos="0.39 0 1.01" quat="1 0 0 0"/>
+            <geom type="box" size="0.01 0.14 1.01" pos="-0.39 0 1.01" quat="1 0 0 0"/>
+        </body>
+        <body name="seat_5" pos="-6.124543190002441 1.457713007926941 8.903443813323975e-07" quat="-0.018717958065235966 -9.436539702922141e-08 3.732006412981067e-08 0.999824803676053">
+            <geom type="mesh" mesh="misc/seating_COLLISION" group="3"/>
+            <geom type="mesh" mesh="misc/seating" material="misc/seating" contype="0" conaffinity="0" group="2"/>
+        </body>
+        <body name="seat_4" pos="2.457540512084961 1.827158808708191 3.650784492492676e-07" quat="0.6965711463598729 -9.8445237769765e-08 -9.281268754523073e-09 0.7174877267653313">
+            <geom type="mesh" mesh="misc/seating_COLLISION" group="3"/>
+            <geom type="mesh" mesh="misc/seating" material="misc/seating" contype="0" conaffinity="0" group="2"/>
+        </body>
+        <body name="seat_3" pos="-5.232150554656982 1.086162805557251 1.862645149230957e-07" quat="0.869394197165036 -2.3105134178441182e-08 -5.4508089587465503e-08 0.4941191454859435">
+            <geom type="mesh" mesh="misc/seating_COLLISION" group="3"/>
+            <geom type="mesh" mesh="misc/seating" material="misc/seating" contype="0" conaffinity="0" group="2"/>
+        </body>
+        <body name="seat_2" pos="2.470966100692749 1.249991774559021 1.043081283569336e-07" quat="0.7016693426243517 -4.578352677711602e-08 -3.409745854302636e-10 0.7125027253429338">
+            <geom type="mesh" mesh="misc/seating_COLLISION" group="3"/>
+            <geom type="mesh" mesh="misc/seating" material="misc/seating" contype="0" conaffinity="0" group="2"/>
+        </body>
+        <body name="seat_1" pos="0.8752650618553162 1.8183119297027588 9.685754776000977e-08" quat="0.7003278246783498 6.077168309017026e-10 9.150660373972498e-10 -0.7138213627941453">
+            <geom type="mesh" mesh="misc/seating_COLLISION" group="3"/>
+            <geom type="mesh" mesh="misc/seating" material="misc/seating" contype="0" conaffinity="0" group="2"/>
+        </body>
+        <body name="rear_wall2" pos="-1.5299044847488403 2.3642303943634033 2.1420419216156006e-08" quat="0.7110894893947495 -4.2299184453710425e-08 -3.416539261946448e-10 0.7031015133480462">
+            <geom type="box" size="0.12 0.4 1.25" pos="0.12 -1.53 1.25" quat="1 0 0 0"/>
+            <geom type="box" size="0.045 1.53 0.07" pos="0.045 0.4 0.98" quat="1 0 0 0"/>
+            <geom type="box" size="0.1 1.93 1.25" pos="-0.1 0 1.25" quat="1 0 0 0"/>
+        </body>
+        <body name="rear_wall" pos="4.648350715637207 -0.19143187999725342 2.076849341392517e-07" quat="0.9999688467693555 -4.8386534419179e-10 -5.9493783547866234e-08 -0.007893382719827651">
+            <geom type="box" size="0.12 0.4 1.25" pos="0.12 -1.53 1.25" quat="1 0 0 0"/>
+            <geom type="box" size="0.045 1.53 0.07" pos="0.045 0.4 0.98" quat="1 0 0 0"/>
+            <geom type="box" size="0.1 1.93 1.25" pos="-0.1 0 1.25" quat="1 0 0 0"/>
+        </body>
+        <body name="living_room_table" pos="-2.056173801422119 -1.4971483945846558 0" quat="0.7111610814771234 0 0 0.7030291005301902">
+            <geom type="box" size="0.0155 0.0155 0.3475" pos="-0.275 -0.655 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.0155 0.0155 0.3475" pos="0.275 -0.655 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.0155 0.0155 0.3475" pos="-0.275 0.655 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.0155 0.0155 0.3475" pos="0.275 0.655 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.3 0.7 0.0125" pos="0 0 0.7075" quat="1 0 0 0"/>
+        </body>
+        <body name="kitchen_counter" pos="2.8098220825195312 -1.6191110610961914 0.17207466065883636" quat="-0.0019253790266899752 5.1539003876615075e-09 -1.2244798881546277e-08 0.999998146456084">
+            <body name="dishwasher_drawer" pos="-0.245 -0.49 0.5" quat="1 0 0 0">
+                <geom type="box" size="0.0005 0.23 0.0005" pos="0.425 0.23 0.001" quat="1 0 0 0"/>
+                <geom type="box" size="0.0005 0.23 0.0005" pos="0.305 0.23 0.001" quat="1 0 0 0"/>
+                <geom type="box" size="0.0005 0.23 0.0005" pos="0.185 0.23 0.001" quat="1 0 0 0"/>
+                <geom type="box" size="0.0005 0.23 0.0005" pos="0.065 0.23 0.001" quat="1 0 0 0"/>
+                <geom type="box" size="0.245 0.0005 0.0005" pos="0.245 0.215 0.001" quat="1 0 0 0"/>
+                <geom type="box" size="0.245 0.0005 0.0005" pos="0.245 0.18 0.001" quat="1 0 0 0"/>
+                <geom type="box" size="0.245 0.0005 0.0005" pos="0.245 0.145 0.001" quat="1 0 0 0"/>
+                <geom type="box" size="0.245 0.0005 0.0005" pos="0.245 0.11 0.001" quat="1 0 0 0"/>
+                <geom type="box" size="0.245 0.0005 0.0005" pos="0.245 0.075 0.001" quat="1 0 0 0"/>
+                <geom type="box" size="0.245 0.0005 0.0005" pos="0.245 0.04 0.001" quat="1 0 0 0"/>
+                <geom type="box" size="0.245 0.0005 0.0005" pos="0.245 0 0.001" quat="1 0 0 0"/>
+                <geom type="box" size="0.025 0.025 0.035" pos="0.31 0.22 0.035" quat="1 0 0 0"/>
+                <geom type="box" size="0.025 0.025 0.035" pos="0.18 0.08 0.035" quat="1 0 0 0"/>
+                <geom type="box" size="0.015 0.095 0.05" pos="0.49 0.365 0.05" quat="1 0 0 0"/>
+                <geom type="box" size="0.015 0.095 0.05" pos="0 0.365 0.05" quat="1 0 0 0"/>
+                <geom type="box" size="0.3 0.06 0.05" pos="0.25 -0.06 -0.03" quat="1 0 0 0"/>
+                <geom type="box" size="0.245 0.23 0.0005" pos="0.245 0.23 0.0005" quat="1 0 0 0"/>
+                <joint type="slide" axis="0 1 0" range="-0.5 0"/>
+            </body>
+            <geom type="mesh" mesh="clf/cupro_kitchen/parts/stl_base_COLLISION" group="3"/>
+            <geom type="mesh" mesh="clf/cupro_kitchen/parts/stl_base" material="clf/cupro_kitchen/parts/stl_base" contype="0" conaffinity="0" group="2"/>
+        </body>
+        <body name="ikea_table" pos="1.702411413192749 1.5461113452911377 2.384185791015625e-07" quat="0.0019943099036485567 6.453821781376714e-10 -1.6989687066270616e-10 -0.9999980113620268">
+            <geom type="box" size="0.02 0.02 0.366" pos="0.38 0.58 0.366" quat="1 0 0 0"/>
+            <geom type="box" size="0.02 0.02 0.366" pos="-0.38 0.58 0.366" quat="1 0 0 0"/>
+            <geom type="box" size="0.02 0.02 0.366" pos="0.38 -0.58 0.366" quat="1 0 0 0"/>
+            <geom type="box" size="0.02 0.02 0.366" pos="-0.38 -0.58 0.366" quat="1 0 0 0"/>
+            <geom type="box" size="0.4 0.6 0.0085" pos="0 0 0.7415" quat="1 0 0 0"/>
+        </body>
+        <body name="door" pos="0.9384735822677612 -4.598316192626953 3.501772880554199e-07" quat="0.7766852711518727 -4.6999732288803213e-08 -3.1990927932148137e-08 0.6298888708143199">
+            <geom type="box" size="0.4 0.005 1" pos="0 0 1" quat="1 0 0 0"/>
+        </body>
+        <body name="couch_table" pos="-2.3571231365203857 1.735526442527771 0" quat="-0.7037666124663966 -4.271208972744832e-08 4.294298057908772e-08 0.710431245918681">
+            <geom type="box" size="0.025 0.025 0.2" pos="-0.425 -0.25 0.2" quat="1 0 0 0"/>
+            <geom type="box" size="0.025 0.025 0.2" pos="0.425 -0.25 0.2" quat="1 0 0 0"/>
+            <geom type="box" size="0.025 0.025 0.2" pos="-0.425 0.25 0.2" quat="1 0 0 0"/>
+            <geom type="box" size="0.025 0.025 0.2" pos="0.425 0.25 0.2" quat="1 0 0 0"/>
+            <geom type="box" size="0.45 0.225 0.005" pos="0 0 0.205" quat="1 0 0 0"/>
+            <geom type="box" size="0.45 0.275 0.02525" pos="0 0 0.425" quat="1 0 0 0"/>
+        </body>
+        <body name="coffee_machine" pos="4.0961384773254395 -0.5723403096199036 1.601874828338623e-07" quat="0.7083268769037853 1.6348411530520224e-10 -4.067501548165117e-11 -0.7058845765815611">
+            <geom type="mesh" mesh="clf/coffee_machine_COLLISION" group="3"/>
+            <geom type="mesh" mesh="clf/coffee_machine" material="clf/coffee_machine" contype="0" conaffinity="0" group="2"/>
+        </body>
+        <body name="cabinet" pos="-4.3368449211120605 1.9804695844650269 1.043081283569336e-07" quat="0.7081023411851836 -2.928190117105094e-09 5.961469060104494e-09 -0.7061098175270345">
+            <geom type="mesh" mesh="clf/cabinet_COLLISION" group="3"/>
+            <geom type="mesh" mesh="clf/cabinet" material="clf/cabinet" contype="0" conaffinity="0" group="2"/>
+        </body>
+    </worldbody>
+  
+
+</mujoco>
