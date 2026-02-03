@@ -161,6 +161,31 @@
             <geom type="mesh" mesh="clf/cabinet" material="clf/cabinet" contype="0" conaffinity="0" group="2"/>
         </body>
     </worldbody>
-  
 
+   <worldbody>
+		<geom name="wall1" pos="0.265 -7.039 0.250" size="0.907 0.050 0.250" euler="0 0 3.142" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall2" pos="-4.596 -5.056 0.250" size="4.493 0.050 0.250" euler="0 0 -3.137" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall3" pos="-9.083 -1.376 0.250" size="3.698 0.050 0.250" euler="0 0 1.569" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall4" pos="-8.701 2.315 0.250" size="0.375 0.050 0.250" euler="0 0 -0.017" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall5" pos="-8.319 1.852 0.250" size="0.457 0.050 0.250" euler="0 0 -1.557" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall6" pos="-8.219 1.395 0.250" size="0.094 0.050 0.250" euler="0 0 0.000" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall7" pos="-8.125 1.827 0.250" size="0.432 0.050 0.250" euler="0 0 1.571" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall8" pos="-7.681 2.253 0.250" size="0.444 0.050 0.250" euler="0 0 -0.014" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall9" pos="-7.243 2.303 0.250" size="0.057 0.050 0.250" euler="0 0 1.681" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall10" pos="-6.217 2.359 0.250" size="1.032 0.050 0.250" euler="0 0 0.000" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall11" pos="-0.066 2.184 0.250" size="2.716 0.050 0.250" euler="0 0 -0.005" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall12" pos="2.649 2.265 0.250" size="0.094 0.050 0.250" euler="0 0 1.571" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall13" pos="3.106 2.353 0.250" size="0.457 0.050 0.250" euler="0 0 -0.014" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall14" pos="3.557 2.240 0.250" size="0.107 0.050 0.250" euler="0 0 -1.630" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall15" pos="3.607 2.127 0.250" size="0.057 0.050 0.250" euler="0 0 -0.111" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall16" pos="3.926 1.752 0.250" size="0.453 0.050 0.250" euler="0 0 -0.952" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall17" pos="4.320 1.370 0.250" size="0.132 0.050 0.250" euler="0 0 -0.095" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall18" pos="4.439 -0.181 0.250" size="1.539 0.050 0.250" euler="0 0 -1.579" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall19" pos="3.018 -1.708 0.250" size="1.408 0.050 0.250" euler="0 0 -0.009" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall20" pos="1.611 -1.752 0.250" size="0.056 0.050 0.250" euler="0 0 -1.571" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall21" pos="1.379 -1.808 0.250" size="0.232 0.050 0.250" euler="0 0 3.142" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall22" pos="1.148 -2.959 0.250" size="1.151 0.050 0.250" euler="0 0 -1.571" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall23" pos="1.073 -4.111 0.250" size="0.075 0.050 0.250" euler="0 0 3.142" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall24" pos="0.897 -4.549 0.250" size="0.449 0.050 0.250" euler="0 0 -1.796" type="box" rgba="0.5 0.5 0.5 1"/>
+	</worldbody>
 </mujoco>
