@@ -5,6 +5,11 @@
   <option noslip_iterations="1" />
   <size njmax="500" nconmax="100" />
 
+    <xacro:include filename="$(find tobi_sim)/assets/xacro/human_assets.xml.xacro" />
+  <xacro:include filename="$(find tobi_sim)/assets/xacro/human_avatar.xml.xacro" />
+
+  <xacro:human_assets />
+
   <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
   <xacro:add_robot robot_name="tiago" robot_pos="0 0 0" robot_rot="0 0 0" />
 
@@ -161,6 +166,15 @@
             <geom type="mesh" mesh="clf/cabinet" material="clf/cabinet" contype="0" conaffinity="0" group="2"/>
         </body>
     </worldbody>
+
+    <!-- Valid gestures are 'neutral', 'waving_left', 'waving_right', 'pointing_left', 'pointing_right', 'holding_pringles'-->
+  <!-- Valid postures are 'standing', 'sitting'-->
+  <worldbody>
+    <xacro:human_avatar name="human1" pos="0.8 1.1 0.95" rot="0 0 0" gesture="waving_left" posture="sitting" />
+    <xacro:human_avatar name="human2" pos="0.4 -5 0.95" rot="0 0 1.57" gesture="neutral" posture="standing" />
+    <xacro:human_avatar name="human3" pos="-7 1.3 0.95" rot="0 0 -1.57" gesture="neutral" posture="sitting" />
+    <xacro:human_avatar name="human4" pos="-2 -2.2 0.95" rot="0 0 0.78" gesture="neutral" posture="standing" />
+  </worldbody>
 
    <worldbody>
 		<geom name="wall1" pos="0.265 -7.039 0.250" size="0.907 0.050 0.250" euler="0 0 3.142" type="box" rgba="0.5 0.5 0.5 1"/>
