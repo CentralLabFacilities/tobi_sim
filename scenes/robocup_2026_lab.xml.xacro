@@ -5,10 +5,35 @@
   <option noslip_iterations="1" />
   <size njmax="500" nconmax="100" />
 
-    <xacro:include filename="$(find tobi_sim)/assets/xacro/human_assets.xml.xacro" />
+  <xacro:include filename="$(find tobi_sim)/assets/xacro/human_assets.xml.xacro" />
   <xacro:include filename="$(find tobi_sim)/assets/xacro/human_avatar.xml.xacro" />
 
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_pringles/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_pringles/model.xml.xacro" />
+
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_apple/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_apple/model.xml.xacro" />
+
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_banana/model.xml.xacro" />
+
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_spezi/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_spezi/model.xml.xacro" />
+
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_coke/model.xml.xacro" />
+
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_bowl/assets.xml.xacro" />
+  <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_bowl/model.xml.xacro" />
+
+
   <xacro:human_assets />
+  <xacro:clf_pringles_assets />
+  <xacro:ycb_apple_assets />
+  <xacro:ycb_banana_assets />
+  <xacro:clf_coke_assets />
+  <xacro:clf_spezi_assets />
+  <xacro:ycb_bowl_assets />
 
   <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
   <xacro:add_robot robot_name="tiago" robot_pos="0 0 0" robot_rot="0 0 0" />
@@ -170,9 +195,9 @@
     <!-- Valid gestures are 'neutral', 'waving_left', 'waving_right', 'pointing_left', 'pointing_right', 'holding_pringles'-->
   <!-- Valid postures are 'standing', 'sitting'-->
   <worldbody>
-    <xacro:human_avatar name="human1" pos="0.8 1.1 0.95" rot="0 0 0" gesture="waving_left" posture="sitting" />
+    <xacro:human_avatar name="human1" pos="0.8 1.1 0.55" rot="0 0 0" gesture="waving_left" posture="sitting" />
     <xacro:human_avatar name="human2" pos="0.4 -5 0.95" rot="0 0 1.57" gesture="neutral" posture="standing" />
-    <xacro:human_avatar name="human3" pos="-7 1.3 0.95" rot="0 0 -1.57" gesture="neutral" posture="sitting" />
+    <xacro:human_avatar name="human3" pos="-7 1.3 0.55" rot="0 0 -1.57" gesture="neutral" posture="sitting" />
     <xacro:human_avatar name="human4" pos="-2 -2.2 0.95" rot="0 0 0.78" gesture="neutral" posture="standing" />
   </worldbody>
 
@@ -202,4 +227,16 @@
 		<geom name="wall23" pos="1.073 -4.111 0.250" size="0.075 0.050 0.250" euler="0 0 3.142" type="box" rgba="0.5 0.5 0.5 1"/>
 		<geom name="wall24" pos="0.897 -4.549 0.250" size="0.449 0.050 0.250" euler="0 0 -1.796" type="box" rgba="0.5 0.5 0.5 1"/>
 	</worldbody>
+
+    <worldbody>
+        <xacro:clf_coke_model name="grasp" pos="1.6 1.4 1.05" rot="0 0 0"/>
+        <xacro:clf_spezi_model name="grasp" pos="0.5 -1 0.5" rot="0 0 0"/>
+        <xacro:clf_pringles_model name="grasp" pos="1.5 1.3 1.05" rot="0 0 0"/>
+
+        <xacro:clf_pringles_model name="shelf2" pos="-3.0 2.1 0.5" rot="0 0 0"/>
+        <xacro:ycb_banana_model name="shelf3" pos="-3.2 2.1 1.1" rot="0 0 3.14"/>
+        <xacro:ycb_apple_model name="shelf4" pos="-3.0 2.1 1.1" rot="0 0 3.14"/>
+
+        <xacro:ycb_bowl_model name="ikea_table" pos="1.85 1.25 1.05" rot="0 0 0"/>
+  </worldbody>
 </mujoco>
