@@ -8,6 +8,7 @@ import math
 import argparse
 import os
 import datetime
+import yaml
 
 class XMLConstants:
     """
@@ -49,7 +50,7 @@ class XMLConstants:
 
 
 class WallGenerator:
-    def __init__(self, pixel_to_meter, map_image_path, save_file_path, do_add_robot, wall_thickness, wall_height):
+    def __init__(self, pixel_to_meter: float, map_image_path: str, save_file_path: str, do_add_robot: bool, wall_thickness: float, wall_height: float):
         self.PIXEL_TO_METER = pixel_to_meter
         self.MAP_IMAGE_PATH = map_image_path
         self.SAVE_FILE_PATH = save_file_path
@@ -76,6 +77,19 @@ class WallGenerator:
 
         if self.IMAGE is None:
             raise FileNotFoundError(f"Image not found: {self.MAP_IMAGE_PATH}")
+
+        self.MAP_INFO_PATH = map_image_path.removesuffix('.pgm') + ".yaml"
+
+        if not os.path.exists(self.MAP_INFO_PATH):
+            raise FileNotFoundError(f"Info file for input image not found: '{self.MAP_INFO_PATH}'.")
+
+        with open(self.MAP_INFO_PATH) as stream:
+            try:
+                self.MAP_INFO = yaml.safe_load(stream)
+            except yaml.YAMLError as exc:
+                print(exc)
+                self.MAP_INFO = None
+
 
         self.fig, self.ax = plt.subplots()
         self.ax.imshow(self.IMAGE, cmap='gray', origin='upper', zorder=0)
@@ -211,22 +225,22 @@ class WallGenerator:
                 return
 
         if event.key == 'enter':
-            coords_m = {
-                key: np.array(plt_circle.center) * self.PIXEL_TO_METER
+
+            coords_px = {
+                key: np.array(plt_circle.center)
                 for key, plt_circle in self.wall_nodes.items()
             }
 
-            coords_m = {k: np.array([v[0], -v[1]]) for k, v in coords_m.items()}
+            origin = self.MAP_INFO['origin'][:2]
 
-            sorted_points = [v for _, v in sorted(coords_m.items())[:2]]
-            origin = sorted_points[0]
+            h = self.IMAGE.shape[0]
 
-            coords_m = {k: v - origin for k, v in coords_m.items()}
-
-            dx, dy = sorted_points[1] - sorted_points[0]
-            theta = math.atan2(dy, dx)
-
-            coords_m = {k: self.rotate_points(v, theta) for k, v in coords_m.items()}
+            coords_m = {}
+            for k, (x_px, y_px) in coords_px.items():
+                x_m = x_px * self.PIXEL_TO_METER + origin[0]
+                y_m = (h - y_px) * self.PIXEL_TO_METER + origin[1]
+                coords_m[k] = np.array([x_m, y_m])
+            
 
             self.compute_geometry(coords_m)
             self.segments_to_mujoco_xml()
@@ -251,7 +265,7 @@ class WallGenerator:
             sy = self.MUJOCO_WALL_THICKNESS
             sz = self.MUJOCO_WALL_HEIGHT
             cx = (x1 + x2) / 2
-            cy = (y1 + y2) / 2 + sy
+            cy = (y1 + y2) / 2 
             cz = self.MUJOCO_WALL_HEIGHT
             xml = (
                 f'\t\t<geom name="wall{idx}" '
@@ -296,7 +310,7 @@ if __name__ == '__main__':
     Example:
         python generate_scene.py input.pgm output.xml.xacro
     """
-    DEFAULT_PIXEL_TO_METER = 0.05
+    DEFAULT_PIXEL_TO_METER = 0.025
     DEFAULT_WALL_THICKNESS = 0.1  # meters
     DEFAULT_WALL_HEIGHT = 0.5  # meters
 
@@ -309,7 +323,7 @@ if __name__ == '__main__':
     parser.add_argument("--pixel_to_meter",
                         type=float,
                         default=DEFAULT_PIXEL_TO_METER,
-                        help="Conversion factor from pixel to meter (default 0.05)."
+                        help="Conversion factor from pixel to meter (default 0.025)."
                         )
     parser.add_argument("--wall_thickness",
                         type=float,
