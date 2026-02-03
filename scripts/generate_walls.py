@@ -79,7 +79,7 @@ class WallGenerator:
 
         self.fig, self.ax = plt.subplots()
         self.ax.imshow(self.IMAGE, cmap='gray', origin='upper', zorder=0)
-        self.ax.set_title("Left click for adding new nodes. \nClick existing nodes to select them. \nWall gets created from selected node to new node. \nHit enter to save to xml. \nNodes can be dragged around but cant be deleted.")
+        self.ax.set_title("Mujoco Wall Generator")
 
         self.wall_connections = []
         self.wall_nodes = {}
