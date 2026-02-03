@@ -152,6 +152,7 @@ class WallGenerator:
         key_nearest_node = self.find_near_node(x, y)
 
         if is_ctrl_pressed and key_nearest_node is not None:
+            self.wall_connections.append((self.selected_wall_node_key, key_nearest_node))
             self.set_selected_wall_node_key(key_nearest_node)
             self.fig.canvas.draw_idle()
             return
@@ -197,6 +198,18 @@ class WallGenerator:
         self.fig.canvas.draw_idle()
 
     def on_key(self, event):
+
+        if event.key == 'delete':
+            if self.selected_wall_node_key is not None:
+                self.wall_nodes[self.selected_wall_node_key].remove()
+                self.wall_nodes.pop(self.selected_wall_node_key, None)
+                self.wall_connections[:] = [con for con in self.wall_connections if not self.selected_wall_node_key in con]
+                self.selected_wall_node_key = None
+
+                self.update_edges()
+                self.fig.canvas.draw_idle()
+                return
+
         if event.key == 'enter':
             coords_m = {
                 key: np.array(plt_circle.center) * self.PIXEL_TO_METER
