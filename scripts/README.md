@@ -6,7 +6,7 @@ Script to generate mujoco geometries from ecwm simple_geometry.yaml file.
 
 For more information see comment in file.
 
-## generate_scene.py
+## generate_walls.py
 
 Script to generate mujoco scene from map
 
