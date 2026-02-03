@@ -118,6 +118,9 @@ class WallGenerator:
     def set_selected_wall_node_key(self, new_key):
         if self.selected_wall_node_key is not None:
             self.wall_nodes[self.selected_wall_node_key].set_edgecolor(self.NODE_COLOR_DEFAULT)
+            if new_key == self.selected_wall_node_key:
+                self.selected_wall_node_key = None
+                return
         self.selected_wall_node_key = new_key
         self.wall_nodes[self.selected_wall_node_key].set_edgecolor(self.NODE_COLOR_SELECTED)
 
