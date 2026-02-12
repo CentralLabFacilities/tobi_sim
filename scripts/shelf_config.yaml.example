@@ -1,0 +1,21 @@
+# All values are in [cm]!
+# Copy this file and rename it to "shelf_config.yaml"!
+shelf_height : 50
+shelf_width : 30
+shelf_depth: 10
+vertical_board_thickness: 2
+horizontal_board_thickness: 2
+shelf_board_depth : 9
+clearances_above_shelf_boards:
+  - 20
+  - 14
+height_first_board : 12
+do_create_affordances : True
+do_pad_affordances : True
+create_affordances_for:
+  - 0
+  - 1
+affordance_max_z: 0.0 #Max height of all affordances. Set to 0.0 to fill whole gap to next board. If max is greater than that gap, only the gap will be filled 
+affordance_padding:
+  x: 0
+  y: 0
