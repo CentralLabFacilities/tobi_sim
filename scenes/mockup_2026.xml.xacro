@@ -20,6 +20,10 @@
 
 		<texture name="grid" type="2d" builtin="checker" width="512" height="512" rgb1=".1 .2 .3"                      rgb2=".2 .3 .4" />
 		<material name="grid" texture="grid" texrepeat="1 1" texuniform="true" reflectance=".2" />
+
+		<material name="misc/seating"/>
+        <mesh name="misc/seating_COLLISION" file="$(find ecwm_data)/models/misc/seating/meshes/collision.stl"/>
+        <mesh name="misc/seating" file="$(find ecwm_data)/models/misc/seating/meshes/textured.stl"/>
 	</asset>
 
 	<worldbody>
@@ -30,7 +34,92 @@
 	<xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
 	<xacro:add_robot robot_name="tiago" robot_pos="0 0 0" robot_rot="0 0 0" />
 
-
+	<worldbody>
+        <body name="working_table2" pos="7.794271469116211 -4.350337028503418 3.725290298461914e-09" quat="0.001113440698489049 -4.750988378298072e-10 -5.291750800243135e-10 -0.9999993801247133">
+            <geom type="box" size="0.035 0.035 0.35" pos="-0.965 -0.365 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.035 0.035 0.35" pos="0.965 -0.365 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.035 0.035 0.35" pos="-0.965 0.365 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.035 0.035 0.35" pos="0.965 0.365 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="1 0.4 0.0105" pos="0 0 0.7075" quat="1 0 0 0"/>
+        </body>
+        <body name="working_table1" pos="5.793829441070557 -4.355586051940918 9.238719940185547e-07" quat="0.999956534118101 -2.6423678872177553e-08 -1.8286666145577964e-08 -0.009323619174657372">
+            <geom type="box" size="0.035 0.035 0.35" pos="-0.944 -0.365 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.035 0.035 0.35" pos="0.944 -0.365 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.035 0.035 0.35" pos="-0.944 0.365 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.035 0.035 0.35" pos="0.944 0.365 0.3475" quat="1 0 0 0"/>
+            <geom type="box" size="0.979 0.4 0.0105" pos="0 0 0.7075" quat="1 0 0 0"/>
+        </body>
+        <body name="trashbin" pos="3.774446964263916 2.558544874191284 0" quat="0.9998455855472655 -1.4333701708010158e-08 -3.448968328074148e-09 -0.01757285012869549">
+            <geom type="box" size="0.025 0.025 0.025" pos="0 0 0.025" quat="1 0 0 0"/>
+        </body>
+        <body name="stool2" pos="6.0038580894470215 -0.3694360554218292 2.384185791015625e-07" quat="0.0019943099036485567 6.453821781376714e-10 -1.6989687066270616e-10 -0.9999980113620268">
+            <geom type="box" size="0.25 0.2075 0.225" pos="0 0 0.225" quat="1 0 0 0"/>
+        </body>
+        <body name="stool1" pos="4.594932556152344 -2.484583854675293 8.791685104370117e-07" quat="-0.0020146665570880133 -2.885629149520463e-08 3.026432429260701e-08 0.9999979705572718">
+            <geom type="box" size="0.25 0.2075 0.225" pos="0 0 0.225" quat="1 0 0 0"/>
+        </body>
+        <body name="shelf" pos="4.427527904510498 3.0427048206329346 1.844950020313263e-06" quat="-0.002034059053080725 8.136556910808678e-08 -1.513866211567279e-08 -0.9999979312997411">
+            <geom type="box" size="0.38 0.133 0.01" pos="0 0.007000000000000006 1.9960000000000002" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.133 0.01" pos="0 0.007000000000000006 1.7730000000000001" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.133 0.01" pos="0 0.007000000000000006 1.3880000000000001" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.133 0.01" pos="0 0.007000000000000006 1.0339999999999998" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.133 0.01" pos="0 0.007000000000000006 0.743" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.133 0.01" pos="0 0.007000000000000006 0.39" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.133 0.01" pos="0 0.007000000000000006 0.07" quat="1 0 0 0"/>
+            <geom type="box" size="0.38 0.007000000000000006 1.01" pos="0 -0.133 1.01" quat="1 0 0 0"/>
+            <geom type="box" size="0.01 0.14 1.01" pos="0.39 0 1.01" quat="1 0 0 0"/>
+            <geom type="box" size="0.01 0.14 1.01" pos="-0.39 0 1.01" quat="1 0 0 0"/>
+        </body>
+        <body name="seat_4" pos="7.131048202514648 1.6653859615325928 1.0952353477478027e-06" quat="0.6965711463598729 -9.8445237769765e-08 -9.281268754523073e-09 0.7174877267653313">
+            <geom type="mesh" mesh="misc/seating_COLLISION" group="3"/>
+            <geom type="mesh" mesh="misc/seating" material="misc/seating" contype="0" conaffinity="0" group="2"/>
+        </body>
+        <body name="seat_3" pos="7.311963081359863 -3.444875955581665 1.6167759895324707e-06" quat="0.9507858688617007 -2.3136838065911566e-08 -5.457251680117766e-08 0.3098487236909287">
+            <geom type="mesh" mesh="misc/seating_COLLISION" group="3"/>
+            <geom type="mesh" mesh="misc/seating" material="misc/seating" contype="0" conaffinity="0" group="2"/>
+        </body>
+        <body name="seat_2" pos="5.500264644622803 1.7026004791259766 1.4901161193847656e-08" quat="0.7209090152580562 4.036902833275319e-08 3.4058327421214546e-09 -0.6930297192182008">
+            <geom type="mesh" mesh="misc/seating_COLLISION" group="3"/>
+            <geom type="mesh" mesh="misc/seating" material="misc/seating" contype="0" conaffinity="0" group="2"/>
+        </body>
+        <body name="seat_1" pos="7.092272758483887 -1.2040947675704956 1.4901161193847656e-08" quat="0.20447152332916366 7.509208064202577e-10 -1.2213007183559397e-08 0.9788725127142203">
+            <geom type="mesh" mesh="misc/seating_COLLISION" group="3"/>
+            <geom type="mesh" mesh="misc/seating" material="misc/seating" contype="0" conaffinity="0" group="2"/>
+        </body>
+        <body name="round_table" pos="7.359313011169434 0.09826286882162094 1.601874828338623e-07" quat="0.7083268769037853 1.6348411530520224e-10 -4.067501548165117e-11 -0.7058845765815611">
+            <geom type="cylinder" size="0.2 0.005" pos="0 0 0.005" quat="1 0 0 0"/>
+            <geom type="cylinder" size="0.1 0.35" pos="0 0 0.35" quat="1 0 0 0"/>
+            <geom type="cylinder" size="0.45 0.0125" pos="0 0 0.715" quat="1 0 0 0"/>
+        </body>
+        <body name="kitchen_refrigerator" pos="0.5147291421890259 2.1027204990386963 0" quat="0.7087796582720486 -4.209975452781328e-08 -4.820778542349932e-10 0.7054299370027872">
+            <geom type="box" size="0.575 0.2965 0.4585" pos="0 0 0.4585" quat="1 0 0 0"/>
+            <geom type="box" size="0.31 0.2965 1.15" pos="-0.885 0 1.15" quat="1 0 0 0"/>
+        </body>
+        <body name="kitchen_oven" pos="1.8971235752105713 2.9880576133728027 0" quat="0.7067220776251374 -4.23086808185462e-08 -7.055409004011468e-10 0.7074912755626089">
+            <geom type="box" size="0.315 1.569 0.6" pos="0 0 2.032" quat="1 0 0 0"/>
+            <geom type="box" size="0.315 1.569 0.4585" pos="0 0 0.4585" quat="1 0 0 0"/>
+        </body>
+        <body name="kitchen_counter" pos="3.140516996383667 2.2580442428588867 3.725290298461914e-08" quat="0.7087796582720486 -4.209975452781328e-08 -4.820812959262025e-10 0.7054299370027872">
+            <geom type="box" size="0.4 0.32 0.4585" pos="0 0 0.4585" quat="1 0 0 0"/>
+        </body>
+        <body name="glass_table" pos="6.2535481452941895 1.7018171548843384 3.7159770727157593e-07" quat="0.709219966328421 -2.1846834656069532e-10 -4.1716832911847685e-08 -0.7049872618431567">
+            <geom type="box" size="0.06 0.06 0.36" pos="-0.305 -0.5005 0.36" quat="1 0 0 0"/>
+            <geom type="box" size="0.06 0.06 0.36" pos="0.305 -0.5005 0.36" quat="1 0 0 0"/>
+            <geom type="box" size="0.06 0.06 0.36" pos="-0.305 0.5005 0.36" quat="1 0 0 0"/>
+            <geom type="box" size="0.06 0.06 0.36" pos="0.305 0.5005 0.36" quat="1 0 0 0"/>
+            <geom type="box" size="0.365 0.5605 0.011" pos="0 0 0.731" quat="1 0 0 0"/>
+        </body>
+        <body name="couch_table" pos="6.938351631164551 -2.3634183406829834 0" quat="0.7847741881010395 -8.564504703302683e-09 6.340631939708683e-10 -0.6197817952234111">
+            <geom type="box" size="0.025 0.025 0.2" pos="-0.25 -0.25 0.2" quat="1 0 0 0"/>
+            <geom type="box" size="0.025 0.025 0.2" pos="0.25 -0.25 0.2" quat="1 0 0 0"/>
+            <geom type="box" size="0.025 0.025 0.2" pos="-0.25 0.25 0.2" quat="1 0 0 0"/>
+            <geom type="box" size="0.025 0.025 0.2" pos="0.25 0.25 0.2" quat="1 0 0 0"/>
+            <geom type="box" size="0.275 0.275 0.025" pos="0 0 0.425" quat="1 0 0 0"/>
+        </body>
+        <body name="couch" pos="8.280790328979492 -2.2168631553649902 6.044283509254456e-07" quat="0.7087796582720486 -4.209975452781328e-08 -4.820594800448268e-10 0.7054299370027872">
+            <geom type="box" size="1 0.45 0.41" pos="0 0 0.41" quat="1 0 0 0"/>
+        </body>
+    </worldbody>
 
 	<worldbody>
 		<geom name="wall1" pos="0.789 2.035 0.250" size="1.240 0.050 0.250" euler="0 0 1.572" type="box" rgba="0.5 0.5 0.5 1"/>
