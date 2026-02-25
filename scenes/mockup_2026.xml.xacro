@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+    <mujoco xmlns:xacro="http://ros.org/wiki/xacro" model="Tiago Scene">
+    <compiler angle="radian" autolimits="true" balanceinertia="true" />
+    <option noslip_iterations="1" />
+    <size njmax="500" nconmax="100" />
+
+	<statistic center="0 0 0.3" extent="1.2" />
+
+
+	<visual>
+		<headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0" />
+		<rgba haze="0.15 0.25 0.35 1" />
+		<global azimuth="120" elevation="-20" />
+	</visual>
+
+	<asset>
+		<texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512"                      height="3072" />
+		<texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4"                      rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300" />
+		<material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5"                      reflectance="0.2" />
+
+		<texture name="grid" type="2d" builtin="checker" width="512" height="512" rgb1=".1 .2 .3"                      rgb2=".2 .3 .4" />
+		<material name="grid" texture="grid" texrepeat="1 1" texuniform="true" reflectance=".2" />
+	</asset>
+
+	<worldbody>
+		<light pos="0 0 1.5" dir="0 0 -1" directional="true" />
+		<geom name="floor" size="0 0 0.05" type="plane" material="groundplane" />
+	</worldbody>
+
+	<xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
+	<xacro:add_robot robot_name="tiago" robot_pos="0 0 0" robot_rot="0 0 0" />
+
+
+
+	<worldbody>
+		<geom name="wall1" pos="0.789 2.035 0.250" size="1.240 0.050 0.250" euler="0 0 1.572" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall2" pos="6.169 3.167 0.250" size="2.792 0.050 0.250" euler="0 0 -0.028" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall3" pos="8.937 1.217 0.250" size="1.874 0.050 0.250" euler="0 0 -1.583" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall4" pos="7.295 -0.611 0.250" size="1.620 0.050 0.250" euler="0 0 3.113" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall5" pos="2.083 3.260 0.250" size="1.295 0.050 0.250" euler="0 0 -0.012" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall6" pos="5.684 -0.642 0.250" size="0.077 0.050 0.250" euler="0 0 -1.471" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall7" pos="7.326 -0.727 0.250" size="1.635 0.050 0.250" euler="0 0 -0.005" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall8" pos="8.907 -2.754 0.250" size="2.021 0.050 0.250" euler="0 0 -1.598" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall9" pos="6.524 -4.744 0.250" size="2.329 0.050 0.250" euler="0 0 3.128" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall10" pos="4.288 -2.631 0.250" size="2.084 0.050 0.250" euler="0 0 1.526" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall11" pos="4.504 -0.565 0.250" size="0.124 0.050 0.250" euler="0 0 -0.124" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall12" pos="4.303 -0.557 0.250" size="0.077 0.050 0.250" euler="0 0 -3.042" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall13" pos="4.203 -0.773 0.250" size="0.209 0.050 0.250" euler="0 0 -1.681" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall14" pos="2.407 -0.958 0.250" size="1.774 0.050 0.250" euler="0 0 3.129" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall15" pos="0.602 -0.750 0.250" size="0.188 0.050 0.250" euler="0 0 1.736" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall16" pos="1.120 0.801 0.250" size="0.330 0.050 0.250" euler="0 0 0.021" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall17" pos="1.458 0.731 0.250" size="0.077 0.050 0.250" euler="0 0 -1.471" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall18" pos="0.872 0.677 0.250" size="0.594 0.050 0.250" euler="0 0 3.103" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall19" pos="2.923 0.877 0.250" size="0.470 0.050 0.250" euler="0 0 0.016" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall20" pos="4.003 0.870 0.250" size="0.609 0.050 0.250" euler="0 0 3.116" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall21" pos="4.627 0.692 0.250" size="0.163 0.050 0.250" euler="0 0 -1.476" type="box" rgba="0.5 0.5 0.5 1"/>
+		<geom name="wall22" pos="3.555 0.592 0.250" size="1.089 0.050 0.250" euler="0 0 3.085" type="box" rgba="0.5 0.5 0.5 1"/>
+	</worldbody>
+</mujoco>
