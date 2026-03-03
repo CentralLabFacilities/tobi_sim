@@ -6,6 +6,15 @@
 
 	<statistic center="0 0 0.3" extent="1.2" />
 
+    <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_pringles/assets.xml.xacro" />
+    <xacro:include filename="$(find mujoco_ycb)/assets/xacro/clf_pringles/model.xml.xacro" />
+
+    <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_orange/assets.xml.xacro" />
+    <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_orange/model.xml.xacro" />
+
+    <xacro:clf_pringles_assets />
+    <xacro:ycb_orange_assets />
+
 
 	<visual>
 		<headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0" />
@@ -145,4 +154,9 @@
 		<geom name="wall21" pos="4.627 0.692 0.250" size="0.163 0.050 0.250" euler="0 0 -1.476" type="box" rgba="0.5 0.5 0.5 1"/>
 		<geom name="wall22" pos="3.555 0.592 0.250" size="1.089 0.050 0.250" euler="0 0 3.085" type="box" rgba="0.5 0.5 0.5 1"/>
 	</worldbody>
+
+    <worldbody>
+        <xacro:clf_pringles_model name="pringles1" pos="6.3 1.8 1.8" rot="0 0 0"/>
+        <xacro:ycb_orange_model name="orange1" pos="6.35 1.8 1.8" rot="0 0 0"/>
+    </worldbody>
 </mujoco>
