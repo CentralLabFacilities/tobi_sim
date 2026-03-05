@@ -12,8 +12,12 @@
     <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_orange/assets.xml.xacro" />
     <xacro:include filename="$(find mujoco_ycb)/assets/xacro/ycb_orange/model.xml.xacro" />
 
+    <xacro:include filename="$(find tobi_sim)/assets/xacro/human_assets.xml.xacro" />
+    <xacro:include filename="$(find tobi_sim)/assets/xacro/human_avatar.xml.xacro" />
+
     <xacro:clf_pringles_assets />
     <xacro:ycb_orange_assets />
+    <xacro:human_assets />
 
 
 	<visual>
@@ -128,6 +132,11 @@
         <body name="couch" pos="8.280790328979492 -2.2168631553649902 6.044283509254456e-07" quat="0.7087796582720486 -4.209975452781328e-08 -4.820594800448268e-10 0.7054299370027872">
             <geom type="box" size="1 0.45 0.41" pos="0 0 0.41" quat="1 0 0 0"/>
         </body>
+    </worldbody>
+
+    <worldbody>
+        <xacro:human_avatar name="human1" pos="8.5 2.8 0.95" rot="0 0 -1.56" gesture="waving_left" posture="standing" />
+        <xacro:human_avatar name="human2" pos="8.5 0 0.95" rot="0 0 3.14" gesture="neutral" posture="sitting" />
     </worldbody>
 
 	<worldbody>
