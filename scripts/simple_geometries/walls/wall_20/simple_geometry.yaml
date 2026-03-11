@@ -1,0 +1,11 @@
+model_spec: 1
+primitives:
+- box:
+    pose:
+      x: -0.05
+      y: 0.0
+      z: 1.0
+    size:
+      x: 0.1
+      y: 3.0042314578688805
+      z: 2.0
