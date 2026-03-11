@@ -10,6 +10,9 @@ import os
 import datetime
 import yaml
 
+from scipy.spatial.transform import Rotation
+from copy import deepcopy
+
 class XMLConstants:
     """
     Holds xml boilerplate needed for mujoco xml.
@@ -106,6 +109,10 @@ class WallGenerator:
 
         self.segments = []
         self.xml_geoms = ['\t<worldbody>']
+
+        # Ecwm simple geometry stuff
+        self.wall_models_output_dir = './simple_geometries/walls'
+        self.geometry_template = './simple_geometries/template.yaml'
 
         self.cid_on_press = self.fig.canvas.mpl_connect('button_press_event', self.on_press)
         self.cid_on_motion = self.fig.canvas.mpl_connect('motion_notify_event', self.on_motion)
@@ -246,6 +253,9 @@ class WallGenerator:
             self.segments_to_mujoco_xml()
             self.save_to_file()
 
+            self.generate_ecwm_wall_geometry()
+            self.generate_ecwm_world_file()
+
             self.safe_close_figure()
             print(f"Saved xml.xacro with wall geometries to '{self.SAVE_FILE_PATH}'")
             return
@@ -294,6 +304,56 @@ class WallGenerator:
         c, s = np.cos(-angle), np.sin(-angle)
         rot_mat = np.array([[c, -s], [s, c]])
         return points @ rot_mat.T
+    
+    def generate_ecwm_wall_geometry(self):
+
+        with open(self.geometry_template) as f:
+            template = yaml.safe_load(f)
+
+        for idx, (x1, y1, x2, y2, length, angle) in enumerate(self.segments, 1):
+
+            geom = deepcopy(template)
+
+            geom["primitives"][0]["box"]["size"] = {
+                "x": self.MUJOCO_WALL_THICKNESS * 2,
+                "y": length,
+                "z": 2.0,
+            }
+
+            geom["primitives"][0]["box"]["pose"]["x"] = -self.MUJOCO_WALL_THICKNESS
+            geom["primitives"][0]["box"]["pose"]["z"] = 1.0
+
+            os.makedirs(os.path.join(self.wall_models_output_dir, f"wall_{idx}"), exist_ok=True)
+
+            out_path = os.path.join(
+                self.wall_models_output_dir, f"wall_{idx}", 'simple_geometry.yaml'
+            )
+            with open(out_path, "w") as f:
+                yaml.dump(geom, f)
+
+    def generate_ecwm_world_file(self):
+        world = {'entities' : []}
+        for idx, (x1, y1, x2, y2, length, angle) in enumerate(self.segments, 1):
+
+            print(f"Angle of wall {idx} is {angle}")
+
+            pos = {'x': float((x1 + x2) / 2), 'y': float((y1 + y2) / 2), 'z': float(0.0)}
+            rot: Rotation = Rotation.from_euler('xyz', [0, 0, angle+np.pi/2], degrees=False)
+            rot = rot.as_quat(scalar_first=True)
+            print(rot)
+            ori = {'w': float(rot[0]), 'x': float(rot[1]), 'y': float(rot[2]), 'z': float(rot[3])}
+
+            world['entities'].append(
+                {
+                    'name': f"wall_{idx}",
+                    'type': f"CHANGE_ME/wall_{idx}",
+                    'position': pos,
+                    'orientation': ori,
+                }
+            )
+            with open('world.yaml', "w") as f:
+                yaml.dump(world, f)
+            
 
 
 if __name__ == '__main__':
