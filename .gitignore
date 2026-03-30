@@ -1,2 +1,4 @@
 build/
 .env/
+simple_geometries/
+world.yaml
