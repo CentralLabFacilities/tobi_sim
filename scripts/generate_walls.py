@@ -13,6 +13,13 @@ import yaml
 from scipy.spatial.transform import Rotation
 from copy import deepcopy
 
+# Map style yaml dump
+class Pose(dict):
+    pass
+def pose_representer(dumper, data):
+    return dumper.represent_mapping('tag:yaml.org,2002:map', data, flow_style=True)
+yaml.add_representer(Pose, pose_representer)
+
 class XMLConstants:
     """
     Holds xml boilerplate needed for mujoco xml.
@@ -53,11 +60,13 @@ class XMLConstants:
 
 
 class WallGenerator:
-    def __init__(self, pixel_to_meter: float, map_image_path: str, save_file_path: str, do_add_robot: bool, wall_thickness: float, wall_height: float):
-        self.PIXEL_TO_METER = pixel_to_meter
+    def __init__(self, world_name: str, map_image_path: str, save_file_path: str, create_scene: bool, wall_thickness: float, wall_height: float):
         self.MAP_IMAGE_PATH = map_image_path
-        self.SAVE_FILE_PATH = save_file_path
-        self.DO_INCLUDE_ROBOT_IN_SCENE = do_add_robot
+        self.SAVE_FILE_PATH = f"{save_file_path}/{world_name}.xml.xacro"
+        self.WORLD_YAML = f"{save_file_path}/{world_name}.yaml"
+        self.WALL_TYPE_PREFIX = f"walls/{world_name}/wall_"
+        self.wall_models_output_dir = f"{save_file_path}/models/walls/{world_name}"
+        self.CREATE_FULL_SCENE = create_scene
         self.MUJOCO_WALL_THICKNESS = wall_thickness / 2
         self.MUJOCO_WALL_HEIGHT = wall_height / 2
 
@@ -70,8 +79,8 @@ class WallGenerator:
         if not self.MAP_IMAGE_PATH.endswith(".pgm"):
             raise ValueError(f"Invalid IMAGE_PATH: '{self.MAP_IMAGE_PATH}'. Must end with '.pgm'.")
 
-        if not self.SAVE_FILE_PATH.endswith(".xml.xacro"):
-            raise ValueError(f"Invalid SAVE_FILE_PATH: '{self.SAVE_FILE_PATH}'. Must end with '.xml.xacro'.")
+        if not os.path.isdir(save_file_path):
+            raise ValueError(f"Invalid save_file_path: '{save_file_path}'. Needs to be directory")
 
         if not os.path.exists(self.MAP_IMAGE_PATH):
             raise FileNotFoundError(f"Input image not found: '{self.MAP_IMAGE_PATH}'.")
@@ -89,6 +98,7 @@ class WallGenerator:
         with open(self.MAP_INFO_PATH) as stream:
             try:
                 self.MAP_INFO = yaml.safe_load(stream)
+                self.PIXEL_TO_METER = self.MAP_INFO['resolution']
             except yaml.YAMLError as exc:
                 print(exc)
                 self.MAP_INFO = None
@@ -109,10 +119,6 @@ class WallGenerator:
 
         self.segments = []
         self.xml_geoms = ['\t<worldbody>']
-
-        # Ecwm simple geometry stuff
-        self.wall_models_output_dir = './simple_geometries/walls'
-        self.geometry_template = './simple_geometries/template.yaml'
 
         self.cid_on_press = self.fig.canvas.mpl_connect('button_press_event', self.on_press)
         self.cid_on_motion = self.fig.canvas.mpl_connect('motion_notify_event', self.on_motion)
@@ -257,7 +263,7 @@ class WallGenerator:
             self.generate_ecwm_world_file()
 
             self.safe_close_figure()
-            print(f"Saved xml.xacro with wall geometries to '{self.SAVE_FILE_PATH}'")
+            print(f"Saved '{self.SAVE_FILE_PATH}' '{self.WORLD_YAML}' and models '{self.wall_models_output_dir}' ")
             return
 
     def compute_geometry(self, coords_in_meter):
@@ -288,16 +294,15 @@ class WallGenerator:
         self.xml_geoms.append('\t</worldbody>\n')
 
     def save_to_file(self):
-
-
         walls_xml_with_newlines = "\n".join(self.xml_geoms)
         with open(self.SAVE_FILE_PATH, "w") as f:
-            f.write(self.XML_CONSTANTS.SCENE_XML_HEADER)
-            if self.DO_INCLUDE_ROBOT_IN_SCENE:
+            if self.CREATE_FULL_SCENE:
+                f.write(self.XML_CONSTANTS.SCENE_XML_HEADER)
                 f.write(self.XML_CONSTANTS.SCENE_INCLUDE_ROBOT)
-            f.write(self.XML_CONSTANTS.SCENE_BASIC_SETUP)
+                f.write(self.XML_CONSTANTS.SCENE_BASIC_SETUP)
             f.write(walls_xml_with_newlines)
-            f.write(self.XML_CONSTANTS.SCENE_FOOTER)
+            if self.CREATE_FULL_SCENE:
+                f.write(self.XML_CONSTANTS.SCENE_FOOTER)
 
     @staticmethod
     def rotate_points(points, angle):
@@ -307,8 +312,14 @@ class WallGenerator:
     
     def generate_ecwm_wall_geometry(self):
 
-        with open(self.geometry_template) as f:
-            template = yaml.safe_load(f)
+        template_yaml = """
+model_spec: 1
+primitives:
+  - box:
+        pose: {x: 0.00, y: 0.00, z: 0.00}
+        size: {x: 0.00, y: 0.00, z: 0.00}
+"""
+        template = yaml.safe_load(template_yaml)
 
         for idx, (x1, y1, x2, y2, length, angle) in enumerate(self.segments, 1):
 
@@ -339,20 +350,26 @@ class WallGenerator:
 
             pos = {'x': float((x1 + x2) / 2), 'y': float((y1 + y2) / 2), 'z': float(0.0)}
             rot: Rotation = Rotation.from_euler('xyz', [0, 0, angle+np.pi/2], degrees=False)
-            rot = rot.as_quat(scalar_first=True)
+            try:
+                rot = rot.as_quat(scalar_first=True)
+            except TypeError:
+                rot = rot.as_quat()
+
             print(rot)
             ori = {'w': float(rot[0]), 'x': float(rot[1]), 'y': float(rot[2]), 'z': float(rot[3])}
+            pos = Pose(pos)
+            ori = Pose(ori)
 
             world['entities'].append(
                 {
                     'name': f"wall_{idx}",
-                    'type': f"CHANGE_ME/wall_{idx}",
+                    'type': f"{self.WALL_TYPE_PREFIX}{idx}",
                     'position': pos,
                     'orientation': ori,
                 }
             )
-            with open('world.yaml', "w") as f:
-                yaml.dump(world, f)
+            with open(self.WORLD_YAML, "w") as f:
+                yaml.dump(world, f, default_flow_style=False)
             
 
 
@@ -370,7 +387,6 @@ if __name__ == '__main__':
     Example:
         python generate_scene.py input.pgm output.xml.xacro
     """
-    DEFAULT_PIXEL_TO_METER = 0.025
     DEFAULT_WALL_THICKNESS = 0.1  # meters
     DEFAULT_WALL_HEIGHT = 0.5  # meters
 
@@ -378,12 +394,12 @@ if __name__ == '__main__':
         description="Process a map (pgm file) to generate a corresponding mujoco scene."
     )
     parser.add_argument("MAP_IMAGE_PATH", help="Path to the input map image file (.pgm).")
-    parser.add_argument("SAVE_FILE_PATH", help="Path to save the output scene file (.xml.xacro).")
+    parser.add_argument("SAVE_FILE_PATH", help="Path to directory for the oputput.")
 
-    parser.add_argument("--pixel_to_meter",
-                        type=float,
-                        default=DEFAULT_PIXEL_TO_METER,
-                        help="Conversion factor from pixel to meter (default 0.025)."
+    parser.add_argument("--world_name",
+                        type=str,
+                        default="world",
+                        help="Name of the world."
                         )
     parser.add_argument("--wall_thickness",
                         type=float,
@@ -394,13 +410,13 @@ if __name__ == '__main__':
                         type=float,
                         default=DEFAULT_WALL_HEIGHT,
                         help="Wall height in mujoco in meters (default 0.5).")
-    parser.add_argument("--add_robot",
+    parser.add_argument("--create_xml",
                         type=bool,
                         nargs="?",
                         default=False,
                         const=True,
-                        help="Include robot in scene if set.")
+                        help="Create full scene xml")
 
     args = parser.parse_args()
 
-    WallGenerator(args.pixel_to_meter, args.MAP_IMAGE_PATH, args.SAVE_FILE_PATH, args.add_robot, args.wall_thickness, args.wall_height)
+    WallGenerator(args.world_name, args.MAP_IMAGE_PATH, args.SAVE_FILE_PATH, args.create_xml, args.wall_thickness, args.wall_height)
