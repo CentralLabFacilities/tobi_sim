@@ -1,9 +1,27 @@
 <?xml version="1.0"?>
 <mujoco xmlns:xacro="http://ros.org/wiki/xacro" model="Tiago Scene">
+  <!-- Select original CuPro fingers (false) or articulated tendon fingers (true).
+       This single argument also controls whether curl tendons are created. -->
+  <xacro:arg name="use_curl_tendons" default="true" />
+
+  <!-- Populated by wsg_cupro_gripper using the actual 1/2 per-side counts
+       selected by the schunk-wsg-cupro or schunk-wsg-cupro-4 robot type. -->
+  <xacro:property name="cupro_selected_num_finger_l" value="0" />
+  <xacro:property name="cupro_selected_num_finger_r" value="0" />
+
   <!-- <compiler angle="radian" autolimits="false" /> -->
   <compiler angle="radian" autolimits="true" balanceinertia="true" />
-  <option impratio="100" noslip_iterations="1" cone="elliptic"/>
-  <size njmax="500" nconmax="100" />
+  
+  <option
+        integrator="implicitfast"
+        solver="CG"
+        impratio="5"
+        noslip_iterations="2"
+        cone="elliptic">
+    <flag spring="enable"
+          damper="enable"/>
+  </option>
+  <size njmax="500" nconmax="1000" />
 
   <xacro:include filename="$(find tobi_sim)/scenes/makros/add_robot.xml.xacro" />
 
