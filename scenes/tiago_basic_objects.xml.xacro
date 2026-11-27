@@ -3,6 +3,7 @@
   <!-- Select original CuPro fingers (false) or articulated tendon fingers (true).
        This single argument also controls whether curl tendons are created. -->
   <xacro:arg name="use_curl_tendons" default="true" />
+  <xacro:arg name="enable_play_envelope" default="false"/>
 
   <!-- Populated by wsg_cupro_gripper using the actual 1/2 per-side counts
        selected by the schunk-wsg-cupro or schunk-wsg-cupro-4 robot type. -->
